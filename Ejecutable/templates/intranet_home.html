@@ -265,6 +265,51 @@
       max-width: 100%; /* Asegurar que la imagen se ajuste horizontalmente */
     }
   </style>
+
+  <style>
+    .carousel-indicators {
+      display: flex;
+    justify-content: center;
+    margin-top: 0.1em; /* Ajuste para mover los botones hacia arriba */
+    position: relative; /* Posición relativa para los botones */
+    top: -10px; /* Ajuste fino de la posición */
+    }
+  
+    .carousel-btn {
+      width: 25px; /* Ancho más largo */
+      height: 2.7px; /* Altura delgada */
+      background-color: rgba(255, 0, 0, 0.3); /* Rojo tenue con transparencia */
+      border: none; /* Sin borde */
+      margin: 0 4px; /* Espacio entre botones */
+      cursor: pointer;
+      transition: background-color 0.3s; /* Transición para el color de fondo */
+    }
+  
+    .carousel-btn.active {
+      background-color: #ff0a41; /* Fondo rojo para el botón activo */
+      transition: background-color 0.3s; /* Transición para el color de fondo */
+    }
+  
+    .carousel-btn:hover {
+      background-color: rgba(255, 0, 0, 0.5); /* Rojo tenue más claro al pasar el cursor */
+    }
+
+    .carousel img {
+      max-width: calc(100% + 20px); /* Aumentar el ancho un poco más */
+      max-height: 100%;
+      display: none; /* Ocultamos todas las imágenes inicialmente */
+      object-fit: cover; /* Ajustar la imagen cubriendo el contenedor */
+      border-top-right-radius: 42px;
+      border-bottom-right-radius: 42px;
+    }
+
+    .carousel img.active {
+      display: block; /* Mostrar solo la imagen activa */
+      max-height: 100%; /* Ajustar la altura máxima */
+      max-width: calc(100% + 20px); /* Aumentar el ancho un poco más */
+    }
+  </style>
+
 </head>
 <body>
   <div class="outer-container">
@@ -286,7 +331,7 @@
       <main>
         <section class="login-section">
           <h1>Ingresa a tu cuenta</h1>
-          <a href="#" class="login-button">
+          <a href="/login" class="login-button">
             <img src="/static/images/o365.png" alt="Office 365 Logo" />
             Inicia sesión con o365
           </a>
@@ -324,38 +369,50 @@
     </section>
 
     <section class="carousel-container">
-      <div class="carousel">
-        <img
-          src="/static/images/ganadores.png"
-          alt="Ganadores"
-          class="active"
-        />
-        <img src="/static/images/buen_pagador.png" alt="Buen Pagador" />
-        <img src="/static/images/promo_amigos.png" alt="Promoción Amigos" />
-        <img src="/static/images/yape.png" alt="Yape" />
-        <img
-          src="/static/images/centro_idiomas.jpeg"
-          alt="Centro de Idiomas"
-        />
-      </div>
-    </section>
+  <div class="carousel">
+    <img src="/static/images/ganadores.png" alt="Ganadores" class="active" />
+    <img src="/static/images/buen_pagador.png" alt="Buen Pagador" />
+    <img src="/static/images/promo_amigos.png" alt="Promoción Amigos" />
+    <img src="/static/images/yape.png" alt="Yape" />
+    <img src="/static/images/centro_idiomas.jpeg" alt="Centro de Idiomas" />
+    <div class="carousel-indicators">
+      <button type="button" class="carousel-btn active" aria-label="Slide 1"></button>
+      <button type="button" class="carousel-btn" aria-label="Slide 2"></button>
+      <button type="button" class="carousel-btn" aria-label="Slide 3"></button>
+      <button type="button" class="carousel-btn" aria-label="Slide 4"></button>
+      <button type="button" class="carousel-btn" aria-label="Slide 5"></button>
+    </div>
+  </div>
+</section>
   </div>
 
   <script>
     const carousel = document.querySelector(".carousel");
     const slides = carousel.querySelectorAll("img");
+    const buttons = carousel.querySelectorAll(".carousel-btn");
     let slideIndex = 0;
-    const totalSlides = slides.length;
-
+  
+    buttons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        slides[index].classList.add("active");
+        button.classList.add("active");
+        slideIndex = index;
+      });
+    });
+  
     function moveSlides() {
       slides.forEach((slide) => slide.classList.remove("active"));
+      buttons.forEach((btn) => btn.classList.remove("active"));
       slides[slideIndex].classList.add("active");
+      buttons[slideIndex].classList.add("active");
       slideIndex++;
-      if (slideIndex >= totalSlides) {
+      if (slideIndex >= slides.length) {
         slideIndex = 0;
       }
     }
-
+  
     setInterval(moveSlides, 5000); // Cambia la imagen cada 5 segundos
   </script>
 </body>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Universidad Privada San Juan Bautista</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/static/images/illustration.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.56); /* Capa de superposición oscura */
+            z-index: -1;
+        }
+        .header-logo {
+            position: absolute;
+            top: 10px; /* Ajuste para subir el logo un poco más */
+            left: 30px;
+            right: 47px;
+            width: 100px;
+        }
+        .login-container {
+            background-color: #fff; /* Fondo blanco */
+            padding: 2em;
+            border: none; /* Quitamos el borde curvo */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Alinear el texto a la izquierda */
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        .login-container img {
+            width: 150px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: 0; /* Alinear la imagen a la izquierda */
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+            text-align: left; /* Alinear el título a la izquierda */
+        }
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container input[type="email"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-container button[type="submit"] {
+            padding: 10px;
+            background-color: #0066cc; /* Color azul */
+            color: #fff;
+            border: none;
+            border-radius: 0; /* Quitamos el borde curvo */
+            font-size: 16px;
+            cursor: pointer;
+            width: auto; /* Ancho del botón automático */
+            margin-left: auto; /* Mover el botón a la derecha */
+            font-size: 14px; /* Tamaño de fuente del botón */
+            padding: 10px 20px; /* Ajustar el padding */
+        }
+        .login-container button[type="submit"]:hover {
+            background-color: #004080;
+        }
+        .help-box {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f7f7f7; /* Fondo gris claro */
+            text-align: left; /* Alinear el texto a la izquierda */
+        }
+        .help-box p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        .help-box a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .help-box a:hover {
+            text-decoration: underline;
+        }
+        .forgot-password {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: left;
+            margin-left: 0; /* Alinear el texto a la izquierda */
+        }
+        .options-container {
+            width: 100%; /* Ajustar el ancho al mismo que el contenedor de login */
+            max-width: 400px; /* Asegurar que no se exceda el ancho máximo */
+            margin-top: 20px; /* Margen de separación con el cuadro de inicio de sesión */
+            text-align: center;
+        }
+        .options-bar .option {
+            background-color: #f2f2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 0; /* Borde no curvado */
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .options-bar .option:hover {
+            background-color: #e5e5e5;
+        }
+        .options-bar .icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/images/headerlogo.png" alt="Logo Universidad Privada San Juan Bautista" class="header-logo small-logo">
+    <div class="login-container">
+        <img src="/static/images/logo_SJB.png" alt="Logo Universidad Privada San Juan Bautista" class="small-logo"> 
+        <h2>Iniciar sesión</h2>
+        <form action="path/to/login" method="POST">
+            <input type="email" name="email" placeholder="nombre.apellido@upsjb.edu.pe" required>
+            <a href="#" class="forgot-password">¿No puede acceder a su cuenta?</a>
+            <button type="submit">Siguiente</button>
+        </form>
+        <div class="help-box">
+            <p>Visita nuestro portal de ayuda:</p>
+            <a href="https://ayuda.upsjb.edu.pe" target="_blank">https://ayuda.upsjb.edu.pe</a>
+        </div>
+    </div>
+    <!-- Barra de opciones debajo del cuadro de inicio de sesión -->
+    <div class="options-container">
+        <div class="options-bar">
+            <div class="option">
+                <i class="icon fa fa-key"></i> 
+                <span>Opciones de inicio de sesión</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
