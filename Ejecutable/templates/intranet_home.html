@@ -1,364 +1,362 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intranet - San Juan en Línea</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #333;
-        background-color: #f0f0f0; /* Fondo gris claro */
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intranet - San Juan en Línea</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f0f0f0; /* Fondo gris claro */
+    }
 
-      .outer-container {
-        background-color: #fff;
-        max-width: 1275px; /* Ancho máximo */
-        margin: 2em auto; /* Margen en la parte superior e inferior y centrado horizontalmente */
-        padding: 1em;
-        border-radius: 65px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        min-height: calc(100vh - 2em); /* Reducción de la altura */
-        display: flex;
-        justify-content: space-between; /* Espacio entre el carrusel y el .container */
-        align-items: flex-start; /* Alinea el contenido hacia arriba */
-        position: relative;
-      }
-      
-      .container {
-        background-color: #fff;
-        padding: 1em;
-        border-radius: 30px;
-        box-shadow: none; /* Elimina cualquier sombra */
-        text-align: center;
-        overflow: hidden;
-        width: 100%;
-        max-width: calc(50% - 1em); /* Ancho máximo menos el margen derecho */
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin-left: 0; /* Ajuste el margen izquierdo según sea necesario */
-        height: 90vh; /* Altura máxima vertical del .container */
-      }
-      
-      .banner {
-        background-color: #ff0a41;
-        color: #fff;
-        text-align: center;
-        padding: 0.3em 0.75em; /* Espaciado interno reducido */
-        border-radius: 80px 0 0 0;
-        position: absolute; /* Añadido */
-        top: 0; /* Añadido */
-        left: 0; /* Añadido */
-        right: 0; /* Añadido */
-      }
+    .outer-container {
+      background-color: #fff;
+      max-width: 1275px; /* Ancho máximo */
+      margin: 2em auto; /* Margen en la parte superior e inferior y centrado horizontalmente */
+      padding: 1em;
+      border-radius: 65px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      min-height: calc(100vh - 6em); /* Aumenta el espacio vertical */
+      display: flex;
+      justify-content: space-between; /* Espacio entre el carrusel y el .container */
+      align-items: stretch; /* Alinea el contenido hacia arriba */
+      position: relative;
+    }
 
-      .banner h1 {
-        font-size: 1.2em;
-        font-weight: 400;
-        margin: 0;
-      }
+    .container {
+      background-color: #fff;
+      padding: 1em;
+      border-radius: 30px;
+      box-shadow: none; /* Elimina cualquier sombra */
+      text-align: center;
+      overflow: hidden;
+      width: 50%; /* Ancho del .container ajustado al 50% */
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-top-right-radius: 0; /* Ajuste aquí */
+      border-bottom-right-radius: 0; /* Ajuste aquí */
+    }
+    
 
-      header {
-        background-color: #fff;
-        color: #004080;
-        padding: 1em 0;
-      }
+    .banner {
+      background-color: #ff0a41;
+      color: #fff;
+      text-align: center;
+      padding: 0.3em 0.75em; /* Espaciado interno reducido */
+      border-radius: 80px 0 0 0;
+      position: absolute; /* Añadido */
+      top: 0; /* Añadido */
+      left: 0; /* Añadido */
+      right: 0; /* Añadido */
+    }
 
-      .header-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 2em;
-        margin-bottom: 10em; /* Ajusta el margen inferior según sea necesario */
-      }
+    .banner h1 {
+      font-size: 1.2em;
+      font-weight: 400;
+      margin: 0;
+    }
 
-      .logo {
-        height: 61px; /* Aumenta la altura del logo */
-        width: auto; /* Ajusta automáticamente el ancho para mantener la proporción */
-        object-fit: contain;
-        margin-bottom: -19em; /* Ajusta este valor para mover el logo hacia abajo */
-      }
-      
-      .login-section {
-        margin: 2em 0;
-        flex: 1;
-      }
+    header {
+      background-color: #fff;
+      color: #004080;
+      padding: 1em 0;
+    }
 
-      .login-button,
-      .user-button {
-        display: inline-block;
-        padding: 0.5em 1.5em;
-        color: #fff;
-        border: none;
-        border-radius: 25px;
-        font-size: 0.9em;
-        cursor: pointer;
-        text-decoration: none;
-        margin-bottom: 1em;
-        transition: background-color 0.3s, color 0.3s;
-        text-align: center;
-      }
+    .header-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2em;
+      margin-bottom: 10em; /* Ajusta el margen inferior según sea necesario */
+    }
 
-      .login-button {
-        background-color: #0dcaf0;
-        letter-spacing: 0.03em;
-        font-weight: 600;
-        padding: 0.6em 1em; /* Aumentar el padding vertical */
-        max-width: 30x; /* Reducir el ancho máximo */
-        border-radius: 3.5px; /* Redondeado reducido */
-        font-size: 1em; /* Aumentar el tamaño de la fuente aquí */
-      }
+    .logo {
+      height: 61px; /* Aumenta la altura del logo */
+      width: auto; /* Ajusta automáticamente el ancho para mantener la proporción */
+      object-fit: contain;
+      margin-bottom: -19em; /* Ajusta este valor para mover el logo hacia abajo */
+    }
 
-      .login-button:hover {
-        background-color: #31d2f2;
-      }
+    .login-section {
+      margin: 2em 0;
+      flex: 1;
+    }
 
-      .login-button img {
-        height: 23px;
-        margin-right: 0.8em; /* Reducir el margen derecho */
-        vertical-align: middle;
-      }
-      
+    .login-button,
+    .user-button {
+      display: inline-block;
+      padding: 0.5em 1.5em;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 0.9em;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: 1em;
+      transition: background-color 0.3s, color 0.3s;
+      text-align: center;
+    }
 
-      .login-button:hover img {
-        filter: none; /* Elimina cualquier filtro al hacer hover */
-      }
+    .login-button {
+      background-color: #0dcaf0;
+      letter-spacing: 0.03em;
+      font-weight: 600;
+      padding: 0.6em 1em; /* Aumentar el padding vertical */
+      max-width: 30x; /* Reducir el ancho máximo */
+      border-radius: 3.5px; /* Redondeado reducido */
+      font-size: 1em; /* Aumentar el tamaño de la fuente aquí */
+    }
 
-      .user-button {
-        background-color: #ff0a41;
-        font-size: 0.85em;
-        padding: 0.6em 1.35em;
-        width: auto;
-      }
+    .login-button:hover {
+      background-color: #31d2f2;
+    }
 
-      .user-button:hover {
-        background-color: #da0938;
-      }
+    .login-button img {
+      height: 23px;
+      margin-right: 0.8em; /* Reducir el margen derecho */
+      vertical-align: middle;
+    }
 
-      .social-links {
-        margin: 3em 0 5em 0; /* Ajustado para mover los íconos más abajo */
-      }
+    .login-button:hover img {
+      filter: none; /* Elimina cualquier filtro al hacer hover */
+    }
 
-      .social-links h2 {
-        font-size: 0.9em; /* Tamaño de fuente ajustado */
-      }      
+    .user-button {
+      background-color: #ff0a41;
+      font-size: 0.85em;
+      padding: 0.6em 1.35em;
+      width: auto;
+    }
 
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1em;
-        flex-wrap: wrap;
-      }
+    .user-button:hover {
+      background-color: #da0938;
+    }
 
-      .social-icon {
-        width: 60px;
-        height: 48px;
-        background-color: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        margin: -0.5em;
-      }
+    .social-links {
+      margin: 3em 0 5em 0; /* Ajustado para mover los íconos más abajo */
+    }
 
-      .social-icon img {
-        width: 20px;
-        height: 20px;
-        filter: brightness(1.2);
-        transform: scale(0.8);
-      }
+    .social-links h2 {
+      font-size: 0.9em; /* Tamaño de fuente ajustado */
+    }
 
-      .social-icon:hover {
-        background-color: #ff0a41;
-      }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
 
-      .social-icon:hover img {
-        filter: brightness(0) invert(1);
-      }
+    .social-icon {
+      width: 60px;
+      height: 48px;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      margin: -0.5em;
+    }
 
-      .social-icon.twitter img {
-        width: 30px;
-        height: 30px;
-      }
+    .social-icon img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(1.2);
+      transform: scale(0.8);
+    }
 
-      .forgot-password {
-        color: #53565a;
-        text-decoration: none;
-        cursor: pointer;
-      }
+    .social-icon:hover {
+      background-color: #ff0a41;
+    }
 
-      .forgot-password:hover,
-      .forgot-password:active {
-        color: #f20c49;
-      }
+    .social-icon:hover img {
+      filter: brightness(0) invert(1);
+    }
 
-      .login-section h1 {
-        color: #53565a;
-        font-size: 1.8em; /* Reducido el tamaño de fuente */
-        font-weight: 600;
-        letter-spacing: 0.05em; /* Añadir esta línea para expandir las letras */
-      }
+    .social-icon.twitter img {
+      width: 30px;
+      height: 30px;
+    }
 
-      .footer {
-        background-color: #f7f7f7; /* Color de fondo del pie de página */
-        color: #333; /* Color de texto para los enlaces */
-        text-align: center;
-        padding: 0.5em; /* Reducida la altura del padding */
-        border-radius: 0 0 10px 10px;
-        position: absolute; /* Añadido */
-        bottom: 0; /* Añadido */
-        left: 0; /* Añadido */
-        width: 100%; /* Añadido */
-      }
+    .forgot-password {
+      color: #53565a;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-      .footer-links {
-        display: flex;
-        justify-content: center;
-        gap: 4em; /* Aumentado el gap para mayor separación */
-        padding: 1em 0 0.2em 0; /* Bajado un poquito los enlaces */
-        font-size: 1em;
-      }
+    .forgot-password:hover,
+    .forgot-password:active {
+      color: #f20c49;
+    }
 
-      .footer-links a {
-        color: #333;
-        text-decoration: none;
-        transition: color 0.3s;
-        font-weight: 300; /* Adelgazado el peso de la fuente */
-      }
+    .login-section h1 {
+      color: #53565a;
+      font-size: 1.8em; /* Reducido el tamaño de fuente */
+      font-weight: 600;
+      letter-spacing: 0.05em; /* Añadir esta línea para expandir las letras */
+    }
 
-      .footer-links a:hover {
-        color: #ff0a41;
-      }
+    .footer {
+      background-color: #f7f7f7; /* Color de fondo del pie de página */
+      color: #333; /* Color de texto para los enlaces */
+      text-align: center;
+      padding: 0.5em; /* Reducida la altura del padding */
+      border-radius: 0 0 10px 10px;
+      position: absolute; /* Añadido */
+      bottom: 0; /* Añadido */
+      left: 0; /* Añadido */
+      width: 100%; /* Añadido */
+    }
 
-      /* Estilos para el carrusel */
-      .carousel-container {
-        width: 50%; /* Ancho del carrusel */
-        overflow: hidden;
-        margin-top: 0.5em; /* Reducir el margen superior */
-        margin-right: -1em; /* Margen derecho reducido */
-        margin-left: auto; /* Alinear el carrusel a la derecha */
-        display: flex; /* Permitir el crecimiento vertical */
-        justify-content: center; /* Centrar horizontalmente */
-        align-items: flex-start; /* Alinear el carrusel hacia arriba */
-      }
-      
-      .carousel {
-        display: flex;
-        flex-direction: column; /* Ajuste para alinear verticalmente */
-        align-items: center; /* Ajuste para alinear verticalmente */
-        height: 100%; /* Ocupa todo el espacio disponible */
-      }
-      .carousel img {
-        width: auto; /* Ajuste para asegurar que la imagen no se estire */
-        height: auto; /* Ajuste para asegurar que la imagen no se estire */
-        max-width: 100%;
-        max-height: 100%;
-        display: none; /* Ocultamos todas las imágenes inicialmente */
-        object-fit: contain; /* Ajuste para mantener la relación de aspecto */
-      }
-      
-      .carousel img.active {
-        display: block; /* Mostrar solo la imagen activa */
-        max-height: calc(100% - 4em); /* Ajuste de altura máxima */
-        max-width: 100%; /* Asegurar que la imagen se ajuste horizontalmente */
-      }
-    </style>
-  </head>
-  <body>
-    <div class="outer-container">
-      <section class="container">
-        <div class="banner">
-          <h1>Intranet - San Juan en Línea</h1>
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 4em; /* Aumentado el gap para mayor separación */
+      padding: 1em 0 0.2em 0; /* Bajado un poquito los enlaces */
+      font-size: 1em;
+    }
+
+    .footer-links a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-weight: 300; /* Adelgazado el peso de la fuente */
+    }
+
+    .footer-links a:hover {
+      color: #ff0a41;
+    }
+
+    /* Estilos para el carrusel */
+    .carousel-container {
+      width: 52%; /* Aumenta el ancho ligeramente */
+      height: 80%; /* Ajusta la altura del carrusel */
+      overflow: hidden;
+      margin-top: -0.em; /* Aumenta el margen superior */
+      margin-bottom: -0.5em; /* Aumenta el margen inferior */
+      display: flex; /* Permitir el crecimiento vertical */
+      justify-content: center; /* Centrar horizontalmente */
+      align-items: center; /* Alinear el carrusel verticalmente */
+    }
+    
+    .carousel {
+      display: flex;
+      flex-direction: column; /* Ajuste para alinear verticalmente */
+      align-items: center; /* Ajuste para alinear verticalmente */
+      height: 100%; /* Ocupa todo el espacio disponible */
+    }
+    
+    .carousel img {
+      max-width: 100%;
+      max-height: 100%;
+      display: none; /* Ocultamos todas las imágenes inicialmente */
+      object-fit: contain; /* Ajuste para mantener la relación de aspecto */
+    }
+
+    .carousel img.active {
+      display: block; /* Mostrar solo la imagen activa */
+      max-height: 100%; /* Ajuste de altura máxima */
+      max-width: 100%; /* Asegurar que la imagen se ajuste horizontalmente */
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-container">
+    <section class="container">
+      <div class="banner">
+        <h1>Intranet - San Juan en Línea</h1>
+      </div>
+
+      <header>
+        <div class="header-container">
+          <img
+            src="/static/images/logo_SJB.png"
+            alt="Logo UPSJB"
+            class="logo"
+          />
         </div>
+      </header>
 
-        <header>
-          <div class="header-container">
-            <img
-              src="/static/images/logo_SJB.png"
-              alt="Logo UPSJB"
-              class="logo"
-            />
-          </div>
-        </header>
-
-        <main>
-          <section class="login-section">
-            <h1>Ingresa a tu cuenta</h1>
-            <a href="#" class="login-button">
-              <img src="/static/images/o365.png" alt="Office 365 Logo" />
-              Inicia sesión con o365
-            </a>
-            <p><a href="#" class="forgot-password">Olvidé mi contraseña</a></p>
-            <a href="#" class="user-button">Conoce tu usuario</a>
-          </section>
-          <section class="social-links">
-            <h2 style="color: #53565a;">Síguenos en:</h2>
-            <div class="social-icons">
-              <div class="social-icon">
-                <img src="/static/images/ico_ig.png" alt="Instagram" />
-              </div>
-              <div class="social-icon">
-                <img src="/static/images/ico_fb.png" alt="Facebook" />
-              </div>
-              <div class="social-icon">
-                <img src="/static/images/ico_in.png" alt="LinkedIn" />
-              </div>
-              <div class="social-icon twitter">
-                <img src="/static/images/ico_twitter.png" alt="Twitter" />
-              </div>
-              <div class="social-icon">
-                <img src="/static/images/ico_tiktok.png" alt="TikTok" />
-              </div>
+      <main>
+        <section class="login-section">
+          <h1>Ingresa a tu cuenta</h1>
+          <a href="#" class="login-button">
+            <img src="/static/images/o365.png" alt="Office 365 Logo" />
+            Inicia sesión con o365
+          </a>
+          <p><a href="#" class="forgot-password">Olvidé mi contraseña</a></p>
+          <a href="#" class="user-button">Conoce tu usuario</a>
+        </section>
+        <section class="social-links">
+          <h2 style="color: #53565a">Síguenos en:</h2>
+          <div class="social-icons">
+            <div class="social-icon">
+              <img src="/static/images/ico_ig.png" alt="Instagram" />
             </div>
-          </section>
-        </main>
-        <footer class="footer">
-          <div class="footer-links">
-            <a href="#">Transparencia</a>
-            <a href="#">Campus UPSJB</a>
-            <a href="#">Ayuda</a>
+            <div class="social-icon">
+              <img src="/static/images/ico_fb.png" alt="Facebook" />
+            </div>
+            <div class="social-icon">
+              <img src="/static/images/ico_in.png" alt="LinkedIn" />
+            </div>
+            <div class="social-icon twitter">
+              <img src="/static/images/ico_twitter.png" alt="Twitter" />
+            </div>
+            <div class="social-icon">
+              <img src="/static/images/ico_tiktok.png" alt="TikTok" />
+            </div>
           </div>
-        </footer>
-      </section>
-
-      <section class="carousel-container">
-        <div class="carousel">
-          <img
-            src="/static/images/buen_pagador.png"
-            alt="Buen Pagador"
-            class="active"
-          />
-          <img src="/static/images/promo_amigos.png" alt="Promoción Amigos" />
-          <img src="/static/images/yape.png" alt="Yape" />
-          <img
-            src="/static/images/centro_idiomas.jpeg"
-            alt="Centro de Idiomas"
-          />
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="#">Transparencia</a>
+          <a href="#">Campus UPSJB</a>
+          <a href="#">Ayuda</a>
         </div>
-      </section>
-    </div>
+      </footer>
+    </section>
 
-    <script>
-      const carousel = document.querySelector(".carousel");
-      const slides = carousel.querySelectorAll("img");
-      let slideIndex = 0;
-      const totalSlides = slides.length;
+    <section class="carousel-container">
+      <div class="carousel">
+        <img
+          src="/static/images/ganadores.png"
+          alt="Ganadores"
+          class="active"
+        />
+        <img src="/static/images/buen_pagador.png" alt="Buen Pagador" />
+        <img src="/static/images/promo_amigos.png" alt="Promoción Amigos" />
+        <img src="/static/images/yape.png" alt="Yape" />
+        <img
+          src="/static/images/centro_idiomas.jpeg"
+          alt="Centro de Idiomas"
+        />
+      </div>
+    </section>
+  </div>
 
-      function moveSlides() {
-        slides.forEach((slide) => slide.classList.remove("active"));
-        slides[slideIndex].classList.add("active");
-        slideIndex++;
-        if (slideIndex >= totalSlides) {
-          slideIndex = 0;
-        }
+  <script>
+    const carousel = document.querySelector(".carousel");
+    const slides = carousel.querySelectorAll("img");
+    let slideIndex = 0;
+    const totalSlides = slides.length;
+
+    function moveSlides() {
+      slides.forEach((slide) => slide.classList.remove("active"));
+      slides[slideIndex].classList.add("active");
+      slideIndex++;
+      if (slideIndex >= totalSlides) {
+        slideIndex = 0;
       }
+    }
 
-      setInterval(moveSlides, 5000); // Cambia la imagen cada 5 segundos
-    </script>
-  </body>
+    setInterval(moveSlides, 5000); // Cambia la imagen cada 5 segundos
+  </script>
+</body>
 </html>
