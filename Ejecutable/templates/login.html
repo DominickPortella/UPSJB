@@ -152,11 +152,12 @@
     <div class="login-container">
         <img src="/static/images/logo_SJB.png" alt="Logo Universidad Privada San Juan Bautista" class="small-logo"> 
         <h2>Iniciar sesión</h2>
-        <form action="path/to/login" method="POST">
+        <form action="{% url 'contrasena' %}" method="POST">
+            {% csrf_token %}
             <input type="email" name="email" placeholder="nombre.apellido@upsjb.edu.pe" required>
             <a href="#" class="forgot-password">¿No puede acceder a su cuenta?</a>
             <button type="submit">Siguiente</button>
-        </form>
+        </form>        
         <div class="help-box">
             <p>Visita nuestro portal de ayuda:</p>
             <a href="https://ayuda.upsjb.edu.pe" target="_blank">https://ayuda.upsjb.edu.pe</a>

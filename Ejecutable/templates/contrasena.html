@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Universidad Privada San Juan Bautista</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            background-image: url('/static/images/illustration.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.56);
+            z-index: -1;
+        }
+
+        .header-logo {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 100px;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 2em;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .login-container img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-container button[type="submit"] {
+            padding: 10px;
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: auto;
+            align-self: flex-end;
+            font-size: 14px;
+            padding: 10px 20px;
+        }
+
+        .login-container button[type="submit"]:hover {
+            background-color: #004080;
+        }
+
+        .help-box {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f7f7f7;
+            text-align: left;
+        }
+
+        .help-box p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .help-box a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .help-box a:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-password {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/images/headerlogo.png" alt="Logo Universidad Privada San Juan Bautista" class="header-logo">
+    <div class="login-container">
+        <img src="/static/images/logo_SJB.png" alt="Logo Universidad Privada San Juan Bautista"> 
+        <h2>Iniciar sesión</h2>
+        <form action="path/to/login" method="POST">
+            <input type="email" name="email" placeholder="nombre.apellido@upsjb.edu.pe" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <a href="#" class="forgot-password">¿No puede acceder a su cuenta?</a>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <div class="help-box">
+            <p>Visita nuestro portal de ayuda:</p>
+            <a href="https://ayuda.upsjb.edu.pe" target="_blank">https://ayuda.upsjb.edu.pe</a>
+        </div>
+    </div>
+</body>
+</html>
+
