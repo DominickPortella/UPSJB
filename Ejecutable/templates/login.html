@@ -145,6 +145,43 @@
         .options-bar .icon {
             margin-right: 10px;
         }
+        .troubleshoot-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semi-transparente */
+            color: white;
+            padding: 2px; /* Reducir el padding para hacer la barra más delgada */
+            border-top: 1px solid #000; /* Añadir un borde superior para separar del contenido */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        
+        
+        .troubleshoot-container .troubleshoot-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transform: rotate(90deg); /* Rotar para mostrar en horizontal */
+        }
+        .troubleshoot-message {
+            display: none;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            padding: 15px;
+            position: absolute;
+            bottom: 110px; /* Ajustar distancia desde la parte inferior */
+            width: 300px; /* Ajustar el ancho del cuadro de mensaje */
+            color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
@@ -163,14 +200,32 @@
             <a href="https://ayuda.upsjb.edu.pe" target="_blank">https://ayuda.upsjb.edu.pe</a>
         </div>
     </div>
-    <!-- Barra de opciones debajo del cuadro de inicio de sesión -->
-    <div class="options-container">
-        <div class="options-bar">
-            <div class="option">
-                <i class="icon fa fa-key"></i> 
-                <span>Opciones de inicio de sesión</span>
-            </div>
-        </div>
+    <!-- Mensaje de solución de problemas -->
+    <div class="troubleshoot-message" id="troubleshoot-message">
+        <p>Al ponerse en contacto con el administrador hay que enviarle esta información.</p>
+        <p>Copiar la información en el portapapeles</p>
+        <p>Error Code: 50126</p>
+        <p>Request Id: e6ead675-6b21-4137-a1f2-8c4280b83300</p>
+        <p>Correlation Id: 121988dc-85a0-4756-8f3b-7d6eaa92f781</p>
+        <p>Timestamp: 2024-06-22T05:03:33.114Z</p>
+        <p>Marcar errores de inicio de sesión para revisión: <a href="#">Habilitar marcado</a></p>
     </div>
+    <!-- Barra negra con botón de tres puntos -->
+    <div class="troubleshoot-container">
+        <button class="troubleshoot-button" onclick="showMessage()">⋮</button>
+    </div>
+    <script>
+        function showMessage() {
+            var message = document.getElementById('troubleshoot-message');
+            if (message.style.display === "none" || message.style.display === "") {
+                message.style.display = "block";
+            } else {
+                message.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
+
+
+
