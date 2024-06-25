@@ -1,231 +1,390 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar Sesión - Universidad Privada San Juan Bautista</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            position: relative;
-            overflow: hidden;
-        }
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('/static/images/illustration.png');
-            background-size: cover;
-            background-position: center;
-            z-index: -2;
-        }
-        body::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.56); /* Capa de superposición oscura */
-            z-index: -1;
-        }
-        .header-logo {
-            position: absolute;
-            top: 10px; /* Ajuste para subir el logo un poco más */
-            left: 30px;
-            right: 47px;
-            width: 100px;
-        }
-        .login-container {
-            background-color: #fff; /* Fondo blanco */
-            padding: 2em;
-            border: none; /* Quitamos el borde curvo */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left; /* Alinear el texto a la izquierda */
-            max-width: 400px;
-            width: 100%;
-            position: relative;
-            z-index: 1;
-        }
-        .login-container img {
-            width: 150px;
-            margin-bottom: 20px;
-            display: block;
-            margin-left: 0; /* Alinear la imagen a la izquierda */
-        }
-        .login-container h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #333;
-            text-align: left; /* Alinear el título a la izquierda */
-        }
-        .login-container form {
-            display: flex;
-            flex-direction: column;
-        }
-        .login-container input[type="email"] {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .login-container button[type="submit"] {
-            padding: 10px;
-            background-color: #0066cc; /* Color azul */
-            color: #fff;
-            border: none;
-            border-radius: 0; /* Quitamos el borde curvo */
-            font-size: 16px;
-            cursor: pointer;
-            width: auto; /* Ancho del botón automático */
-            margin-left: auto; /* Mover el botón a la derecha */
-            font-size: 14px; /* Tamaño de fuente del botón */
-            padding: 10px 20px; /* Ajustar el padding */
-        }
-        .login-container button[type="submit"]:hover {
-            background-color: #004080;
-        }
-        .help-box {
-            margin-top: 20px;
-            border: 1px solid #ccc;
-            padding: 15px;
-            background-color: #f7f7f7; /* Fondo gris claro */
-            text-align: left; /* Alinear el texto a la izquierda */
-        }
-        .help-box p {
-            margin-bottom: 10px;
-            font-size: 14px;
-            color: #333;
-        }
-        .help-box a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .help-box a:hover {
-            text-decoration: underline;
-        }
-        .forgot-password {
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 10px;
-            text-align: left;
-            margin-left: 0; /* Alinear el texto a la izquierda */
-        }
-        .options-container {
-            width: 100%; /* Ajustar el ancho al mismo que el contenedor de login */
-            max-width: 400px; /* Asegurar que no se exceda el ancho máximo */
-            margin-top: 20px; /* Margen de separación con el cuadro de inicio de sesión */
-            text-align: center;
-        }
-        .options-bar .option {
-            background-color: #f2f2f2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 0; /* Borde no curvado */
-            cursor: pointer;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .options-bar .option:hover {
-            background-color: #e5e5e5;
-        }
-        .options-bar .icon {
-            margin-right: 10px;
-        }
-        .troubleshoot-container {
-            background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semi-transparente */
-            color: white;
-            padding: 2px; /* Reducir el padding para hacer la barra más delgada */
-            border-top: 1px solid #000; /* Añadir un borde superior para separar del contenido */
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-        
-        
-        
-        .troubleshoot-container .troubleshoot-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            transform: rotate(90deg); /* Rotar para mostrar en horizontal */
-        }
-        .troubleshoot-message {
-            display: none;
-            background-color: #f7f7f7;
-            border: 1px solid #ccc;
-            padding: 15px;
-            position: absolute;
-            bottom: 110px; /* Ajustar distancia desde la parte inferior */
-            width: 300px; /* Ajustar el ancho del cuadro de mensaje */
-            color: #333;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-        }
+      /* Estilos del botón de solución de problemas */
+      @font-face {
+        font-family: "Segoe UI Webfont";
+        src: url("/static/fonts/SegoeUI.woff2") format("woff2"),
+          url("/static/fonts/SegoeUI.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("/static/images/illustration.png");
+        background-size: cover;
+        background-position: center;
+        z-index: -2;
+      }
+
+      body::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.56
+        ); /* Capa de superposición oscura */
+        z-index: -1;
+      }
+
+      .header-logo {
+        position: absolute;
+        top: 15px; /* Ajuste para bajar el logo un poco más */
+        left: 20px; /* Mover el logo un poco a la izquierda */
+        right: 47px;
+        width: 115px; /* Ancho ajustado del logo */
+        z-index: 1;
+      }
+
+      .login-container {
+        background-color: #fff; /* Fondo blanco */
+        padding: 2em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left; /* Alinear el texto a la izquierda */
+        max-width: 400px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        min-height: 300px; /* Ajustar la altura mínima según sea necesario */
+        margin-bottom: 7.5px; /* Reducir el margen inferior */
+      }
+
+      .login-container img {
+        width: 150px;
+        margin-bottom: 20px;
+        display: block;
+        margin-left: 0; /* Alinear la imagen a la izquierda */
+      }
+
+      .login-container h2 {
+        margin-bottom: 20px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        color: rgb(27, 27, 27);
+        text-align: left; /* Alinear el título a la izquierda */
+      }
+
+      .login-container form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .login-container input[type="email"] {
+        border: none;
+        border-bottom: 1px solid #666666; /* Línea inferior más delgada */
+        margin-bottom: 10px;
+        padding: 10px 0;
+        font-size: 16px;
+        outline: none;
+      }
+
+      .login-container input[type="email"]:hover {
+        border-color: #333333;
+      }
+
+      .login-container input[type="email"]:focus {
+        border-color: #0067b8; /* Color de borde al estar enfocado */
+      }
+
+      ::placeholder {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        color: #666666;
+        font-size: 15px;
+      }
+
+      .login-container button[type="submit"] {
+        padding: 10px 20px; /* Ajustar el padding */
+        background-color: #0066cc; /* Color azul */
+        color: #fff;
+        border: none;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 15px;
+        cursor: pointer;
+        margin-left: auto; /* Mover el botón a la derecha */
+      }
+
+      .login-container button[type="submit"]:hover {
+        background-color: #004080;
+      }
+      /* Estilos actualizados para el contenedor de ayuda */
+      .help-box {
+        position: absolute;
+        bottom: 0; /* Fija la caja en el pie del contenedor */
+        left: 0; /* Fija la caja al borde izquierdo del contenedor */
+        right: 0; /* Fija la caja al borde derecho del contenedor */
+        padding: 30px 0; /* Ajustar el padding */
+        background-color: #f2f2f2; /* Fondo color #f2f2f2 */
+        text-align: left; /* Alinear el texto a la izquierda */
+        width: 100%; /* Ancho completo del contenedor */
+        box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+      }
+
+      .help-box p {
+        margin: 0; /* Quitar el margen */
+        font-size: 14px;
+        color: #333;
+      }
+
+      .help-box a {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        color: #1b1b1b; /* Cambiar el color a #1b1b1b */
+        font-size: 15px;
+        text-decoration: none;
+      }
+
+      .help-box a:hover {
+        text-decoration: underline;
+      }
+
+      .forgot-password {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-size: 13px;
+        color: rgb(0, 103, 184); /* Color de texto específico */
+        margin-bottom: 10px;
+        text-align: left;
+        text-decoration: none; /* Quitar subrayado por defecto */
+      }
+
+      .forgot-password:hover {
+        color: #666666; /* Color de texto al pasar el cursor */
+        text-decoration: underline; /* Subrayado al pasar el cursor */
+      }
+
+      .troubleshoot-container {
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.6
+        ); /* Fondo negro semi-transparente */
+        color: white;
+        padding: 10px; /* Ajustar el padding */
+        border-top: 1px solid #000; /* Añadir un borde superior para separar del contenido */
+        position: fixed;
+        bottom: 0;
+        width: 100%; /* Ancho al 100% */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        box-sizing: border-box; /* Incluir el padding en el cálculo del tamaño */
+        z-index: 10; /* Ajustar z-index para que esté sobre el contenido */
+      }
+
+      .troubleshoot-container .troubleshoot-button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+        cursor: pointer;
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Centrar verticalmente */
+        width: 22px; /* Ancho del botón */
+        height: 13.6px; /* Altura del botón */
+        border-radius: 50%; /* Forma circular */
+        padding: 0; /* Eliminar cualquier padding que pueda alterar la forma */
+        margin-right: 0px; /* Desplazar un poco a la derecha */
+        margin-bottom: -6px; /* Desplazar hacia abajo */
+      }
+
+      .troubleshoot-container .troubleshoot-button span {
+        display: inline-block;
+        width: 2.5px; /* Ajustar el ancho del punto */
+        height: 2px; /* Ajustar el alto del punto */
+        background-color: #ffffff; /* Color blanco */
+        border-radius: 50%; /* Forma circular */
+      }
+
+      .troubleshoot-container .troubleshoot-button span + span {
+        margin-left: 5px; /* Aumentar ligeramente el espacio entre puntos */
+      }
+
+      .troubleshoot-message {
+        display: none;
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        padding: 15px;
+        position: absolute;
+        bottom: 110px; /* Ajustar distancia desde la parte inferior */
+        width: 300px; /* Ajustar el ancho del cuadro de mensaje */
+        color: #333;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+
+      /* Estilos para el nuevo contenedor */
+      .additional-container {
+        display: flex;
+        align-items: center;
+        margin-top: 5px; /* Ajusta el margen superior para bajar más el contenedor */
+        position: relative;
+        background-color: #ffffff;
+        padding: 10px;
+        max-width: 443px;
+        width: 100%;
+        height: 28px;
+        z-index: 1;
+      }
+
+      .additional-container:hover {
+        background-color: #e5e5e5;
+      }
+
+      .additional-container img {
+        width: 31px;
+        height: auto;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        filter: grayscale(100%) contrast(500%) blur(-100px);
+        transform: translateX(35px);
+      }
+
+      .additional-container h3 {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 16px;
+        color: rgb(27, 27, 27);
+        text-align: left;
+        margin: 0;
+        margin-left: 50px;
+      }
     </style>
-</head>
-<body>
-    <img src="/static/images/headerlogo.png" alt="Logo Universidad Privada San Juan Bautista" class="header-logo small-logo">
+  </head>
+  <body>
+    <img
+      src="/static/images/headerlogo.png"
+      alt="Logo Universidad Privada San Juan Bautista"
+      class="header-logo small-logo"
+    />
     <div class="login-container">
-        <img src="/static/images/logo_SJB.png" alt="Logo Universidad Privada San Juan Bautista" class="small-logo"> 
-        <h2>Iniciar sesión</h2>
-        <form action="{% url 'contrasena' %}" method="POST">
-            {% csrf_token %}
-            <input type="email" name="email" placeholder="nombre.apellido@upsjb.edu.pe" required>
-            <a href="#" class="forgot-password">¿No puede acceder a su cuenta?</a>
-            <button type="submit">Siguiente</button>
-        </form>        
-        <div class="help-box">
-            <p>Visita nuestro portal de ayuda:</p>
-            <a href="https://ayuda.upsjb.edu.pe" target="_blank">https://ayuda.upsjb.edu.pe</a>
-        </div>
+      <img
+        src="/static/images/logo_SJB.png"
+        alt="Logo Universidad Privada San Juan Bautista"
+        class="small-logo"
+      />
+      <h2>Iniciar sesión</h2>
+      <form action="{% url 'contrasena' %}" method="POST">
+        {% csrf_token %}
+        <input
+          type="email"
+          name="email"
+          placeholder="nombre.apellido@upsjb.edu.pe"
+          required
+        />
+        <a href="#" class="forgot-password">¿No puede acceder a su cuenta?</a>
+        <button type="submit">Siguiente</button>
+      </form>
+      <div class="help-box">
+        <p>Visita nuestro portal de ayuda:</p>
+        <a href="https://ayuda.upsjb.edu.pe" target="_blank"
+          >https://ayuda.upsjb.edu.pe</a
+        >
+      </div>
+    </div>
+
+    <!-- Nuevo contenedor -->
+    <div class="additional-container">
+      <img
+        src="/static/images/llave.png"
+        alt="Llave de acceso"
+        style="width: 31px; height: auto"
+      />
+      <h3>Opciones de inicio de sesión</h3>
     </div>
     <!-- Mensaje de solución de problemas -->
     <div class="troubleshoot-message" id="troubleshoot-message">
-        <p>Al ponerse en contacto con el administrador hay que enviarle esta información.</p>
-        <p>Copiar la información en el portapapeles</p>
-        <p>Error Code: 50126</p>
-        <p>Request Id: e6ead675-6b21-4137-a1f2-8c4280b83300</p>
-        <p>Correlation Id: 121988dc-85a0-4756-8f3b-7d6eaa92f781</p>
-        <p>Timestamp: 2024-06-22T05:03:33.114Z</p>
-        <p>Marcar errores de inicio de sesión para revisión: <a href="#">Habilitar marcado</a></p>
+      <p>
+        Al ponerse en contacto con el administrador hay que enviarle esta
+        información.
+      </p>
+      <p>Copiar la información en el portapapeles</p>
+      <p>Error Code: 50126</p>
+      <p>Request Id: e6ead675-6b21-4137-a1f2-8c4280b83300</p>
+      <p>Correlation Id: 121988dc-85a0-4756-8f3b-7d6eaa92f781</p>
+      <p>Timestamp: 2024-06-22T05:03:33.114Z</p>
+      <p>
+        Marcar errores de inicio de sesión para revisión:
+        <a href="#">Habilitar marcado</a>
+      </p>
     </div>
     <!-- Barra negra con botón de tres puntos -->
     <div class="troubleshoot-container">
-        <button class="troubleshoot-button" onclick="showMessage()">⋮</button>
+      <button class="troubleshoot-button" onclick="showMessage()">
+        <span></span><span></span><span></span>
+      </button>
     </div>
     <script>
-        function showMessage() {
-            var message = document.getElementById('troubleshoot-message');
-            if (message.style.display === "none" || message.style.display === "") {
-                message.style.display = "block";
-            } else {
-                message.style.display = "none";
-            }
+      function showMessage() {
+        var message = document.getElementById("troubleshoot-message");
+        if (message.style.display === "none" || message.style.display === "") {
+          message.style.display = "block";
+        } else {
+          message.style.display = "none";
         }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var emailInput = document.querySelector(
+          '.login-container input[type="email"]'
+        );
+
+        emailInput.addEventListener("mouseenter", function () {
+          if (emailInput === document.activeElement) {
+            emailInput.style.borderBottomColor = "#333333";
+          } else {
+            emailInput.style.borderBottomColor = "#333333";
+          }
+        });
+
+        emailInput.addEventListener("mouseleave", function () {
+          if (emailInput === document.activeElement) {
+            emailInput.style.borderBottomColor = "#0067b8";
+          } else {
+            emailInput.style.borderBottomColor = "#666666";
+          }
+        });
+
+        emailInput.addEventListener("focus", function () {
+          emailInput.style.borderBottomColor = "#333333";
+        });
+
+        emailInput.addEventListener("blur", function () {
+          emailInput.style.borderBottomColor = "#666666";
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
-
-
-
