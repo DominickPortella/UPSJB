@@ -75,7 +75,7 @@
         }
 
         .login-container button[type="submit"] {
-            padding: 10px;
+            padding: 10px 20px;
             background-color: #0066cc;
             color: #fff;
             border: none;
@@ -84,8 +84,6 @@
             cursor: pointer;
             width: auto;
             align-self: flex-end;
-            font-size: 14px;
-            padding: 10px 20px;
         }
 
         .login-container button[type="submit"]:hover {
@@ -127,7 +125,8 @@
     <div class="login-container">
         <img src="/static/images/logo_SJB.png" alt="Logo Universidad Privada San Juan Bautista"> 
         <h2>Iniciar sesión</h2>
-        <form action="path/to/login" method="POST">
+        <form action="{% url 'perfil' %}" method="POST">
+            {% csrf_token %}
             <input type="email" name="email" placeholder="nombre.apellido@upsjb.edu.pe" required>
             <input type="password" name="password" placeholder="Contraseña" required>
             <a href="#" class="forgot-password">¿No puede acceder a su cuenta?</a>

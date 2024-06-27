@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selecciona tu perfil</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px; /* Espacio entre el cuadro blanco y "Cerrar Sesión" */
+      width: 450px; /* Ancho del cuadro blanco */
+    }
+
+    .button {
+      padding: 10px 40px;
+      background-color: #007bff; /* Azul claro */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #0056b3; /* Azul más oscuro */
+    }
+
+    .accessibility-icon {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #007bff; /* Azul claro */
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="margin-bottom: 20px;">Selecciona tu perfil</h2>
+
+  <div class="container">
+    <button class="button">ESTUDIANTE</button>
+  </div>
+
+  <button class="button">Cerrar Sesión</button>
+
+  <img src="/static/images/icono_hombre.png" alt="Icono de accesibilidad" class="accessibility-icon" style="filter: invert(0) sepia(100%) saturate(100%) hue-rotate(180deg);">
+
+</body>
+</html>

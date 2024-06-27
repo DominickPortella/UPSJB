@@ -8,3 +8,6 @@ def login_view(request):
 
 def contrasena_view(request):
     return render(request, 'contrasena.html')
+
+def perfil_view(request):
+    return render(request, 'ingreso.html', {})
