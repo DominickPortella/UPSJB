@@ -1,0 +1,304 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+.outer-container {
+  background-color: #fff;
+  max-width: 1275px;
+  margin: 2em auto;
+  padding: 1em;
+  border-radius: 65px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 6em);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+}
+
+.container {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 30px;
+  box-shadow: none;
+  text-align: center;
+  overflow: hidden;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.banner {
+  background-color: #ff0a41;
+  color: #fff;
+  text-align: center;
+  padding: 0.3em 0.75em;
+  border-radius: 80px 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.banner h1 {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0;
+}
+
+header {
+  background-color: #fff;
+  color: #004080;
+  padding: 1em 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2em;
+  margin-bottom: 10em;
+}
+
+.logo {
+  height: 61px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: -19em;
+}
+
+.login-section {
+  margin: 2em 0;
+  flex: 1;
+}
+
+.login-button,
+.user-button {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.9em;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 1em;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+}
+
+.login-button {
+  background-color: #0dcaf0;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  padding: 0.6em 1em;
+  max-width: 30x;
+  border-radius: 3.5px;
+  font-size: 1em;
+}
+
+.login-button:hover {
+  background-color: #31d2f2;
+}
+
+.login-button img {
+  height: 23px;
+  margin-right: 0.8em;
+  vertical-align: middle;
+}
+
+.login-button:hover img {
+  filter: none;
+}
+
+.user-button {
+  background-color: #ff0a41;
+  font-size: 0.85em;
+  padding: 0.6em 1.35em;
+  width: auto;
+}
+
+.user-button:hover {
+  background-color: #da0938;
+}
+
+.social-links {
+  margin: 3em 0 5em 0;
+}
+
+.social-links h2 {
+  font-size: 0.9em;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 60px;
+  height: 48px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: -0.5em;
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(1.2);
+  transform: scale(0.8);
+}
+
+.social-icon:hover {
+  background-color: #ff0a41;
+}
+
+.social-icon:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.social-icon.twitter img {
+  width: 30px;
+  height: 30px;
+}
+
+.forgot-password {
+  color: #53565a;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.forgot-password:hover,
+.forgot-password:active {
+  color: #f20c49;
+}
+
+.login-section h1 {
+  color: #53565a;
+  font-size: 1.8em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.footer {
+  background-color: #f7f7f7;
+  color: #333;
+  text-align: center;
+  padding: 0.5em;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  padding: 1em 0 0.2em 0;
+  font-size: 1em;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 300;
+}
+
+.footer-links a:hover {
+  color: #ff0a41;
+}
+
+/* Estilos para el carrusel */
+.carousel-container {
+  width: 52%;
+  height: 80%;
+  overflow: hidden;
+  margin-top: -0em;
+  margin-bottom: -0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel img {
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
+  object-fit: contain;
+}
+
+.carousel img.active {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.1em;
+  position: relative;
+  top: -10px;
+}
+
+.carousel-btn {
+  width: 25px;
+  height: 2.7px;
+  background-color: rgba(255, 0, 0, 0.3);
+  border: none;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn.active {
+  background-color: #ff0a41;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(
+    255,
+    0,
+    0,
+    0.5
+  );
+}
+
+.carousel img {
+  max-width: calc(100% + 20px);
+  max-height: 100%;
+  display: none;
+  object-fit: cover;
+  border-top-right-radius: 42px;
+  border-bottom-right-radius: 42px;
+}
+
+.carousel img.active {
+  display: block;
+  max-height: 100%;
+  max-width: calc(100% + 20px);
+}

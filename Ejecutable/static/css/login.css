@@ -1,76 +1,435 @@
+/* ESTILOS DEL BOTÓN DE SOLUCIÓN DE PROBLEMAS */
+@font-face {
+  font-family: "Segoe UI Webfont";
+  src: url("/static/fonts/SegoeUI.woff2") format("woff2"),
+    url("/static/fonts/SegoeUI.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-    background: url('{% static "images/background.jpg" %}') no-repeat center center fixed;
-    background-size: cover;
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/static/images/illustration.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.56);
+  z-index: -1;
+}
+
+.header-logo {
+  position: absolute;
+  top: 13px;
+  left: 23.6px;
+  right: 47px;
+  width: 115px;
+  z-index: 1;
 }
 
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background-color: #fff;
+  padding: 2em;
+  padding-top: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 376px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  min-height: 300px;
+  margin-bottom: 7.5px;
+  padding-bottom: 0;
 }
 
-.login-box {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 300px;
-    width: 100%;
+.login-container img {
+  width: 168px;
+  display: block;
+  margin-left: 24px;
+  margin-top: 29.2px;
 }
 
-.logo {
-    max-width: 100px;
-    margin-bottom: 20px;
+.login-container h2 {
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: rgb(27, 27, 27);
+  text-align: left;
+  margin-left: 12px;
+  margin-top: -4px;
 }
 
-h2 {
-    margin-bottom: 20px;
+.login-container form {
+  display: flex;
+  flex-direction: column;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.login-container input[type="email"] {
+  border: none;
+  border-bottom: 1px solid #666666;
+  margin-bottom: 15px;
+  margin-top: -6px;
+  padding: 7.5px 0;
+  font-size: 16px;
+  outline: none;
+  margin-left: 14px;
+  width: calc(95.2% - 10px);
 }
 
-input[type="email"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
+.login-container input[type="email"]:hover {
+  border-color: #333333;
 }
 
-button {
-    padding: 10px;
-    background-color: #0078d4;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+.login-container input[type="email"]:focus {
+  border-color: #0067b8;
 }
 
-button:hover {
-    background-color: #005a9e;
+::placeholder {
+  font-family: "Segoe UI Webfont", Arial, sans-serif;
+  color: #666666;
+  font-size: 15px;
 }
 
-a {
-    color: #0078d4;
-    text-decoration: none;
-    font-size: 0.9em;
+/* ESTILOS DEL CONTENEDOR DEL BOTÓN "SIGUIENTE" */
+.next-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 17px;
+  position: relative;
+  left: -12px;
 }
 
-a:hover {
-    text-decoration: underline;
+.next-button-container button[type="submit"] {
+  padding: 6.9px 25px;
+  background-color: #0067b8;
+  color: #fff;
+  border: none;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  width: auto;
+  transition: none;
+}
+
+.next-button-container button[type="submit"]:hover {
+  background-color: #005da6;
+}
+
+/* ESTILOS ACTUALIZADOS PARA EL CONTENEDOR DE AYUDA */
+.help-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 49.8px 0;
+  background-color: #f2f2f2;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 44px;
+}
+
+/* AJUSTAR TEXTO "¿ NO PUEDE ACCEDER A SU CUENTA ?" */
+.forgot-password {
+  font-family: "Segoe UI Webfont", Arial, sans-serif;
+  font-size: 13px;
+  color: rgb(0, 103, 184);
+  margin-left: 14px;
+  margin-top: 1.8px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  color: #666666;
+  text-decoration: underline;
+}
+
+.troubleshoot-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  border-top: 1px solid #000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.troubleshoot-container .troubleshoot-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 13.6px;
+  border-radius: 50%;
+  padding: 0;
+  margin-right: 0px;
+  margin-bottom: -6px;
+}
+
+.troubleshoot-container .troubleshoot-button span {
+  display: inline-block;
+  width: 2.5px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.troubleshoot-container .troubleshoot-button span + span {
+  margin-left: 5px;
+}
+
+/* ESTILOS PARA EL MENSAJE DE SOLUCIÓN DE PROBLEMA */
+.troubleshoot-message {
+  display: none;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: -100px;
+  width: 440px;
+  color: #333;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 20px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.troubleshoot-message h4 {
+  font-family: "Segoe UI Webfont", Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(27, 27, 27);
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0 0 10px;
+}
+
+.troubleshoot-message p:first-of-type {
+  font-family: "Segoe UI Webfont", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(27, 27, 27);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.troubleshoot-message p {
+  margin: 0px 0;
+}
+
+.troubleshoot-message a.copy-info {
+  font-family: "Segoe UI Webfont", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 20px;
+  color: #0067b8;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.troubleshoot-message a.copy-info:hover {
+  text-decoration: underline;
+}
+
+.troubleshoot-message .check-icon {
+  background-image: url("/static/images/check.png");
+  background-size: contain;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 3px;
+}
+#copied-text {
+  font-family: "Segoe UI Webfont", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 20px;
+  color: #107c10;
+  display: inline;
+  cursor: default;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.error-code-label {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(27, 27, 27);
+}
+
+.error-code-value {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(27, 27, 27);
+}
+
+.error-code-label,
+.request-id-label,
+.correlation-id-label,
+.timestamp-label {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(27, 27, 27);
+}
+
+.error-code-value,
+.request-id-value,
+.correlation-id-value,
+.timestamp-value {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(27, 27, 27);
+}
+
+.mark-errors-label {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(27, 27, 27);
+}
+
+.enable-marking {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(0, 103, 184);
+  text-decoration: none;
+  transition: color 0.3s;
+  padding-left: 10px;
+}
+
+.enable-marking:hover {
+  text-decoration: underline;
+}
+
+.enable-marking:active {
+  color: #666666;
+  text-decoration: underline;
+}
+
+.additional-info-text {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(27, 27, 27);
+}
+
+/* MOVER LOS DOS CONTENEDORES HACIA ARRIBA */
+.login-container,
+.additional-container {
+  transform: translateY(-17.7px);
+}
+
+/* ESTILO PARA EL CONTENEDOR CON LA LLAVE */
+.additional-container {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+  background-color: #ffffff;
+  padding: 10px;
+  max-width: 420px;
+  width: 100%;
+  height: 28px;
+  z-index: 1;
+  top: 8px;
+}
+
+.additional-container:hover {
+  background-color: #e5e5e5;
+}
+
+.additional-container img {
+  width: 31px;
+  height: auto;
+  transform: translateX(35px);
+}
+
+.additional-container h3 {
+  font-family: "Segoe UI Webfont", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  color: rgb(27, 27, 27);
+  text-align: left;
+  margin: 0;
+  margin-left: 50px;
+}
+
+/* NUEVO ESTILO PARA EL TEXTO DE AYUDA */
+.help-text {
+  position: absolute;
+  bottom: 56.5px;
+  left: 44px;
+  font-family: "Segoe UI Webfont", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgb(27, 27, 27);
 }
 
 .help-link {
-    margin-top: 10px;
-}
-
-.options-link {
-    margin-top: 20px;
-    display: block;
+  position: absolute;
+  bottom: 36px;
+  left: 44px;
+  font-family: "Segoe UI Webfont", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(27, 27, 27);
+  line-height: 20px;
 }

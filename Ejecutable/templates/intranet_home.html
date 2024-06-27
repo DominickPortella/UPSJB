@@ -1,430 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intranet - San Juan en Línea</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      background-color: #f0f0f0; /* Fondo gris claro */
-    }
-
-    .outer-container {
-      background-color: #fff;
-      max-width: 1275px; /* Ancho máximo */
-      margin: 2em auto; /* Margen en la parte superior e inferior y centrado horizontalmente */
-      padding: 1em;
-      border-radius: 65px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      min-height: calc(100vh - 6em); /* Aumenta el espacio vertical */
-      display: flex;
-      justify-content: space-between; /* Espacio entre el carrusel y el .container */
-      align-items: stretch; /* Alinea el contenido hacia arriba */
-      position: relative;
-    }
-
-    .container {
-      background-color: #fff;
-      padding: 1em;
-      border-radius: 30px;
-      box-shadow: none; /* Elimina cualquier sombra */
-      text-align: center;
-      overflow: hidden;
-      width: 50%; /* Ancho del .container ajustado al 50% */
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      border-top-right-radius: 0; /* Ajuste aquí */
-      border-bottom-right-radius: 0; /* Ajuste aquí */
-    }
-    
-
-    .banner {
-      background-color: #ff0a41;
-      color: #fff;
-      text-align: center;
-      padding: 0.3em 0.75em; /* Espaciado interno reducido */
-      border-radius: 80px 0 0 0;
-      position: absolute; /* Añadido */
-      top: 0; /* Añadido */
-      left: 0; /* Añadido */
-      right: 0; /* Añadido */
-    }
-
-    .banner h1 {
-      font-size: 1.2em;
-      font-weight: 400;
-      margin: 0;
-    }
-
-    header {
-      background-color: #fff;
-      color: #004080;
-      padding: 1em 0;
-    }
-
-    .header-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 2em;
-      margin-bottom: 10em; /* Ajusta el margen inferior según sea necesario */
-    }
-
-    .logo {
-      height: 61px; /* Aumenta la altura del logo */
-      width: auto; /* Ajusta automáticamente el ancho para mantener la proporción */
-      object-fit: contain;
-      margin-bottom: -19em; /* Ajusta este valor para mover el logo hacia abajo */
-    }
-
-    .login-section {
-      margin: 2em 0;
-      flex: 1;
-    }
-
-    .login-button,
-    .user-button {
-      display: inline-block;
-      padding: 0.5em 1.5em;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      font-size: 0.9em;
-      cursor: pointer;
-      text-decoration: none;
-      margin-bottom: 1em;
-      transition: background-color 0.3s, color 0.3s;
-      text-align: center;
-    }
-
-    .login-button {
-      background-color: #0dcaf0;
-      letter-spacing: 0.03em;
-      font-weight: 600;
-      padding: 0.6em 1em; /* Aumentar el padding vertical */
-      max-width: 30x; /* Reducir el ancho máximo */
-      border-radius: 3.5px; /* Redondeado reducido */
-      font-size: 1em; /* Aumentar el tamaño de la fuente aquí */
-    }
-
-    .login-button:hover {
-      background-color: #31d2f2;
-    }
-
-    .login-button img {
-      height: 23px;
-      margin-right: 0.8em; /* Reducir el margen derecho */
-      vertical-align: middle;
-    }
-
-    .login-button:hover img {
-      filter: none; /* Elimina cualquier filtro al hacer hover */
-    }
-
-    .user-button {
-      background-color: #ff0a41;
-      font-size: 0.85em;
-      padding: 0.6em 1.35em;
-      width: auto;
-    }
-
-    .user-button:hover {
-      background-color: #da0938;
-    }
-
-    .social-links {
-      margin: 3em 0 5em 0; /* Ajustado para mover los íconos más abajo */
-    }
-
-    .social-links h2 {
-      font-size: 0.9em; /* Tamaño de fuente ajustado */
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1em;
-      flex-wrap: wrap;
-    }
-
-    .social-icon {
-      width: 60px;
-      height: 48px;
-      background-color: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 5px;
-      margin: -0.5em;
-    }
-
-    .social-icon img {
-      width: 20px;
-      height: 20px;
-      filter: brightness(1.2);
-      transform: scale(0.8);
-    }
-
-    .social-icon:hover {
-      background-color: #ff0a41;
-    }
-
-    .social-icon:hover img {
-      filter: brightness(0) invert(1);
-    }
-
-    .social-icon.twitter img {
-      width: 30px;
-      height: 30px;
-    }
-
-    .forgot-password {
-      color: #53565a;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .forgot-password:hover,
-    .forgot-password:active {
-      color: #f20c49;
-    }
-
-    .login-section h1 {
-      color: #53565a;
-      font-size: 1.8em; /* Reducido el tamaño de fuente */
-      font-weight: 600;
-      letter-spacing: 0.05em; /* Añadir esta línea para expandir las letras */
-    }
-
-    .footer {
-      background-color: #f7f7f7; /* Color de fondo del pie de página */
-      color: #333; /* Color de texto para los enlaces */
-      text-align: center;
-      padding: 0.5em; /* Reducida la altura del padding */
-      border-radius: 0 0 10px 10px;
-      position: absolute; /* Añadido */
-      bottom: 0; /* Añadido */
-      left: 0; /* Añadido */
-      width: 100%; /* Añadido */
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 4em; /* Aumentado el gap para mayor separación */
-      padding: 1em 0 0.2em 0; /* Bajado un poquito los enlaces */
-      font-size: 1em;
-    }
-
-    .footer-links a {
-      color: #333;
-      text-decoration: none;
-      transition: color 0.3s;
-      font-weight: 300; /* Adelgazado el peso de la fuente */
-    }
-
-    .footer-links a:hover {
-      color: #ff0a41;
-    }
-
-    /* Estilos para el carrusel */
-    .carousel-container {
-      width: 52%; /* Aumenta el ancho ligeramente */
-      height: 80%; /* Ajusta la altura del carrusel */
-      overflow: hidden;
-      margin-top: -0.em; /* Aumenta el margen superior */
-      margin-bottom: -0.5em; /* Aumenta el margen inferior */
-      display: flex; /* Permitir el crecimiento vertical */
-      justify-content: center; /* Centrar horizontalmente */
-      align-items: center; /* Alinear el carrusel verticalmente */
-    }
-    
-    .carousel {
-      display: flex;
-      flex-direction: column; /* Ajuste para alinear verticalmente */
-      align-items: center; /* Ajuste para alinear verticalmente */
-      height: 100%; /* Ocupa todo el espacio disponible */
-    }
-    
-    .carousel img {
-      max-width: 100%;
-      max-height: 100%;
-      display: none; /* Ocultamos todas las imágenes inicialmente */
-      object-fit: contain; /* Ajuste para mantener la relación de aspecto */
-    }
-
-    .carousel img.active {
-      display: block; /* Mostrar solo la imagen activa */
-      max-height: 100%; /* Ajuste de altura máxima */
-      max-width: 100%; /* Asegurar que la imagen se ajuste horizontalmente */
-    }
-  </style>
-
-  <style>
-    .carousel-indicators {
-      display: flex;
-    justify-content: center;
-    margin-top: 0.1em; /* Ajuste para mover los botones hacia arriba */
-    position: relative; /* Posición relativa para los botones */
-    top: -10px; /* Ajuste fino de la posición */
-    }
-  
-    .carousel-btn {
-      width: 25px; /* Ancho más largo */
-      height: 2.7px; /* Altura delgada */
-      background-color: rgba(255, 0, 0, 0.3); /* Rojo tenue con transparencia */
-      border: none; /* Sin borde */
-      margin: 0 4px; /* Espacio entre botones */
-      cursor: pointer;
-      transition: background-color 0.3s; /* Transición para el color de fondo */
-    }
-  
-    .carousel-btn.active {
-      background-color: #ff0a41; /* Fondo rojo para el botón activo */
-      transition: background-color 0.3s; /* Transición para el color de fondo */
-    }
-  
-    .carousel-btn:hover {
-      background-color: rgba(255, 0, 0, 0.5); /* Rojo tenue más claro al pasar el cursor */
-    }
-
-    .carousel img {
-      max-width: calc(100% + 20px); /* Aumentar el ancho un poco más */
-      max-height: 100%;
-      display: none; /* Ocultamos todas las imágenes inicialmente */
-      object-fit: cover; /* Ajustar la imagen cubriendo el contenedor */
-      border-top-right-radius: 42px;
-      border-bottom-right-radius: 42px;
-    }
-
-    .carousel img.active {
-      display: block; /* Mostrar solo la imagen activa */
-      max-height: 100%; /* Ajustar la altura máxima */
-      max-width: calc(100% + 20px); /* Aumentar el ancho un poco más */
-    }
-  </style>
-
-</head>
-<body>
-  <div class="outer-container">
-    <section class="container">
-      <div class="banner">
-        <h1>Intranet - San Juan en Línea</h1>
-      </div>
-
-      <header>
-        <div class="header-container">
-          <img
-            src="/static/images/logo_SJB.png"
-            alt="Logo UPSJB"
-            class="logo"
-          />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intranet - San Juan en Línea</title>
+    <link rel="stylesheet" href="/static/css/inicio.css" />
+  </head>
+  <body>
+    <div class="outer-container">
+      <section class="container">
+        <div class="banner">
+          <h1>Intranet - San Juan en Línea</h1>
         </div>
-      </header>
 
-      <main>
-        <section class="login-section">
-          <h1>Ingresa a tu cuenta</h1>
-          <a href="/login" class="login-button">
-            <img src="/static/images/o365.png" alt="Office 365 Logo" />
-            Inicia sesión con o365
-          </a>
-          <p><a href="#" class="forgot-password">Olvidé mi contraseña</a></p>
-          <a href="#" class="user-button">Conoce tu usuario</a>
-        </section>
-        <section class="social-links">
-          <h2 style="color: #53565a">Síguenos en:</h2>
-          <div class="social-icons">
+        <header>
+          <div class="header-container">
+            <img
+              src="/static/images/logo_SJB.png"
+              alt="Logo UPSJB"
+              class="logo"
+            />
+          </div>
+        </header>
+
+        <main>
+          <section class="login-section">
+            <h1>Ingresa a tu cuenta</h1>
+            <a href="/login" class="login-button">
+              <img src="/static/images/o365.png" alt="Office 365 Logo" />
+              Inicia sesión con o365
+            </a>
+            <p><a href="#" class="forgot-password">Olvidé mi contraseña</a></p>
+            <a href="#" class="user-button">Conoce tu usuario</a>
+          </section>
+          <section class="social-links">
+            <h2 style="color: #53565a">Síguenos en:</h2>
+            <div class="social-icons">
               <div class="social-icon">
-                  <a href="https://www.instagram.com/upsjb/" target="_blank">
-                      <img src="/static/images/ico_ig.png" alt="Instagram"/>
-                  </a>
+                <a href="https://www.instagram.com/upsjb/" target="_blank">
+                  <img src="/static/images/ico_ig.png" alt="Instagram" />
+                </a>
               </div>
               <div class="social-icon">
-                  <a href="https://www.facebook.com/UPSJBSAC" target="_blank">
-                      <img src="/static/images/ico_fb.png" alt="Facebook"/>
-                  </a>
+                <a href="https://www.facebook.com/UPSJBSAC" target="_blank">
+                  <img src="/static/images/ico_fb.png" alt="Facebook" />
+                </a>
               </div>
               <div class="social-icon">
-                  <a href="https://pe.linkedin.com/school/universidad-privada-san-juan-bautista/" target="_blank">
-                      <img src="/static/images/ico_in.png" alt="LinkedIn"/>
-                  </a>
+                <a
+                  href="https://pe.linkedin.com/school/universidad-privada-san-juan-bautista/"
+                  target="_blank"
+                >
+                  <img src="/static/images/ico_in.png" alt="LinkedIn" />
+                </a>
               </div>
               <div class="social-icon twitter">
-                  <a href="https://twitter.com/UPSJB" target="_blank">
-                      <img src="/static/images/ico_twitter.png" alt="Twitter"/>
-                  </a>
+                <a href="https://twitter.com/UPSJB" target="_blank">
+                  <img src="/static/images/ico_twitter.png" alt="Twitter" />
+                </a>
               </div>
               <div class="social-icon">
-                  <a href="https://www.tiktok.com/@aprendeconlasanjuan" target="_blank">
-                      <img src="/static/images/ico_tiktok.png" alt="TikTok"/>
-                  </a>
+                <a
+                  href="https://www.tiktok.com/@aprendeconlasanjuan"
+                  target="_blank"
+                >
+                  <img src="/static/images/ico_tiktok.png" alt="TikTok" />
+                </a>
               </div>
+            </div>
+          </section>
+        </main>
+        <footer class="footer">
+          <div class="footer-links">
+            <a href="#">Transparencia</a>
+            <a href="#">Campus UPSJB</a>
+            <a href="#">Ayuda</a>
           </div>
+        </footer>
       </section>
-      
-      </main>
-      <footer class="footer">
-        <div class="footer-links">
-          <a href="#">Transparencia</a>
-          <a href="#">Campus UPSJB</a>
-          <a href="#">Ayuda</a>
+
+      <section class="carousel-container">
+        <div class="carousel">
+          <img
+            src="/static/images/ganadores.png"
+            alt="Ganadores"
+            class="active"
+          />
+          <img src="/static/images/buen_pagador.png" alt="Buen Pagador" />
+          <img src="/static/images/promo_amigos.png" alt="Promoción Amigos" />
+          <img src="/static/images/yape.png" alt="Yape" />
+          <img
+            src="/static/images/centro_idiomas.jpeg"
+            alt="Centro de Idiomas"
+          />
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              class="carousel-btn active"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              class="carousel-btn"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              class="carousel-btn"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              class="carousel-btn"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              class="carousel-btn"
+              aria-label="Slide 5"
+            ></button>
+          </div>
         </div>
-      </footer>
-    </section>
-
-    <section class="carousel-container">
-  <div class="carousel">
-    <img src="/static/images/ganadores.png" alt="Ganadores" class="active" />
-    <img src="/static/images/buen_pagador.png" alt="Buen Pagador" />
-    <img src="/static/images/promo_amigos.png" alt="Promoción Amigos" />
-    <img src="/static/images/yape.png" alt="Yape" />
-    <img src="/static/images/centro_idiomas.jpeg" alt="Centro de Idiomas" />
-    <div class="carousel-indicators">
-      <button type="button" class="carousel-btn active" aria-label="Slide 1"></button>
-      <button type="button" class="carousel-btn" aria-label="Slide 2"></button>
-      <button type="button" class="carousel-btn" aria-label="Slide 3"></button>
-      <button type="button" class="carousel-btn" aria-label="Slide 4"></button>
-      <button type="button" class="carousel-btn" aria-label="Slide 5"></button>
+      </section>
     </div>
-  </div>
-</section>
-  </div>
 
-  <script>
-    const carousel = document.querySelector(".carousel");
-    const slides = carousel.querySelectorAll("img");
-    const buttons = carousel.querySelectorAll(".carousel-btn");
-    let slideIndex = 0;
-  
-    buttons.forEach((button, index) => {
-      button.addEventListener("click", () => {
+    <script>
+      const carousel = document.querySelector(".carousel");
+      const slides = carousel.querySelectorAll("img");
+      const buttons = carousel.querySelectorAll(".carousel-btn");
+      let slideIndex = 0;
+
+      buttons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          slides.forEach((slide) => slide.classList.remove("active"));
+          buttons.forEach((btn) => btn.classList.remove("active"));
+          slides[index].classList.add("active");
+          button.classList.add("active");
+          slideIndex = index;
+        });
+      });
+
+      function moveSlides() {
         slides.forEach((slide) => slide.classList.remove("active"));
         buttons.forEach((btn) => btn.classList.remove("active"));
-        slides[index].classList.add("active");
-        button.classList.add("active");
-        slideIndex = index;
-      });
-    });
-  
-    function moveSlides() {
-      slides.forEach((slide) => slide.classList.remove("active"));
-      buttons.forEach((btn) => btn.classList.remove("active"));
-      slides[slideIndex].classList.add("active");
-      buttons[slideIndex].classList.add("active");
-      slideIndex++;
-      if (slideIndex >= slides.length) {
-        slideIndex = 0;
+        slides[slideIndex].classList.add("active");
+        buttons[slideIndex].classList.add("active");
+        slideIndex++;
+        if (slideIndex >= slides.length) {
+          slideIndex = 0;
+        }
       }
-    }
-  
-    setInterval(moveSlides, 5000); // Cambia la imagen cada 5 segundos
-  </script>
-</body>
+
+      setInterval(moveSlides, 5000);
+    </script>
+  </body>
 </html>
