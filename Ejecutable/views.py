@@ -6,8 +6,5 @@ def intranet_home(request):
 def login_view(request):
     return render(request, 'login.html')
 
-def contrasena_view(request):
-    return render(request, 'contrasena.html')
-
 def perfil_view(request):
     return render(request, 'ingreso.html', {})
