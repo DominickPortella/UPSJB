@@ -20,31 +20,47 @@
           class="header-logo"
         />
       </div>
-      <h2>Iniciar sesión</h2>
-      <form action="{% url 'contrasena' %}" method="POST">
-        {% csrf_token %}
-        <input
-          type="email"
-          name="email"
-          placeholder="nombre.apellido@upsjb.edu.pe"
-          required
-        />
-        <a href="#" class="forgot-password">¿No puede acceder a su cuenta?</a>
-        <!-- Contenedor del botón Siguiente -->
-        <div class="next-button-container">
-          <button type="submit">Siguiente</button>
-        </div>
-      </form>
-      <!-- Texto adicional dentro del .help-box -->
+      <div class="slide-container">
+        <h2>Iniciar sesión</h2>
+        <form action="{% url 'contrasena' %}" method="POST">
+          {% csrf_token %}
+          <input
+            type="email"
+            name="email"
+            placeholder="nombre.apellido@upsjb.edu.pe"
+            required
+            id="email-input"
+          />
+          <a href="#" class="forgot-password">¿No puede acceder a su cuenta?</a>
+          <div class="next-button-container">
+            <button type="submit" id="next-button">Siguiente</button>
+          </div>
+        </form>
+      </div>
+      <div class="password-container">
+        <button class="circular-button">
+          <img src="/static/images/volver.png" alt="Regresar" />
+        </button>
+        <p><span id="email-display" class="email-display"></span></p>
+        <h2>Escribir contraseña</h2>
+        <input type="password" placeholder="Contraseña" />
+        <a
+          href="https://passwordreset.microsoftonline.com"
+          class="forgot-password"
+          >He olvidado mi contraseña</a
+        >
+        <a href="#" class="use-app">Use una aplicación en su lugar</a>
+        <button id="login-button">Iniciar sesión</button>
+      </div>
       <div class="help-box">
         <div class="help-text">Visita nuestro portal de ayuda:</div>
         <div class="help-link">
-          <a target="_blank">https://ayuda.upsjb.edu.pe</a>
+          <a href="https://ayuda.upsjb.edu.pe" target="_blank"
+            >https://ayuda.upsjb.edu.pe</a
+          >
         </div>
       </div>
     </div>
-
-    <!-- Nuevo contenedor -->
     <div class="additional-container">
       <img
         src="/static/images/seguro.png"
@@ -53,7 +69,6 @@
       />
       <h3>Opciones de inicio de sesión</h3>
     </div>
-    <!-- Mensaje de solución de problemas -->
     <div class="troubleshoot-message" id="troubleshoot-message">
       <h4>Detalles de la solución de problemas</h4>
       <p>
@@ -99,141 +114,11 @@
         >
       </p>
     </div>
-    <!-- Barra negra con botón de tres puntos -->
     <div class="troubleshoot-container">
       <button class="troubleshoot-button" onclick="showMessage()">
         <span></span><span></span><span></span>
       </button>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const enableMarkingLink = document.querySelector(".enable-marking");
-
-        if (enableMarkingLink) {
-          enableMarkingLink.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            if (this.textContent === "Habilitar marcado") {
-              this.textContent = "Deshabilitar marcado";
-            } else {
-              this.textContent = "Habilitar marcado";
-            }
-          });
-        }
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        var copyInfoLink = document.querySelector(".copy-info");
-        var copiedText = document.getElementById("copied-text");
-
-        copyInfoLink.addEventListener("click", function (event) {
-          event.preventDefault(); // Evitar comportamiento predeterminado del enlace
-
-          // Ocultar el texto "Copiado" y el icono de check brevemente para el efecto de parpadeo
-          copiedText.style.opacity = 0; // Cambiar opacidad a 0
-
-          setTimeout(function () {
-            // Mostrar "Copiado" y el icono de check nuevamente después de una breve pausa
-            copiedText.innerHTML = '<span class="check-icon"></span>Copiado';
-            copiedText.style.color = "#107c10"; // Color verde para "Copiado"
-            copiedText.style.display = "inline"; // Asegurar que el texto esté en línea
-            copiedText.style.opacity = 1; // Cambiar opacidad a 1 para mostrar con transición
-          }, 250); // 250ms para el efecto de parpadeo
-        });
-
-        // Mantener "Copiado" visible hasta que la página se actualice
-        window.addEventListener("beforeunload", function () {
-          copiedText.style.display = "none"; // Ocultar "Copiado" antes de la actualización
-        });
-
-        // Evitar que el cursor cambie a la mano sobre el icono de check
-        copiedText.addEventListener("mouseover", function () {
-          this.style.cursor = "default";
-        });
-      });
-
-      function showMessage() {
-        var message = document.getElementById("troubleshoot-message");
-        if (message.style.display === "none" || message.style.display === "") {
-          message.style.display = "block";
-        } else {
-          message.style.display = "none";
-        }
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        var emailInput = document.querySelector(
-          '.login-container input[type="email"]'
-        );
-
-        emailInput.addEventListener("mouseenter", function () {
-          if (emailInput === document.activeElement) {
-            emailInput.style.borderBottomColor = "#333333";
-          } else {
-            emailInput.style.borderBottomColor = "#333333";
-          }
-        });
-
-        emailInput.addEventListener("mouseleave", function () {
-          if (emailInput === document.activeElement) {
-            emailInput.style.borderBottomColor = "#0067b8";
-          } else {
-            emailInput.style.borderBottomColor = "#666666";
-          }
-        });
-
-        emailInput.addEventListener("focus", function () {
-          emailInput.style.borderBottomColor = "#333333";
-        });
-
-        emailInput.addEventListener("blur", function () {
-          emailInput.style.borderBottomColor = "#666666";
-        });
-      });
-
-      function updatePeruTime() {
-        const timestampElement = document.getElementById("timestamp");
-        const peruTimeOffset = -5;
-        const peruDate = new Date(
-          new Date().getTime() + peruTimeOffset * 60 * 60 * 1000
-        );
-        const formattedDate = peruDate.toISOString().split("T")[0];
-        const formattedTime = peruDate
-          .toISOString()
-          .split("T")[1]
-          .split(".")[0];
-        timestampElement.textContent = `${formattedDate}T${formattedTime}Z`;
-      }
-
-      setInterval(updatePeruTime, 1000);
-      window.onload = updatePeruTime;
-
-      function showMessage() {
-        var message = document.getElementById("troubleshoot-message");
-        var loginContainer = document.querySelector(".login-container");
-        var additionalContainer = document.querySelector(
-          ".additional-container"
-        );
-
-        if (message.style.display === "none" || message.style.display === "") {
-          message.style.display = "block";
-          message.style.bottom = "-177.5px"; // Ajustar para mostrar el mensaje más arriba
-
-          // Movimiento hacia arriba de .login-container y .additional-container
-          loginContainer.style.transform = "translateY(-134.4px)";
-          additionalContainer.style.transform = "translateY(-135px)";
-        } else {
-          message.style.bottom = "-900px"; // Ocultar el mensaje bajándolo nuevamente
-
-          // Restaurar la posición original de .login-container y .additional-container
-          loginContainer.style.transform = "translateY(0)";
-          additionalContainer.style.transform = "translateY(0)";
-
-          setTimeout(function () {
-            message.style.display = "none";
-          }, -1); // Esperar a que termine la animación antes de ocultarlo completamente
-        }
-      }
-    </script>
+    <script src="/static/scripts/login.js"></script>
   </body>
 </html>
