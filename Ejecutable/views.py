@@ -8,3 +8,6 @@ def login_view(request):
 
 def perfil_view(request):
     return render(request, 'ingreso.html')
+
+def principal_view(request):
+    return render(request, 'principal.html')

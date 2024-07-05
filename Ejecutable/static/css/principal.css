@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin-right: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+header .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.content {
+    display: flex;
+    flex: 1; /* Asegura que el contenido principal tome el espacio restante */
+}
+
+aside {
+    background-color: #ff3366;
+    padding: 20px;
+    min-width: 200px;
+    color: #fff;
+    flex-shrink: 0; /* Asegura que el aside no se encoja */
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .center-content {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+main h1 {
+    margin-top: 0;
+    font-weight: normal;
+    color: #333;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px; /* Aumenta el espacio entre las tarjetas */
+    justify-items: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado más pronunciado */
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-weight: normal;
+    color: #ff3366;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.card button {
+    background-color: #fff; /* Cambia el color de fondo a blanco */
+    border: 1px solid #ff3366; /* Cambia el borde a rojo delgado */
+    border-radius: 5px;
+    color: #ff3366; /* Cambia el color de texto a rojo */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.card button:hover {
+    background-color: #ff3366; /* Cambia el color de fondo a rojo al pasar el mouse */
+    color: #fff; /* Cambia el color de texto a blanco */
+}
+
+footer {
+    background-color: #fff; /* Cambia el color de fondo a blanco */
+    padding: 5px; /* Ajusta el tamaño del padding para hacer el footer más delgado */
+    text-align: center;
+    color: #333; /* Cambia el color de texto a negro */
+    height: 30px; /* Ajusta la altura del footer */
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra superior si deseas */
+    position: relative;
+}
