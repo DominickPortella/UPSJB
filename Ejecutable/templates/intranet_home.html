@@ -1,140 +1,118 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intranet - San Juan en Línea</title>
-    <link rel="stylesheet" href="/static/css/inicio.css" />
+    <link rel="stylesheet" href="/intranet_home.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="outer-container">
-      <section class="container">
-        <div class="banner">
-          <h1>Intranet - San Juan en Línea</h1>
+    <div class="main-container">
+      <div class="header-banner">Intranet - San Juan en Línea</div>
+
+      <!-- Contenedor del logo y texto de inicio de sesión -->
+      <div class="logo-container">
+        <img src="/logo_SJB.png" alt="Logo San Juan en Línea" />
+        <div class="login-text">Ingresa a tu cuenta</div>
+      </div>
+
+      <!-- Contenedor de imágenes -->
+      <div class="image-container">
+        <img src="/ganadores.png" alt="Ganadores" class="image-reduced" />
+        <img src="/buen_pagador.png" alt="Buen Pagador" class="image-reduced" />
+        <img src="/promo_amigos.png" alt="Promo Amigos" class="image-reduced" />
+        <img src="/yape.png" alt="Yape" class="image-reduced" />
+        <img
+          src="/centro_idiomas.jpeg"
+          alt="Centro de Idiomas"
+          class="image-centro-idiomas"
+        />
+      </div>
+
+      <a href="#" class="forgot-password">Olvidé mi contraseña</a>
+
+      <!-- Controles de imágenes -->
+      <div class="image-controls">
+        <button
+          onclick="changeImage(0)"
+          class="image-button"
+          aria-label="Imagen 1"
+        ></button>
+        <button
+          onclick="changeImage(1)"
+          class="image-button"
+          aria-label="Imagen 2"
+        ></button>
+        <button
+          onclick="changeImage(2)"
+          class="image-button"
+          aria-label="Imagen 3"
+        ></button>
+        <button
+          onclick="changeImage(3)"
+          class="image-button"
+          aria-label="Imagen 4"
+        ></button>
+        <button
+          onclick="changeImage(4)"
+          class="image-button"
+          aria-label="Imagen 5"
+        ></button>
+      </div>
+
+      <!-- Botón Conocer tu usuario -->
+      <a href="#" class="conocer-usuario-button">Conoce tu usuario</a>
+
+      <div class="follow-us-text">Síguenos en:</div>
+
+      <div class="social-icons">
+        <div class="social-icon-container">
+          <a href="https://www.instagram.com">
+            <img src="/ico_ig.png" class="social-icon" alt="Instagram" />
+          </a>
         </div>
-
-        <header>
-          <div class="header-container">
-            <img
-              src="/static/images/logo_SJB.png"
-              alt="Logo UPSJB"
-              class="logo"
-            />
-          </div>
-        </header>
-
-        <main>
-          <section class="login-section">
-            <h1>Ingresa a tu cuenta</h1>
-            <a href="/login" class="login-button">
-              <img src="/static/images/o365.png" alt="Office 365 Logo" />
-              Inicia sesión con o365
-            </a>
-            <p>
-              <a
-                href="https://passwordreset.microsoftonline.com/Default.aspx"
-                class="forgot-password"
-                >Olvidé mi contraseña</a
-              >
-            </p>
-            <a
-              href="https://passwordreset.microsoftonline.com/Default.aspx"
-              class="user-button"
-              >Conoce tu usuario</a
-            >
-          </section>
-          <section class="social-links">
-            <h2 style="color: #53565a">Síguenos en:</h2>
-            <div class="social-icons">
-              <div class="social-icon">
-                <a href="https://www.instagram.com/upsjb/" target="_blank">
-                  <img src="/static/images/ico_ig.png" alt="Instagram" />
-                </a>
-              </div>
-              <div class="social-icon">
-                <a href="https://www.facebook.com/UPSJBSAC" target="_blank">
-                  <img src="/static/images/ico_fb.png" alt="Facebook" />
-                </a>
-              </div>
-              <div class="social-icon">
-                <a
-                  href="https://pe.linkedin.com/school/universidad-privada-san-juan-bautista/"
-                  target="_blank"
-                >
-                  <img src="/static/images/ico_in.png" alt="LinkedIn" />
-                </a>
-              </div>
-              <div class="social-icon twitter">
-                <a href="https://twitter.com/UPSJB" target="_blank">
-                  <img src="/static/images/ico_twitter.png" alt="Twitter" />
-                </a>
-              </div>
-              <div class="social-icon">
-                <a
-                  href="https://www.tiktok.com/@aprendeconlasanjuan"
-                  target="_blank"
-                >
-                  <img src="/static/images/ico_tiktok.png" alt="TikTok" />
-                </a>
-              </div>
-            </div>
-          </section>
-        </main>
-        <footer class="footer">
-          <div class="footer-links">
-            <a href="#">Transparencia</a>
-            <a href="#">Campus UPSJB</a>
-            <a href="#">Ayuda</a>
-          </div>
-        </footer>
-      </section>
-
-      <section class="carousel-container">
-        <div class="carousel">
-          <img
-            src="/static/images/ganadores.png"
-            alt="Ganadores"
-            class="active"
-          />
-          <img src="/static/images/buen_pagador.png" alt="Buen Pagador" />
-          <img src="/static/images/promo_amigos.png" alt="Promoción Amigos" />
-          <img src="/static/images/yape.png" alt="Yape" />
-          <img
-            src="/static/images/centro_idiomas.jpeg"
-            alt="Centro de Idiomas"
-          />
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              class="carousel-btn active"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              class="carousel-btn"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              class="carousel-btn"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              class="carousel-btn"
-              aria-label="Slide 4"
-            ></button>
-            <button
-              type="button"
-              class="carousel-btn"
-              aria-label="Slide 5"
-            ></button>
-          </div>
+        <div class="social-icon-container">
+          <a href="https://www.facebook.com">
+            <img src="/ico_fb.png" class="social-icon" alt="Facebook" />
+          </a>
         </div>
-      </section>
+        <div class="social-icon-container">
+          <a href="https://www.linkedin.com">
+            <img src="/ico_in.png" class="social-icon" alt="LinkedIn" />
+          </a>
+        </div>
+        <div class="social-icon-container">
+          <a href="https://www.twitter.com">
+            <img src="/ico_twitter.png" class="social-icon" alt="Twitter" />
+          </a>
+        </div>
+        <div class="social-icon-container">
+          <a href="https://www.tiktok.com">
+            <img src="/ico_tiktok.png" class="social-icon" alt="TikTok" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Botón Inicia sesión con o365 -->
+      <button class="o365-button">
+        <img src="/o365.png" alt="o365 icon" class="o365-icon" />
+        <span class="o365-text">Inicia sesión con o365</span>
+      </button>
+
+      <div class="footer">
+        <div class="footer-links">
+          <a href="#" class="footer-link">Transparencia</a>
+          <a href="#" class="footer-link">Campus UPSJB</a>
+          <a href="#" class="footer-link">Ayuda</a>
+        </div>
+      </div>
     </div>
-    <script>
-      "/static/scripts/inicio.js";
-    </script>
+
+    <script src="/static/scripts/intranet_home.js"></script>
   </body>
 </html>
