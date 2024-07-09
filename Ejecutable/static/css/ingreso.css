@@ -1,0 +1,108 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7f7ff;
+  margin: 0;
+  background-image: url("/static/images/fondo_principal.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.main-container {
+  background-size: cover;
+  border: 10px solid white;
+  border-radius: 50px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1232.8px;
+  height: 553px;
+  background-size: 100% 100%;
+  margin-top: 19px;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(76, 82, 88);
+  font-size: 44px;
+  line-height: 66px;
+  transform: translate(0px, -26.48px);
+  letter-spacing: 0.5px; /* Ajuste de espaciado entre letras */
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 28px;
+  width: 460px;
+  transform: translate(-0.06px, -46.5px);
+}
+
+.student-button {
+  padding: 5px 40px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 444px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.3),
+    4px 0 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Posición relativa para contener el .student-text */
+  transform: translate(8px, 0px);
+}
+
+.student-button .student-text {
+  display: inline-block; /* Cambiar a inline-block para que se pueda ajustar el tamaño */
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(255, 10, 65, 255);
+  font-size: 16px; /* Reducir el tamaño de la fuente */
+  line-height: 24px; /* Reducir la altura de línea */
+  background-color: white; /* Fondo verde para diferenciación */
+  padding: 6px 11.62px; /* Reducir el padding para disminuir el tamaño */
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  transform: translate(-132px, -0.7px);
+  letter-spacing: 0.5px; /* Añadir espaciado entre letras */
+}
+
+.student-button .student-text:hover {
+  color: rgba(204, 8, 52, 255);
+}
+
+.logout-button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  line-height: 27px;
+  background-color: rgba(255, 10, 65, 255);
+  border: none;
+  padding: 6.5px 20px;
+  cursor: pointer;
+  border-radius: 22px;
+  width: 205.64px;
+  transform: translateY(-50.3px);
+  letter-spacing: 0.5px;
+}
+
+.logout-button:hover {
+  background-color: rgba(218, 9, 56, 255);
+}

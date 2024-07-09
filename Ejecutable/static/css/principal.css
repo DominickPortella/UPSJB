@@ -1,145 +1,322 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f5;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header .logo img {
-    height: 40px;
+  height: 40px;
 }
 
 header ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 header ul li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 header ul li a {
-    text-decoration: none;
-    color: #333;
+  text-decoration: none;
+  color: #333;
 }
 
 header .user-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .content {
-    display: flex;
-    flex: 1; /* Asegura que el contenido principal tome el espacio restante */
+  display: flex;
+  flex: 1; /* Asegura que el contenido principal tome el espacio restante */
 }
 
 aside {
-    background-color: #ff3366;
-    padding: 20px;
-    min-width: 200px;
-    color: #fff;
-    flex-shrink: 0; /* Asegura que el aside no se encoja */
+  background-color: #ff3366;
+  padding: 20px;
+  min-width: 200px;
+  color: #fff;
+  flex-shrink: 0; /* Asegura que el aside no se encoja */
 }
 
 aside ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 aside ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 aside ul li a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 main {
-    flex-grow: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 main .center-content {
-    width: 100%;
-    max-width: 1000px;
-    text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
 }
 
 main h1 {
-    margin-top: 0;
-    font-weight: normal;
-    color: #333;
+  margin-top: 0;
+  font-weight: normal;
+  color: #333;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px; /* Aumenta el espacio entre las tarjetas */
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px; /* Aumenta el espacio entre las tarjetas */
+  justify-items: center;
 }
 
 .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado más pronunciado */
-    padding: 20px;
-    width: 200px;
-    text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado más pronunciado */
+  padding: 20px;
+  width: 200px;
+  text-align: center;
 }
 
 .card h2 {
-    margin-top: 0;
-    font-weight: normal;
-    color: #ff3366;
+  margin-top: 0;
+  font-weight: normal;
+  color: #ff3366;
 }
 
 .card p {
-    color: #666;
-    font-size: 14px;
+  color: #666;
+  font-size: 14px;
 }
 
 .card button {
-    background-color: #fff; /* Cambia el color de fondo a blanco */
-    border: 1px solid #ff3366; /* Cambia el borde a rojo delgado */
-    border-radius: 5px;
-    color: #ff3366; /* Cambia el color de texto a rojo */
-    font-weight: bold; /* Texto en negrita */
-    cursor: pointer;
-    padding: 10px 20px;
+  background-color: #fff; /* Cambia el color de fondo a blanco */
+  border: 1px solid #ff3366; /* Cambia el borde a rojo delgado */
+  border-radius: 5px;
+  color: #ff3366; /* Cambia el color de texto a rojo */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer;
+  padding: 10px 20px;
 }
 
 .card button:hover {
-    background-color: #ff3366; /* Cambia el color de fondo a rojo al pasar el mouse */
-    color: #fff; /* Cambia el color de texto a blanco */
+  background-color: #ff3366; /* Cambia el color de fondo a rojo al pasar el mouse */
+  color: #fff; /* Cambia el color de texto a blanco */
 }
 
 footer {
-    background-color: #fff; /* Cambia el color de fondo a blanco */
-    padding: 5px; /* Ajusta el tamaño del padding para hacer el footer más delgado */
-    text-align: center;
-    color: #333; /* Cambia el color de texto a negro */
-    height: 30px; /* Ajusta la altura del footer */
-    width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra superior si deseas */
-    position: relative;
+  background-color: #fff; /* Cambia el color de fondo a blanco */
+  padding: 5px; /* Ajusta el tamaño del padding para hacer el footer más delgado */
+  text-align: center;
+  color: #333; /* Cambia el color de texto a negro */
+  height: 30px; /* Ajusta la altura del footer */
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra superior si deseas */
+  position: relative;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none; /* Ocultamos el modal por defecto */
+  position: fixed; /* Modal fijo en la pantalla */
+  z-index: 1; /* Encima de todo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Evita la barra de desplazamiento en el modal */
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
+  display: flex; /* Usamos flexbox */
+  align-items: center; /* Centramos verticalmente */
+  justify-content: center; /* Centramos horizontalmente */
+}
+
+.modal-container {
+  background-color: #fefefe; /* Fondo blanco para el contenido */
+  margin: 5% auto; /* Margen superior */
+  border: 1px solid #888;
+  width: 75%; /* Ancho del contenido */
+  max-width: 800px; /* Ancho máximo del contenido */
+  padding: 10px;
+  position: relative;
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.5); /* Color suavizado */
+  margin: 0 -20px; /* Extiende el borde inferior al ancho completo */
+}
+
+.modal-title {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(76, 82, 88);
+  font-size: 24px;
+  line-height: 36px;
+}
+
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.inner-container {
+  background-color: white;
+  padding: 10px;
+  width: 92%;
+  margin: 40px auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 
+  0 1px 3px rgba(0, 0, 0, 0.05), /* Sombreado suave en la parte superior */
+  0 4px 6px rgba(0, 0, 0, 0.2);  /* Sombreado en el resto */
+  margin-bottom: 25px;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.modal img {
+  width: 100%; /* Imagen dentro del modal ocupa todo el ancho */
+  height: auto; /* Altura automática */
+}
+
+/* Estilos para el contenedor del carrusel */
+.carousel-container {
+  position: relative;
+  width: 97%;
+  max-width: 800px;
+  overflow: hidden;
+  margin: 12px auto;
+}
+
+.carousel-image {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.7; /* Hacer las flechas un poco transparentes */
+}
+
+.carousel-arrow-left {
+  left: 30px; /* Mueve la flecha izquierda un poco más a la derecha */
+}
+
+.carousel-arrow-right {
+  right: 30px; /* Mueve la flecha derecha un poco más a la izquierda */
+}
+
+.carousel-arrow img {
+  width: 32px; /* Ajuste del tamaño del icono */
+  height: 32px; /* Ajuste del tamaño del icono */
+}
+
+.carousel-arrow:hover {
+  opacity: 1; /* Volver las flechas completamente opacas */
+  filter: brightness(0) invert(1); /* Cambiar el color a blanco */
+}
+
+/* Pseudo-elementos para aumentar el área de activación de las flechas */
+.carousel-arrow::before {
+  content: '';
+  position: absolute;
+  top: -165px; /* Ajusta este valor para aumentar el área de activación hacia arriba */
+  bottom: -165px; /* Ajusta este valor para aumentar el área de activación hacia abajo */
+  left: -35px; /* Ajusta este valor para aumentar el área de activación hacia la izquierda */
+  right: -35px; /* Ajusta este valor para aumentar el área de activación hacia la derecha */
+  z-index: -1; /* Asegura que esté debajo de las flechas pero encima del contenido */
+}
+
+.carousel-arrow-left::before {
+  left: -50px; /* Ajusta este valor para aumentar el área de activación hacia la izquierda */
+}
+
+.carousel-arrow-right::before {
+  right: -50px; /* Ajusta este valor para aumentar el área de activación hacia la derecha */
+}
+
+.main-title {
+  font-family: sans-serif;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 10px;
+}
+
+.sub-title {
+  font-family: sans-serif;
+  font-weight: 500;
+  color: rgb(83, 86, 90);
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  font-family: sans-serif;
+  font-weight: 500;
+  color: rgb(76, 82, 88);
+  font-size: 24px;
+  line-height: 36px;
 }
