@@ -128,6 +128,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const passwordInput = document.querySelector(".password-container input[type='password']");
   let originalLoginContainerHeight = getComputedStyle(loginContainer).minHeight;
 
+  const storedEmail = localStorage.getItem("storedEmail");
+  if (storedEmail) {
+    emailInput.value = storedEmail;
+  }
+
+  emailInput.addEventListener("input", function () {
+    const newEmail = emailInput.value;
+    localStorage.setItem("storedEmail", newEmail);
+  });
+
+  const storedPassword = localStorage.getItem("storedPassword");
+  if (storedPassword) {
+    passwordInput.value = storedPassword;
+  }
+
+  passwordInput.addEventListener("input", function () {
+    const newPassword = passwordInput.value;
+    localStorage.setItem("storedPassword", newPassword);
+  });
+
   window.history.replaceState({ view: "slide" }, "");
 
   nextButton.addEventListener("click", function (event) {
@@ -186,7 +206,6 @@ document.addEventListener("DOMContentLoaded", function () {
     loginContainer.style.minHeight = "350px";
   }
 
-  // Add event listener for login button
   loginButton.addEventListener("click", function (event) {
     event.preventDefault();
     const passwordValue = passwordInput.value;
