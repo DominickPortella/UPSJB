@@ -36,7 +36,7 @@ h2 {
   font-size: 44px;
   line-height: 66px;
   transform: translate(0px, -26.48px);
-  letter-spacing: 0.5px; /* Ajuste de espaciado entre letras */
+  letter-spacing: 0.5px;
 }
 
 .container {
@@ -61,25 +61,25 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; /* Posición relativa para contener el .student-text */
+  position: relative;
   transform: translate(8px, 0px);
 }
 
 .student-button .student-text {
-  display: inline-block; /* Cambiar a inline-block para que se pueda ajustar el tamaño */
+  display: inline-block;
   font-family: sans-serif;
   font-style: normal;
   font-weight: 400;
   color: rgba(255, 10, 65, 255);
-  font-size: 16px; /* Reducir el tamaño de la fuente */
-  line-height: 24px; /* Reducir la altura de línea */
-  background-color: white; /* Fondo verde para diferenciación */
-  padding: 6px 11.62px; /* Reducir el padding para disminuir el tamaño */
+  font-size: 16px;
+  line-height: 24px;
+  background-color: white;
+  padding: 6px 11.62px;
   border-radius: 4px;
   text-align: center;
   vertical-align: middle;
   transform: translate(-132px, -0.7px);
-  letter-spacing: 0.5px; /* Añadir espaciado entre letras */
+  letter-spacing: 0.5px;
 }
 
 .student-button .student-text:hover {

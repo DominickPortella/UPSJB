@@ -1,13 +1,11 @@
 var images = document.querySelectorAll(".image-container img");
 var currentIndex = 0;
-
 function changeImage(index) {
     images[currentIndex].style.display = "none";
     currentIndex = index;
     images[currentIndex].style.display = "block";
     updateButtonStyle();
 }
-
 function updateButtonStyle() {
     var buttons = document.querySelectorAll(".image-controls button");
     buttons.forEach(function (button) {

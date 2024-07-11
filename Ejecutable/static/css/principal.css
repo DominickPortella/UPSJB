@@ -2,10 +2,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f5;
+  background-color: rgba(247, 247, 255, 255);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 header nav {
@@ -13,8 +14,18 @@ header nav {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8.6px 20px;
+  box-shadow: 0 2px 3px rgba(40, 40, 40, 0.08);
+  position: fixed;
+  top: 0;
+  left: 70px;
+  right: 0;
+  transition: left 0.3s;
+  z-index: 1;
+}
+
+header nav.expanded {
+  left: 300px;
 }
 
 header .logo img {
@@ -34,7 +45,11 @@ header ul li {
 
 header ul li a {
   text-decoration: none;
-  color: #333;
+  font-family: sans-serif;
+  font-weight: 500;
+  color: rgb(65, 60, 60);
+  font-size: 15px;
+  line-height: 23px;
 }
 
 header .user-info {
@@ -43,31 +58,156 @@ header .user-info {
   align-items: flex-end;
 }
 
+header .user-info span {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  color: rgb(65, 60, 60);
+}
+
+header .user-info .header-info {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(169, 168, 168);
+}
+
 .content {
   display: flex;
-  flex: 1; /* Asegura que el contenido principal tome el espacio restante */
+  flex: 1;
+}
+
+.logo {
+  position: relative;
+  top: 2px;
+}
+
+.logo img {
+  max-width: 50px;
+  height: auto;
+  margin-left: -10px;
+  margin-top: -10px;
+  height: 55px;
+}
+
+.logo-extended {
+  width: 85px;
+  height: 66px;
+  object-fit: cover;
+  position: absolute;
+  top: 6px;
+  right: 118px;
+  z-index: 1;
+  transition: none;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.logo::after {
+  content: "";
+  display: block;
+  width: calc(100% + 40px);
+  height: 0.1px;
+  background-color: rgba(228, 228, 228, 255);
+  margin-top: 8px;
+  position: absolute;
+  left: -20px;
 }
 
 aside {
-  background-color: #ff3366;
+  background-color: rgb(255, 10, 63);
+  color: rgb(255, 206, 217);
   padding: 20px;
-  min-width: 200px;
-  color: #fff;
-  flex-shrink: 0; /* Asegura que el aside no se encoja */
+  width: 30px;
+  overflow: hidden;
+  flex-shrink: 0;
+  font-family: sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s;
+  height: 100vh;
+}
+
+aside:hover {
+  width: 260px;
 }
 
 aside ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
+  margin: 16.19px 0 0 0;
 }
 
 aside ul li {
-  margin-bottom: 10px;
+  margin-bottom: 1px;
+  margin-left: -10px;
+  transform: translateY(10px);
 }
 
 aside ul li a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+  padding: 10.8px 8px;
+  width: calc(100% - -10px);
+  margin-bottom: 6px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: color 0.3s;
+}
+
+aside ul li a span {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+aside a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  background-image: url("/static/images/hogar.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-origin: content-box;
+  background-position: -25px center;
+  padding-left: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+aside a span {
+  margin-left: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+aside a::after {
+  content: "";
+}
+
+aside li:hover {
   color: #fff;
+}
+
+aside a:hover {
+  background-color: rgba(226, 22, 88, 1);
+}
+
+aside ul li a.inicio {
+  background-color: rgba(226, 22, 88, 1);
 }
 
 main {
@@ -94,14 +234,14 @@ main h1 {
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px; /* Aumenta el espacio entre las tarjetas */
+  gap: 40px;
   justify-items: center;
 }
 
 .card {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado más pronunciado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 200px;
   text-align: center;
@@ -119,56 +259,79 @@ main h1 {
 }
 
 .card button {
-  background-color: #fff; /* Cambia el color de fondo a blanco */
-  border: 1px solid #ff3366; /* Cambia el borde a rojo delgado */
+  background-color: #fff;
+  border: 1px solid #ff3366;
   border-radius: 5px;
-  color: #ff3366; /* Cambia el color de texto a rojo */
-  font-weight: bold; /* Texto en negrita */
+  color: #ff3366;
+  font-weight: bold;
   cursor: pointer;
   padding: 10px 20px;
 }
 
 .card button:hover {
-  background-color: #ff3366; /* Cambia el color de fondo a rojo al pasar el mouse */
-  color: #fff; /* Cambia el color de texto a blanco */
+  background-color: #ff3366;
+  color: #fff;
 }
 
 footer {
-  background-color: #fff; /* Cambia el color de fondo a blanco */
-  padding: 5px; /* Ajusta el tamaño del padding para hacer el footer más delgado */
+  background-color: #fff;
+  padding: 5px;
   text-align: center;
-  color: #333; /* Cambia el color de texto a negro */
-  height: 30px; /* Ajusta la altura del footer */
+  color: #333;
+  height: 24.85px;
   width: 100%;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra superior si deseas */
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 70px;
+  right: 0;
+  transition: left 0.3s;
+  border-top: 1px solid rgba(228, 228, 228, 1);
+}
+
+footer.expanded {
+  left: 300px;
+}
+
+footer.expanded p {
+  transform: translateX(-155px) translateY(-12px);
+}
+
+footer p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transform: translateX(-40px) translateY(-12px);
 }
 
 /* Estilos para el modal */
 .modal {
-  display: none; /* Ocultamos el modal por defecto */
-  position: fixed; /* Modal fijo en la pantalla */
-  z-index: 1; /* Encima de todo */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Evita la barra de desplazamiento en el modal */
-  background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
-  display: flex; /* Usamos flexbox */
-  align-items: center; /* Centramos verticalmente */
-  justify-content: center; /* Centramos horizontalmente */
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-container {
-  background-color: #fefefe; /* Fondo blanco para el contenido */
-  margin: 5% auto; /* Margen superior */
+  background-color: #fefefe;
+  margin: 5% auto;
   border: 1px solid #888;
-  width: 75%; /* Ancho del contenido */
-  max-width: 800px; /* Ancho máximo del contenido */
+  width: 75%;
+  max-width: 800px;
   padding: 10px;
   position: relative;
-  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+  box-sizing: border-box;
 }
 
 .modal-header {
@@ -176,8 +339,8 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  border-bottom: 1px solid rgba(136, 136, 136, 0.5); /* Color suavizado */
-  margin: 0 -20px; /* Extiende el borde inferior al ancho completo */
+  border-bottom: 1px solid rgba(136, 136, 136, 0.5);
+  margin: 0 -20px;
 }
 
 .modal-title {
@@ -188,7 +351,6 @@ footer {
   font-size: 24px;
   line-height: 36px;
 }
-
 
 .modal-header h2 {
   margin: 0;
@@ -202,9 +364,7 @@ footer {
   border-radius: 5px;
   box-sizing: border-box;
   overflow: hidden;
-  box-shadow: 
-  0 1px 3px rgba(0, 0, 0, 0.05), /* Sombreado suave en la parte superior */
-  0 4px 6px rgba(0, 0, 0, 0.2);  /* Sombreado en el resto */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.2);
   margin-bottom: 25px;
 }
 
@@ -226,8 +386,8 @@ footer {
 }
 
 .modal img {
-  width: 100%; /* Imagen dentro del modal ocupa todo el ancho */
-  height: auto; /* Altura automática */
+  width: 100%;
+  height: auto;
 }
 
 /* Estilos para el contenedor del carrusel */
@@ -255,44 +415,44 @@ footer {
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 2;
-  opacity: 0.7; /* Hacer las flechas un poco transparentes */
+  opacity: 0.7;
 }
 
 .carousel-arrow-left {
-  left: 30px; /* Mueve la flecha izquierda un poco más a la derecha */
+  left: 30px;
 }
 
 .carousel-arrow-right {
-  right: 30px; /* Mueve la flecha derecha un poco más a la izquierda */
+  right: 30px;
 }
 
 .carousel-arrow img {
-  width: 32px; /* Ajuste del tamaño del icono */
-  height: 32px; /* Ajuste del tamaño del icono */
+  width: 32px;
+  height: 32px;
 }
 
 .carousel-arrow:hover {
-  opacity: 1; /* Volver las flechas completamente opacas */
-  filter: brightness(0) invert(1); /* Cambiar el color a blanco */
+  opacity: 1;
+  filter: brightness(0) invert(1);
 }
 
 /* Pseudo-elementos para aumentar el área de activación de las flechas */
 .carousel-arrow::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: -165px; /* Ajusta este valor para aumentar el área de activación hacia arriba */
-  bottom: -165px; /* Ajusta este valor para aumentar el área de activación hacia abajo */
-  left: -35px; /* Ajusta este valor para aumentar el área de activación hacia la izquierda */
-  right: -35px; /* Ajusta este valor para aumentar el área de activación hacia la derecha */
-  z-index: -1; /* Asegura que esté debajo de las flechas pero encima del contenido */
+  top: -165px;
+  bottom: -165px;
+  left: -35px;
+  right: -35px;
+  z-index: -1;
 }
 
 .carousel-arrow-left::before {
-  left: -50px; /* Ajusta este valor para aumentar el área de activación hacia la izquierda */
+  left: -50px;
 }
 
 .carousel-arrow-right::before {
-  right: -50px; /* Ajusta este valor para aumentar el área de activación hacia la derecha */
+  right: -50px;
 }
 
 .main-title {
@@ -313,10 +473,100 @@ footer {
   margin-bottom: 20px;
 }
 
+.intro-text {
+  position: relative;
+  top: 72px;
+}
+
+.main-title {
+  position: relative;
+  left: 174.5px;
+  letter-spacing: 0.5px;
+}
+
+.sub-title {
+  position: relative;
+  top: -11px;
+  left: 23px;
+  letter-spacing: 0.5px;
+}
+
 .modal-title {
   font-family: sans-serif;
   font-weight: 500;
   color: rgb(76, 82, 88);
   font-size: 24px;
   line-height: 36px;
+}
+
+/* MENÚ DE OPCIONES */
+.dropdown-toggle {
+  position: relative;
+}
+
+.dropdown-arrow {
+  width: 10px;
+  height: 9px;
+  margin-left: 45px;
+  vertical-align: middle;
+  margin-top: 2px;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-span.active.dropdown-arrow {
+  transform: rotate(0deg);
+}
+
+.dropdown-toggle span {
+  cursor: pointer;
+}
+
+.dropdown-toggle span::after {
+  content: "\25BC";
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.dropdown-toggle:hover span::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  padding: 15px;
+  top: -2px;
+  border: none;
+}
+
+.submenu li {
+  margin-bottom: 10px;
+}
+
+.submenu li a {
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  padding-left: 50px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.option-icon {
+  background-size: 12px;
+  padding-left: 20px;
+}
+
+/* Agrega esta clase para mover los elementos cuando el menú esté abierto */
+.submenu-open {
+  position: relative;
+  top: 170px;
 }

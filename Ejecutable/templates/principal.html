@@ -13,9 +13,6 @@
   <body>
     <header>
       <nav>
-        <div class="logo">
-          <img src="/static/images/logo_terceario.png" alt="Logo" />
-        </div>
         <ul>
           <li><a href="#">Blackboard</a></li>
           <li><a href="#">Zoom</a></li>
@@ -25,28 +22,61 @@
         </ul>
         <div class="user-info">
           <span>ANGELA.ROJAS</span>
-          <span>ESTUDIANTE</span>
+          <span class="header-info">ESTUDIANTE</span>
         </div>
       </nav>
     </header>
     <div class="content">
       <aside>
+        <div class="logo">
+          <img src="/static/images/logo_terceario.png" alt="Logo" />
+        </div>
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Requisitos</a></li>
-          <li><a href="#">Mis Trámites</a></li>
-          <li><a href="#">Pagos en Línea</a></li>
-          <li><a href="#">Mi Horario</a></li>
-          <li><a href="#">Mis Calificaciones</a></li>
-          <li><a href="#">Mi Record Académico</a></li>
-          <li><a href="#">Mis Notas Aprobadas</a></li>
-          <li><a href="#">Actualizar Mis Datos</a></li>
+          <li>
+            <a href="#" class="inicio"><span>Inicio</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Mis Trámites</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Pagos en Línea</span></a>
+          </li>
+          <li>
+            <a>
+              <span
+                class="dropdown-span"
+                onclick="this.classList.toggle('active');"
+              >
+                Información Académica
+                <img
+                  src="/static/images/despliegue.png"
+                  alt="Desplegar"
+                  class="dropdown-arrow"
+                />
+              </span>
+            </a>
+            <ul class="submenu">
+              <li><a href="#" class="option-icon">Mi Horario</a></li>
+              <li><a href="#" class="option-icon">Mis Calificaciones</a></li>
+              <li><a href="#" class="option-icon">Mi Record Académico</a></li>
+              <li><a href="#" class="option-icon">Mis Notas Aprobadas</a></li>
+              <li><a href="#" class="option-icon">Requisitos</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span>Portal de Biblioteca</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Cambiar Mi Contraseña</span></a>
+          </li>
         </ul>
       </aside>
       <main>
         <div class="intro-text">
           <h1 class="main-title">¿Qué quieres hacer hoy?</h1>
-          <h2 class="sub-title">Descubre todo lo que te ofrecemos de manera 100% digital</h2>
+          <h2 class="sub-title">
+            Descubre todo lo que te ofrecemos de manera 100% digital
+          </h2>
         </div>
         <div class="cards">
           <div class="card">

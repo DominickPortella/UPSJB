@@ -127,35 +127,28 @@ document.addEventListener("DOMContentLoaded", function () {
   const loginButton = document.querySelector("#login-button");
   const passwordInput = document.querySelector(".password-container input[type='password']");
   let originalLoginContainerHeight = getComputedStyle(loginContainer).minHeight;
-
   const storedEmail = localStorage.getItem("storedEmail");
   if (storedEmail) {
     emailInput.value = storedEmail;
   }
-
   emailInput.addEventListener("input", function () {
     const newEmail = emailInput.value;
     localStorage.setItem("storedEmail", newEmail);
   });
-
   const storedPassword = localStorage.getItem("storedPassword");
   if (storedPassword) {
     passwordInput.value = storedPassword;
   }
-
   passwordInput.addEventListener("input", function () {
     const newPassword = passwordInput.value;
     localStorage.setItem("storedPassword", newPassword);
   });
-
   window.history.replaceState({ view: "slide" }, "");
-
   nextButton.addEventListener("click", function (event) {
     event.preventDefault();
     if (emailInput.value === "") {
       return;
     }
-
     emailDisplay.textContent = emailInput.value.toLowerCase();
     slideContainer.classList.add("desplazado");
     passwordContainer.classList.add("show");
@@ -163,17 +156,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (additionalContainer) {
       additionalContainer.style.display = "none";
     }
-
     loginContainer.style.minHeight = "350px";
-
     window.history.pushState({ view: "password" }, "");
   });
-
   backButton.addEventListener("click", function (event) {
     event.preventDefault();
     navigateToSlideView();
   });
-
   window.addEventListener("popstate", function (event) {
     if (event.state && event.state.view) {
       if (event.state.view === "slide") {
@@ -183,29 +172,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-
   function navigateToSlideView() {
     slideContainer.classList.remove("desplazado");
     passwordContainer.classList.remove("show");
-
     if (additionalContainer) {
       additionalContainer.style.display = "flex";
     }
-
     loginContainer.style.minHeight = originalLoginContainerHeight;
   }
-
   function navigateToPasswordView() {
     slideContainer.classList.add("desplazado");
     passwordContainer.classList.add("show");
-
     if (additionalContainer) {
       additionalContainer.style.display = "none";
     }
-
     loginContainer.style.minHeight = "350px";
   }
-
   loginButton.addEventListener("click", function (event) {
     event.preventDefault();
     const passwordValue = passwordInput.value;
