@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleArrow(span);
     });
   });
+
   function toggleArrow(span) {
     var arrow = span.querySelector('.dropdown-arrow');
     arrow.style.transform = arrow.style.transform === 'rotate(0deg)' ? 'rotate(90deg)' : 'rotate(0deg)';

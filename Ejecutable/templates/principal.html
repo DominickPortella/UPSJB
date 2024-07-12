@@ -14,15 +14,34 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#">Blackboard</a></li>
-          <li><a href="#">Zoom</a></li>
-          <li><a href="#">Onedrive</a></li>
-          <li><a href="#">Correo</a></li>
-          <li><a href="#">Repositorio</a></li>
+          <li><img src="/static/images/ico_TV.png" alt="Blackboard icon" class="tv-icon"> <a href="https://upsjb.blackboard.com/?new_loc=%2Fultra%2Fcourse">Blackboard</a></li>
+          <li class="zoom-item">
+            <img class="zoom-icon" src="/static/images/ico_recording.png" alt="Zoom icon">
+            <a href="https://upsjb-edu-pe.zoom.us/" target="_blank">Zoom</a>
+          </li>
+          <li class="onedrive-item">
+            <img class="onedrive-icon" src="/static/images/ico_cloud.png" alt="Onedrive icon">
+            <a href="https://upsjb-my.sharepoint.com/_layouts/15/MyBraryFirstRun.aspx?FirstRunStage=waiting">Onedrive</a>
+          </li>
+          <li class="correo-item">
+            <img class="correo-icon" src="/static/images/ico_message.png" alt="Correo icon">
+            <a href="https://outlook.office365.com/mail/">Correo</a>
+          </li>
+          <li class="repositorio-item">
+            <img class="repositorio-icon" src="/static/images/ico_notification.png" alt="Repositorio icon">
+            <a href="https://repositorio.upsjb.edu.pe/">Repositorio</a>
+          </li>
         </ul>
+        <div class="icons">
+          <img src="/static/images/ico_clock.png" alt="Clock icon">
+          <img src="/static/images/ico_help.png" alt="Help icon">
+        </div>
         <div class="user-info">
-          <span>ANGELA.ROJAS</span>
-          <span class="header-info">ESTUDIANTE</span>
+          <img src="/static/images/ico_profile.png" alt="imagen">
+          <div class="textos">
+            <span>ANGELA.ROJAS</span>
+            <span class="header-info">ESTUDIANTE</span>
+          </div>
         </div>
       </nav>
     </header>
@@ -36,23 +55,16 @@
             <a href="#" class="inicio"><span>Inicio</span></a>
           </li>
           <li>
-            <a href="#"><span>Mis Trámites</span></a>
+            <a href="https://app.upsjb.edu.pe/tramites/login" target="_blank" class="mis_trámites"><span>Mis Trámites</span></a>
           </li>
           <li>
-            <a href="#"><span>Pagos en Línea</span></a>
+            <a href="https://campus.upsjb.edu.pe/psp/cs92prd/?cmd=login&languageCd=ESP&" class="pagos_en_linea"><span>Pagos en Línea</span></a>
           </li>
           <li>
-            <a>
-              <span
-                class="dropdown-span"
-                onclick="this.classList.toggle('active');"
-              >
+            <a class="informacion_academica">
+              <span class="dropdown-span" onclick="this.classList.toggle('active');">
                 Información Académica
-                <img
-                  src="/static/images/despliegue.png"
-                  alt="Desplegar"
-                  class="dropdown-arrow"
-                />
+                <img src="/static/images/despliegue.png" alt="Desplegar" class="dropdown-arrow" />
               </span>
             </a>
             <ul class="submenu">
@@ -64,10 +76,10 @@
             </ul>
           </li>
           <li>
-            <a href="#"><span>Portal de Biblioteca</span></a>
+            <a href="https://intranet.upsjb.edu.pe/intranet/encuestas-biblioteca" class="portal_de_biblioteca"><span>Portal de Biblioteca</span></a>
           </li>
           <li>
-            <a href="#"><span>Cambiar Mi Contraseña</span></a>
+            <a href="https://account.activedirectory.windowsazure.com/ChangePassword.aspx?BrandContextID=O365&ruO365=" class="cambiar_mi_contraseña"><span>Cambiar Mi Contraseña</span></a>
           </li>
         </ul>
       </aside>
