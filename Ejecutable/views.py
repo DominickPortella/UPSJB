@@ -11,3 +11,6 @@ def perfil_view(request):
 
 def principal_view(request):
     return render(request, 'principal.html')
+
+def record_academico_view(request):
+    return render(request, 'record_academico.html')

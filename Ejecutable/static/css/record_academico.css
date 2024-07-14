@@ -1,0 +1,530 @@
+/* Estilos generales del body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(247, 247, 255, 255);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 123px;
+  overflow-x: hidden;
+}
+
+/* Estilos del header */
+/* Estilos del nav del header */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 8.6px 20px;
+  box-shadow: 0 2px 3px rgba(40, 40, 40, 0.08);
+  position: fixed;
+  top: 0;
+  left: 70px;
+  right: 0;
+  transition: left 0.3s;
+  z-index: 1;
+}
+
+/* DISEÑO PARA EL ELEMENTO DE TV */
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li img.tv-icon {
+  margin-right: 12.76px;
+  transform: scale(1.2) scaleX(1) scaleY(0.95) translateY(0.94px);
+}
+
+header nav ul li a {
+  letter-spacing: 0.5px;
+}
+
+header nav ul li:first-child {
+  transform: translateX(30px);
+}
+
+/* DISEÑO PARA EL ELEMENTO DE ZOOM */
+.zoom-item {
+  transform: translateX(40px);
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.zoom-icon {
+  transform: scale(1.2, 0.84) translate(1.6px, -1.4px);
+}
+
+/* DISEÑO PARA EL ELEMENTO DE ONEDRIVE */
+.onedrive-item {
+  transform: translateX(64.1px);
+  letter-spacing: 0.5px;
+}
+
+.onedrive-icon {
+  transform: scale(2.35, 1.1) translate(-5px, 2px);
+}
+
+/* DISEÑO PARA EL ELEMENTO CORREO */
+.correo-item {
+  transform: translateX(88.7px);
+}
+
+.correo-icon {
+  transform: scale(1.2, 0.96) translate(-10.5px, 1.2px);
+}
+
+/* DISEÑO PARA EL ELEMENTO REPOSITORIO */
+.repositorio-item {
+  transform: translateX(113.5px);
+}
+
+.repositorio-icon {
+  transform: scale(1.1, 1.2) translate(-11px, 1.2px);
+}
+
+/* Estilos del nav expandido del header */
+header nav.expanded {
+  left: 300px;
+}
+
+/* Estilos del logo del header */
+header .logo img {
+  height: 40px;
+}
+
+/* Estilos de la lista del header */
+header ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos de los items de la lista del header */
+header ul li {
+  margin-right: 20px;
+}
+
+/* Estilos de los enlaces de la lista del header */
+header ul li a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 500;
+  color: rgb(65, 60, 60);
+  font-size: 15px;
+  line-height: 23px;
+}
+
+/* Estilos de la información del usuario en el header */
+header .user-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Estilos de los textos del usuario en el header */
+header .user-info span {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  color: rgb(65, 60, 60);
+}
+
+/* Estilos de la información adicional del usuario en el header */
+header .user-info .header-info {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(169, 168, 168);
+}
+
+/* Estilos de las imágenes de la lista del header */
+header nav ul li img {
+  width: 15px;
+  height: 15px;
+}
+
+/* Estilos de las imágenes de los iconos del header */
+header nav .icons img {
+  width: 15px;
+  height: 15px;
+}
+
+/* Estilos de la imagen del usuario en el header */
+header .user-info img {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+/* Estilos de los textos del usuario en el header */
+header .user-info .textos {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-23px);
+  letter-spacing: 0.5px;
+}
+
+/* Estilos de la información del usuario */
+/* LÍNEA VERTICAL AL COSTADO DEL PERFIL */
+.user-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 216.05px;
+  bottom: 0;
+  width: 0.3px;
+  background-color: rgba(240, 240, 240, 255);
+}
+
+/* Estilos de la imagen del usuario */
+.user-info img {
+  transform: translate(-32px, 12.2px) scale(1.2);
+}
+
+/* Estilos de la información adicional del usuario */
+.header-info {
+  transform: translateY(-0.8px);
+}
+
+/* Estilos de la imagen del usuario en el nav */
+header nav .user-info img {
+  width: 15px;
+  height: 15px;
+}
+
+.icons {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.icons img {
+  transform: translateX(-202px) translateY(22px) scale(1.3);
+  margin-right: 25px;
+}
+
+/* Estilos del contenido */
+.content {
+  display: flex;
+  flex: 1;
+}
+
+/* Estilos del logo */
+.logo {
+  position: relative;
+  top: 2px;
+}
+
+/* Estilos de la imagen del logo */
+.logo img {
+  max-width: 50px;
+  height: auto;
+  margin-left: -10px;
+  margin-top: -10px;
+  height: 55px;
+}
+
+/* Estilos del logo extendido */
+.logo-extended {
+  width: 85px;
+  height: 66px;
+  object-fit: cover;
+  position: absolute;
+  top: 6px;
+  right: 118px;
+  z-index: 1;
+  transition: none;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Estilos del borde debajo del logo */
+.logo::after {
+  content: "";
+  display: block;
+  width: calc(100% + 40px);
+  height: 0.1px;
+  background-color: rgba(228, 228, 228, 255);
+  margin-top: 8px;
+  position: absolute;
+  left: -20px;
+}
+
+/* Estilos del aside */
+aside {
+  background-color: rgb(255, 10, 63);
+  color: rgb(255, 206, 217);
+  padding: 20px;
+  width: 30px;
+  overflow: hidden;
+  flex-shrink: 0;
+  font-family: sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s;
+  height: 100vh;
+  z-index: 1;
+}
+
+/* Estilos del aside en hover */
+aside:hover {
+  width: 260px;
+}
+
+/* Estilos de la lista del aside */
+aside ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 16.19px 0 0 0;
+}
+
+/* Estilos de los items de la lista del aside */
+aside ul li {
+  margin-bottom: 1px;
+  margin-left: -10px;
+  transform: translateY(10px);
+}
+
+/* Estilos de los enlaces de la lista del aside */
+aside ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+  padding: 10.8px 8px;
+  width: calc(100% - -10px);
+  margin-bottom: 6px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: color 0.3s;
+}
+
+/* Estilos de los textos de los enlaces de la lista del aside */
+aside ul li a span {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+/* Estilos de los enlaces del aside */
+aside a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  background-image: url("/static/images/hogar.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-origin: content-box;
+  background-position: -25px center;
+  padding-left: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+/* Estilos de los textos de los enlaces del aside */
+aside a span {
+  margin-left: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilos de los enlaces del aside */
+aside a::after {
+  content: "";
+}
+
+/* Estilos de los items de la lista del aside en hover */
+aside li:hover {
+  color: #fff;
+}
+
+/* Estilos de los enlaces del aside en hover */
+aside a:hover {
+  background-color: rgba(226, 22, 88, 1);
+}
+
+/* Estilos de los enlaces del aside con clase inicio */
+aside ul li a.inicio {
+  background-color: rgba(226, 22, 88, 1);
+}
+
+/* DISEÑO PARA "INICIO" */
+aside ul li a.inicio {
+  background-image: url("/static/images/ico_home.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: -25px center;
+  padding-left: 40px;
+  transform: scaleY(1.04) translateY(1px) translateX(-1px);
+}
+
+/* DISEÑO PARA "MIS TRÁMITES" */
+aside ul li a.mis_trámites {
+  background-image: url("/static/images/ico_bookshop.png");
+  background-repeat: no-repeat;
+  background-size: 18px 20.38px;
+  background-position: -24.4px 1px;
+  padding-left: 40px;
+  filter: opacity(0.66) drop-shadow(0 0 0 rgb(255, 206, 217));
+}
+
+aside ul li a.mis_trámites:hover {
+  filter: none;
+}
+
+/* DISEÑO PARA "PAGOS EN LÍNEA" */
+aside ul li a.pagos_en_linea {
+  background-image: url("/static/images/ico_card.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: -25px center;
+  padding-left: 40px;
+  filter: opacity(0.66) drop-shadow(0 0 0 rgb(255, 206, 217));
+}
+
+aside ul li a.pagos_en_linea:hover {
+  filter: none;
+}
+
+/* DISEÑO PARA "INFORMACIÓN ACADÉMICA" */
+.informacion_academica {
+  background-image: url("/static/images/ico_file.png");
+  background-repeat: no-repeat;
+  background-size: 20px 19px;
+  background-position: -25px center;
+  padding-left: 40px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  background-origin: content-box;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background-color 0.3s;
+  filter: opacity(0.66) drop-shadow(0 0 0 rgb(255, 206, 217));
+}
+
+.informacion_academica:hover {
+  filter: none;
+}
+
+/* DISEÑO PARA "PORTAL DE BIBLIOTECA" */
+aside ul li a.portal_de_biblioteca {
+  background-image: url("/static/images/ico_book.png");
+  background-repeat: no-repeat;
+  background-size: 18px 19px;
+  background-position: -25px center;
+  padding-left: 40px;
+  filter: opacity(0.66) drop-shadow(0 0 0 rgb(255, 206, 217));
+}
+
+aside ul li a.portal_de_biblioteca:hover {
+  filter: none;
+}
+
+/* DISEÑO PARA "CAMBIAR MI CONTRASEÑA" */
+aside ul li a.cambiar_mi_contraseña {
+  background-image: url("/static/images/ico_padlock.png");
+  background-repeat: no-repeat;
+  background-size: 16px 20px;
+  background-position: -25px center;
+  padding-left: 40px;
+  filter: opacity(0.66) drop-shadow(0 0 0 rgb(255, 206, 217));
+}
+
+aside ul li a.cambiar_mi_contraseña:hover {
+  filter: none;
+}
+
+/* Estilos del footer */
+footer {
+  background-color: #fff;
+  padding: 5px;
+  text-align: center;
+  color: #333;
+  height: 24.85px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 70px;
+  right: 0;
+  transition: left 0.3s;
+  border-top: 1px solid rgba(228, 228, 228, 1);
+}
+
+/* Estilos del footer expandido */
+footer.expanded {
+  left: 300px;
+}
+
+/* Estilos del párrafo del footer expandido */
+footer.expanded p {
+  transform: translateX(-155px) translateY(-12px);
+}
+
+/* Estilos del párrafo del footer */
+footer p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transform: translateX(-40px) translateY(-12px);
+}
+
+/* Estilos del submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  padding: 15px;
+  top: -2px;
+  border: none;
+}
+
+.submenu li {
+  margin-bottom: 10px;
+}
+
+.submenu li a {
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  padding-left: 50px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.option-icon {
+  background-size: 12px;
+  padding-left: 20px;
+}
+
+/* Estilos para mover los elementos cuando el menú esté abierto */
+.submenu-open {
+  position: relative;
+  top: 170px;
+}
