@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-bottom: 123px;
   overflow-x: hidden;
 }
 
@@ -268,6 +269,7 @@ aside {
   left: 0;
   transition: width 0.3s;
   height: 100vh;
+  z-index: 1;
 }
 
 /* Estilos del aside en hover */
@@ -375,7 +377,7 @@ aside ul li a.mis_trámites {
   background-image: url("/static/images/ico_bookshop.png");
   background-repeat: no-repeat;
   background-size: 18px 20.38px;
-  background-position: -24.40px 1px;
+  background-position: -24.4px 1px;
   padding-left: 40px;
   filter: opacity(0.66) drop-shadow(0 0 0 rgb(255, 206, 217));
 }
@@ -473,54 +475,6 @@ main h1 {
   margin-top: 0;
   font-weight: normal;
   color: #333;
-}
-
-/* Estilos de la grilla de tarjetas */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  justify-items: center;
-}
-
-/* Estilos de las tarjetas */
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-}
-
-/* Estilos del título de la tarjeta */
-.card h2 {
-  margin-top: 0;
-  font-weight: normal;
-  color: #ff3366;
-}
-
-/* Estilos del párrafo de la tarjeta */
-.card p {
-  color: #666;
-  font-size: 14px;
-}
-
-/* Estilos del botón de la tarjeta */
-.card button {
-  background-color: #fff;
-  border: 1px solid #ff3366;
-  border-radius: 5px;
-  color: #ff3366;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 10px 20px;
-}
-
-/* Estilos del botón de la tarjeta en hover */
-.card button:hover {
-  background-color: #ff3366;
-  color: #fff;
 }
 
 /* Estilos del footer */
@@ -754,7 +708,7 @@ footer p {
 /* Estilos del título principal */
 .main-title {
   position: relative;
-  left: 174.5px;
+  left: 186.4px;
   letter-spacing: 0.5px;
 }
 
@@ -762,7 +716,7 @@ footer p {
 .sub-title {
   position: relative;
   top: -11px;
-  left: 23px;
+  left: 35px;
   letter-spacing: 0.5px;
 }
 
@@ -848,4 +802,716 @@ footer p {
 .submenu-open {
   position: relative;
   top: 170px;
+}
+
+/* DISEÑO DE TODAS LAS CARDS */
+/* Estilos de la grilla de tarjetas */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Estilos de las tarjetas */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+/* CARD REQUISITOS */
+.requisitos {
+  transform: translate(-1px, 68.4px);
+  height: 167.95px;
+  border-radius: 30.2px;
+  width: 229px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.requisitos h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.requisitos p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.requisitos button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  transform: translate(0, 18.5px);
+  padding: 6.2px 65.16px;
+  border-radius: 15px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.requisitos button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.requisitos:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.requisitos button span {
+  position: relative;
+  top: -0.5px;
+}
+
+/* CARD TRÁMITES */
+.tramites {
+  transform: translate(23px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 228.95px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.tramites h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.tramites p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.tramites button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.tramites button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.tramites:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.tramites button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD PAGOS EN LÍNEA*/
+.pagos {
+  transform: translate(46.4px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 229.8px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.pagos h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.pagos p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.pagos button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.pagos button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.pagos:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.pagos button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD MI HORARIO */
+.horario {
+  transform: translate(70px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 227.98px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.horario h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.horario p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.horario button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.horario button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.horario:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.horario button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD MIS CALIFICACIONES */
+.calificaciones {
+  transform: translate(-1px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 228.95px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.calificaciones h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.calificaciones p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.calificaciones button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.calificaciones button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.calificaciones:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.calificaciones button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD MI RECORD ACADEMICO */
+.record_academico {
+  transform: translate(23px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 228.95px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.record_academico h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.record_academico p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.record_academico button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.record_academico button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.record_academico:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.record_academico button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD MIS NOTAS APROBADAS */
+.notas_aprobadas {
+  transform: translate(46.4px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 229.8px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.notas_aprobadas h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.notas_aprobadas p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.notas_aprobadas button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.notas_aprobadas button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.notas_aprobadas:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.notas_aprobadas button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD ACTUALIZAR MIS DATOS */
+.actualizar_datos {
+  transform: translate(70px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 227.98px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.actualizar_datos h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.actualizar_datos p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.actualizar_datos button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.actualizar_datos button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.actualizar_datos:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.actualizar_datos button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD FOTOCHECK */
+.fotocheck {
+  transform: translate(-1px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 228.95px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.fotocheck h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.fotocheck p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.fotocheck button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.fotocheck button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.fotocheck:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.fotocheck button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD PORTAL BIBLIOTECA */
+.portal_biblioteca {
+  transform: translate(23px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 228.95px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.portal_biblioteca h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.portal_biblioteca p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.portal_biblioteca button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.portal_biblioteca button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.portal_biblioteca:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.portal_biblioteca button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD INSCRIPCIÓN */
+.inscripcion {
+  transform: translate(46.4px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 229.8px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.inscripcion h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.inscripcion p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.inscripcion button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.inscripcion button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.inscripcion:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.inscripcion button span {
+  position: relative;
+  top: 0.4px;
 }
