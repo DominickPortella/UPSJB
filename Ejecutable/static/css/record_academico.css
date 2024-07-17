@@ -528,3 +528,535 @@ footer p {
   position: relative;
   top: 170px;
 }
+
+/* Estructura del "RECORD ACADÉMICO" */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  position: relative;
+  max-width: 860.4px;
+  margin: 83px 273.8px 40px auto;
+  height: 400vh; /* Ajusta la altura al 100% del viewport */
+}
+
+.red-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 97.3%;
+  height: 120px; /* Ajusta la altura según sea necesario */
+  background-color: rgba(255, 10, 65, 255);
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+  transform: translateX(11.8px);
+  z-index: 0; /* Asegúrate de que esté detrás del contenido */
+}
+
+.record-heading {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 34px;
+  color: rgb(0, 0, 0);
+  text-align: center; /* Centra el texto horizontalmente */
+  position: relative; /* Permite el uso de transformaciones */
+  top: -20px; /* Ajusta la posición vertical hacia arriba */
+  left: -120px;
+}
+
+/* Estilos para la lista de textos */
+.notes-list {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding-left: 0; /* Elimina el padding izquierdo por defecto */
+}
+
+.notes-list li {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(0, 0, 0);
+}
+
+.logo-sjb {
+  width: 249px; /* Ajusta el ancho según sea necesario */
+  height: auto;
+  margin-right: 20px; /* Añade espacio entre el logo y el panel de notas */
+  transform: translate(
+    -8px,
+    -1316.8px
+  ); /* Ajusta los valores según sea necesario */
+}
+
+#suggestion-box {
+  position: absolute;
+  top: 30px; /* ajusta este valor según sea necesario */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
+
+/* TEXTOS DE LAS CALIFICACIONES */
+.notes-panel .header h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0.5px;
+  transform: translateY(-6.5px) translateX(39px);
+}
+
+.notes-panel p span {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.notes-panel p span + span {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.notes-panel p.info {
+  margin: 0 !important;
+  padding: 1.9px 0 !important;
+  transform: translateX(-190px) translateY(-2.5px);
+}
+
+.notes-panel p.codigo span:first-child {
+  margin-right: 110px; /* Agrega espacio entre Código: y 1000071135 */
+}
+
+.notes-panel p.nombre-completo span:first-child {
+  margin-right: 32.35px; /* Agrega espacio entre Nombre Completo: y ROJAS LICAS, ANGELA IBETH */
+}
+
+.notes-panel p.situacion span:first-child {
+  margin-right: 93.6px; /* Agrega espacio entre Situación: y Cambio Datos */
+}
+
+.notes-panel p.grado span:first-child {
+  margin-right: 117.6px; /* Agrega espacio entre Grado: y PREGRADO */
+}
+
+.notes-panel p.especialidad span:first-child {
+  margin-right: 69.6px; /* Agrega espacio entre Especialidad: y MEDICINA HUMANA */
+}
+
+.notes-panel p.info span {
+  letter-spacing: 0.5px; /* Agrega espacio entre letras */
+}
+
+.background-semestre {
+  display: block;
+  height: 30px; /* Altura del fondo */
+  background-color: rgba(237, 237, 237, 255); /* Color del fondo */
+  position: absolute; /* Posicionamos el fondo absolutamente */
+  top: 0; /* Posicionamos el fondo en la parte superior */
+  left: 12px; /* Posicionamos el fondo en la parte izquierda */
+  width: 97.3%;
+  z-index: 0;
+  transform: translateY(393.6px);
+}
+
+h3 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.51px;
+  transform: translate(96.75px, -9.6px);
+  z-index: 1;
+}
+
+th {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+td {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.promedio-ponderado {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+table {
+  transform: translateX(-177px) translateY(-21.6px);
+  letter-spacing: 0.5px;
+}
+
+/* TABLA 1 */
+th.Curso {
+  transform: translateX(-114.4px);
+}
+
+th.Crd {
+  transform: translateX(84.4px);
+}
+
+th.Ciclo {
+  transform: translateX(90.2px);
+}
+
+th.Nota {
+  transform: translateX(94.8px);
+}
+
+/* TABLA 2 */
+th.Curso2 {
+  transform: translateX(-126px);
+}
+
+th.Crd2 {
+  transform: translateX(61.4px);
+}
+
+th.Ciclo2 {
+  transform: translateX(67.3px);
+}
+
+th.Nota2 {
+  transform: translateX(72px);
+}
+
+/* TABLA 3 */
+th.Curso3 {
+  transform: translateX(-126px);
+}
+
+th.Crd3 {
+  transform: translateX(61.4px);
+}
+
+th.Ciclo3 {
+  transform: translateX(67.3px);
+}
+
+th.Nota3 {
+  transform: translateX(72px);
+}
+
+/* TABLA 4 */
+th.Curso4 {
+  transform: translateX(-126px);
+}
+
+th.Crd4 {
+  transform: translateX(61.4px);
+}
+
+th.Ciclo4 {
+  transform: translateX(67.3px);
+}
+
+th.Nota4 {
+  transform: translateX(72px);
+}
+
+/* TABLA 5 */
+th.Curso5 {
+  transform: translateX(-57.2px);
+}
+
+th.Crd5 {
+  transform: translateX(199px);
+}
+
+th.Ciclo5 {
+  transform: translateX(204.4px);
+}
+
+th.Nota5 {
+  transform: translateX(209.4px);
+}
+
+/* TABLA 6 */
+th.Curso6 {
+  transform: translateX(-23.6px);
+}
+
+th.Crd6 {
+  transform: translateX(266.4px);
+}
+
+th.Ciclo6 {
+  transform: translateX(272px);
+}
+
+th.Nota6 {
+  transform: translateX(276.6px);
+}
+
+/* TABLA 7 */
+th.Curso7 {
+  transform: translateX(-126px);
+}
+
+th.Crd7 {
+  transform: translateX(61.4px);
+}
+
+th.Ciclo7 {
+  transform: translateX(67.3px);
+}
+
+th.Nota7 {
+  transform: translateX(72px);
+}
+
+/* TABLA 8 */
+th.Curso8 {
+  transform: translateX(-126px);
+}
+
+th.Crd8 {
+  transform: translateX(61.4px);
+}
+
+th.Ciclo8 {
+  transform: translateX(67.3px);
+}
+
+th.Nota8 {
+  transform: translateX(72px);
+}
+
+/* TABLA 9 */
+th.Curso9 {
+  transform: translateX(-80px);
+}
+
+th.Crd9 {
+  transform: translateX(153.6px);
+}
+
+th.Ciclo9 {
+  transform: translateX(159.4px);
+}
+
+th.Nota9 {
+  transform: translateX(164.4px);
+}
+
+/* REGISTROS DEL PRIMER CICLO */
+td.curso {
+  position: relative;
+  left: 65px;
+}
+
+td.crd {
+  position: relative;
+  left: 84.4px;
+}
+
+td.ciclo {
+  position: relative;
+  left: 90.2px;
+}
+
+td.nota {
+  position: relative;
+  left: 94.8px;
+}
+
+/* REGISTROS DEL SEGUNDO CICLO */
+td.curso2 {
+  position: relative;
+  left: 65px;
+}
+
+td.crd2 {
+  position: relative;
+  left: 61.4px;
+}
+
+td.ciclo2 {
+  position: relative;
+  left: 67.2px;
+}
+
+td.nota2 {
+  position: relative;
+  left: 71.6px;
+}
+
+/* REGISTROS DEL TERCER CICLO */
+td.curso3 {
+  position: relative;
+  left: 65px;
+}
+
+td.crd3 {
+  position: relative;
+  left: 61.4px;
+}
+
+td.ciclo3 {
+  position: relative;
+  left: 67.2px;
+}
+
+td.nota3 {
+  position: relative;
+  left: 71.6px;
+}
+
+/* REGISTROS DEL CUARTO CICLO */
+td.curso4 {
+  position: relative;
+  left: 65px;
+}
+
+td.crd4 {
+  position: relative;
+  left: 61.4px;
+}
+
+td.ciclo4 {
+  position: relative;
+  left: 67.2px;
+}
+
+td.nota4 {
+  position: relative;
+  left: 71.6px;
+}
+
+/* REGISTROS DEL QUINTO CICLO */
+td.curso5 {
+  position: relative;
+  left: 65px;
+}
+
+td.crd5 {
+  position: relative;
+  left: 200px;
+}
+
+td.ciclo5 {
+  position: relative;
+  left: 208px;
+}
+
+td.nota5 {
+  position: relative;
+  left: 210px;
+}
+
+/* REGISTROS DEL SEXTO CICLO */
+td.curso6 {
+  position: relative;
+  left: 65px;
+}
+
+td.crd6 {
+  position: relative;
+  left: 268px;
+}
+
+td.ciclo6 {
+  position: relative;
+  left: 274px;
+}
+
+td.nota6 {
+  position: relative;
+  left: 276px;
+}
+
+/* REGISTROS DEL SEPTIMO CICLO */
+td.curso7 {
+  position: relative;
+  left: 65px;
+}
+
+td.crd7 {
+  position: relative;
+  left: 61.4px;
+}
+
+td.ciclo7 {
+  position: relative;
+  left: 67.2px;
+}
+
+td.nota7 {
+  position: relative;
+  left: 71.6px;
+}
+
+/* REGISTROS DEL OCTAVO CICLO */
+td.curso8 {
+  position: relative;
+  left: 65px;
+}
+
+td.crd8 {
+  position: relative;
+  left: 61.4px;
+}
+
+td.ciclo8 {
+  position: relative;
+  left: 67.2px;
+}
+
+td.nota8 {
+  position: relative;
+  left: 71.6px;
+}
+
+/* REGISTROS DEL NOVENO CICLO */
+td.curso9 {
+  position: relative;
+  left: 65px;
+}
+
+td.crd9 {
+  position: relative;
+  left: 156px;
+}
+
+td.ciclo9 {
+  position: relative;
+  left: 160px;
+}
+
+td.nota9 {
+  position: relative;
+  left: 164px;
+}
