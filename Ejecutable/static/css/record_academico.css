@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-bottom: 123px;
+  padding-bottom: 100px;
   overflow-x: hidden;
 }
 
@@ -540,7 +540,7 @@ footer p {
   position: relative;
   max-width: 860.4px;
   margin: 83px 273.8px 40px auto;
-  height: 400vh; /* Ajusta la altura al 100% del viewport */
+  height: 390vh; /* Ajusta la altura al 100% del viewport */
 }
 
 .red-shape {
@@ -589,8 +589,8 @@ footer p {
   margin-right: 20px; /* Añade espacio entre el logo y el panel de notas */
   transform: translate(
     -8px,
-    -1316.8px
-  ); /* Ajusta los valores según sea necesario */
+    -1280px
+  );
 }
 
 #suggestion-box {
@@ -612,7 +612,7 @@ footer p {
   font-size: 28px;
   line-height: 34px;
   letter-spacing: 0.5px;
-  transform: translateY(-6.5px) translateX(39px);
+  transform: translateY(76px) translateX(39px);
 }
 
 .notes-panel p span {
@@ -636,7 +636,7 @@ footer p {
 .notes-panel p.info {
   margin: 0 !important;
   padding: 1.9px 0 !important;
-  transform: translateX(-190px) translateY(-2.5px);
+  transform: translateX(-189.85px) translateY(80px);
 }
 
 .notes-panel p.codigo span:first-child {
@@ -648,11 +648,11 @@ footer p {
 }
 
 .notes-panel p.situacion span:first-child {
-  margin-right: 93.6px; /* Agrega espacio entre Situación: y Cambio Datos */
+  margin-right: 93.7px; /* Agrega espacio entre Situación: y Cambio Datos */
 }
 
 .notes-panel p.grado span:first-child {
-  margin-right: 117.6px; /* Agrega espacio entre Grado: y PREGRADO */
+  margin-right: 117.5px; /* Agrega espacio entre Grado: y PREGRADO */
 }
 
 .notes-panel p.especialidad span:first-child {
@@ -675,7 +675,33 @@ footer p {
   transform: translateY(393.6px);
 }
 
-h3 {
+.background-semestre2 {
+  display: block;
+  height: 30px; /* Altura del fondo */
+  background-color: rgba(237, 237, 237, 255); /* Color del fondo */
+  position: absolute; /* Posicionamos el fondo absolutamente */
+  top: 0; /* Posicionamos el fondo en la parte superior */
+  left: 12px; /* Posicionamos el fondo en la parte izquierda */
+  width: 97.3%;
+  z-index: 0;
+  transform: translateY(638px);
+  border-top: 1px solid rgba(177, 175, 175, 255);
+}
+
+
+/* SEMESTRES */
+h3.semestre1 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transform: translate(96.75px, 73px);
+  z-index: 1;
+}
+h3.semestre2 {
   font-family: sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -683,9 +709,87 @@ h3 {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.51px;
-  transform: translate(96.75px, -9.6px);
+  transform: translate(96.75px, 53.70px);
   z-index: 1;
 }
+h3.semestre3 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transform: translate(96.75px, 73px);
+  z-index: 1;
+}
+h3.semestre4 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transform: translate(96.75px, 73px);
+  z-index: 1;
+}
+h3.semestre5 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transform: translate(96.75px, 73px);
+  z-index: 1;
+}
+h3.semestre6 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transform: translate(96.75px, 73px);
+  z-index: 1;
+}
+h3.semestre7 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transform: translate(96.75px, 73px);
+  z-index: 1;
+}
+h3.semestre8 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transform: translate(96.75px, 73px);
+  z-index: 1;
+}
+h3.semestre9 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transform: translate(96.75px, 73px);
+  z-index: 1;
+}
+
 
 th {
   font-family: sans-serif;
@@ -705,6 +809,7 @@ td {
   line-height: 21px;
 }
 
+/* PROMEDIOS PONDERADOS */
 .promedio-ponderado {
   font-family: sans-serif;
   font-style: normal;
@@ -712,45 +817,173 @@ td {
   color: rgb(0, 0, 0);
   font-size: 14px;
   line-height: 21px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transform: translateX(336.40px) translateY(52.45px);
+}
+.promedio-ponderado2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transform: translateX(315.40px) translateY(33.60px);
+}
+.promedio-ponderado3 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transform: translateX(336.40px) translateY(52.45px);
+}
+.promedio-ponderado4 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transform: translateX(336.40px) translateY(52.45px);
+}
+.promedio-ponderado5 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transform: translateX(336.40px) translateY(52.45px);
+}
+.promedio-ponderado6 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transform: translateX(336.40px) translateY(52.45px);
+}
+.promedio-ponderado7 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transform: translateX(336.40px) translateY(52.45px);
+}
+.promedio-ponderado8 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transform: translateX(336.40px) translateY(52.45px);
+}
+.promedio-ponderado9 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transform: translateX(336.40px) translateY(52.45px);
 }
 
+
+
+/* TABLAS */
 table {
-  transform: translateX(-177px) translateY(-21.6px);
+  transform: translateX(-177px) translateY(60.80px);
+  letter-spacing: 0.5px;
+}
+table.dos {
+  transform: translateX(-177px) translateY(41.80px);
+  letter-spacing: 0.5px;
+}
+table.tres {
+  transform: translateX(-177px) translateY(41.80px);
+  letter-spacing: 0.5px;
+}
+table.cuatro {
+  transform: translateX(-177px) translateY(41.80px);
+  letter-spacing: 0.5px;
+}
+table.cinco {
+  transform: translateX(-177px) translateY(41.80px);
+  letter-spacing: 0.5px;
+}
+table.seis {
+  transform: translateX(-177px) translateY(41.80px);
+  letter-spacing: 0.5px;
+}
+table.siete {
+  transform: translateX(-177px) translateY(41.80px);
+  letter-spacing: 0.5px;
+}
+table.ocho {
+  transform: translateX(-177px) translateY(41.80px);
+  letter-spacing: 0.5px;
+}
+table.nueve {
+  transform: translateX(-177px) translateY(41.80px);
   letter-spacing: 0.5px;
 }
 
+
+
 /* TABLA 1 */
 th.Curso {
-  transform: translateX(-114.4px);
+  transform: translateX(-110.30px);
 }
 
 th.Crd {
-  transform: translateX(84.4px);
+  transform: translateX(92.60px);
 }
 
 th.Ciclo {
-  transform: translateX(90.2px);
+  transform: translateX(98.40px);
 }
 
 th.Nota {
-  transform: translateX(94.8px);
+  transform: translateX(103px);
 }
 
 /* TABLA 2 */
 th.Curso2 {
-  transform: translateX(-126px);
+  transform: translateX(-110.30px);
 }
 
 th.Crd2 {
-  transform: translateX(61.4px);
+  transform: translateX(92.60px);
 }
 
 th.Ciclo2 {
-  transform: translateX(67.3px);
+  transform: translateX(98.40px);
 }
 
 th.Nota2 {
-  transform: translateX(72px);
+  transform: translateX(103px);
 }
 
 /* TABLA 3 */
@@ -872,52 +1105,366 @@ th.Nota9 {
   transform: translateX(164.4px);
 }
 
+
+
 /* REGISTROS DEL PRIMER CICLO */
-td.curso {
-  position: relative;
-  left: 65px;
+/* CÓDIGO */
+.seccion1 td.cod {
+  transform: translateY(-12.80px);
+}
+.seccion2 td.cod {
+  transform: translateY(-5.60px);
+}
+.seccion3 td.cod {
+  transform: translateY(-8px);
+}
+.seccion4 td.cod {
+  transform: translateY(-10.40px);
+}
+.seccion5 td.cod {
+  transform: translateY(-13.60px);
+}
+.seccion6 td.cod {
+  transform: translateY(-16.80px);
+}
+.seccion7 td.cod {
+  transform: translateY(-14px);
+}
+.seccion8 td.cod {
+  transform: translateY(-16px);
+}
+.seccion9 td.cod {
+  transform: translateY(-9px);
+}
+.seccion10 td.cod {
+  transform: translateY(-10.40px);
+}
+.seccion11 td.cod {
+  transform: translateY(-14px);
+}
+.seccion12 td.cod {
+  transform: translateY(-16.80px);
 }
 
-td.crd {
+
+/* CURSOS */
+.seccion1 td.curso {
   position: relative;
-  left: 84.4px;
+  left: 65.20px;
+  transform: translateY(-2.40px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion2 td.curso {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-5.60px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion3 td.curso {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-8px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion4 td.curso {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-10.40px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion5 td.curso {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-13.60px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion6 td.curso {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-16.80px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion7 td.curso2 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-3.40px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion8 td.curso2 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-5.60px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion9 td.curso2 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-9px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion10 td.curso2 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-10.40px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion11 td.curso2 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-14px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion12 td.curso2 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-16.80px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
 }
 
-td.ciclo {
+
+
+/* CRÉDITOS */
+.seccion1 td.crd {
   position: relative;
-  left: 90.2px;
+  left: 92.60px;
+  transform: translateY(-12.80px);
+}
+.seccion2 td.crd {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-5.60px);
+}
+.seccion3 td.crd {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-8px);
+}
+.seccion4 td.crd {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-10.40px);
+}
+.seccion5 td.crd {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-13.60px);
+}
+.seccion6 td.crd {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-16.80px);
+}
+.seccion7 td.crd2 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-14px);
+}
+.seccion8 td.crd2 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-16px);
+}
+.seccion9 td.crd2 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-9px);
+}
+.seccion10 td.crd2 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-10.40px);
+}
+.seccion11 td.crd2 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-14px);
+}
+.seccion12 td.crd2 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-16.80px);
 }
 
-td.nota {
+
+/* CICLO */
+.seccion1 td.ciclo {
   position: relative;
-  left: 94.8px;
+  left: 98.40px;
+  transform: translateY(-12.80px);
 }
+.seccion2 td.ciclo {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-5.60px);
+}
+.seccion3 td.ciclo {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-8px);
+}
+.seccion4 td.ciclo {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-10.40px);
+}
+.seccion5 td.ciclo {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-13.60px);
+}
+.seccion6 td.ciclo {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-16.80px);
+}
+.seccion7 td.ciclo2 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-14px);
+}
+.seccion8 td.ciclo2 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-16px);
+}
+.seccion9 td.ciclo2 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-9px);
+}
+.seccion10 td.ciclo2 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-10.40px);
+}
+.seccion11 td.ciclo2 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-14px);
+}
+.seccion12 td.ciclo2 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-16.80px);
+}
+
+
+/* NOTAS */
+.seccion1 td.nota {
+  position: relative;
+  left: 103px;
+  transform: translateY(-12.80px);
+}
+.seccion2 td.nota {
+  position: relative;
+  left: 103px;
+  transform: translateY(-5.60px);
+}
+.seccion3 td.nota {
+  position: relative;
+  left: 103px;
+  transform: translateY(-8px);
+}
+.seccion4 td.nota {
+  position: relative;
+  left: 103px;
+  transform: translateY(-10.40px);
+}
+.seccion5 td.nota {
+  position: relative;
+  left: 103px;
+  transform: translateY(-13.60px);
+}
+.seccion6 td.nota {
+  position: relative;
+  left: 103px;
+  transform: translateY(-16.80px);
+}
+.seccion7 td.nota2 {
+  position: relative;
+  left: 103px;
+  transform: translateY(-14px);
+}
+.seccion8 td.nota2 {
+  position: relative;
+  left: 103px;
+  transform: translateY(-16px);
+}
+.seccion9 td.nota2 {
+  position: relative;
+  left: 103px;
+  transform: translateY(-9px);
+}
+.seccion10 td.nota2 {
+  position: relative;
+  left: 103px;
+  transform: translateY(-10.40px);
+}
+.seccion11 td.nota2 {
+  position: relative;
+  left: 103px;
+  transform: translateY(-14px);
+}
+.seccion12 td.nota2 {
+  position: relative;
+  left: 103px;
+  transform: translateY(-16.80px);
+}
+
+
+
+
+
+
+
 
 /* REGISTROS DEL SEGUNDO CICLO */
-td.curso2 {
-  position: relative;
-  left: 65px;
-}
 
-td.crd2 {
-  position: relative;
-  left: 61.4px;
-}
-
-td.ciclo2 {
-  position: relative;
-  left: 67.2px;
-}
-
-td.nota2 {
-  position: relative;
-  left: 71.6px;
-}
 
 /* REGISTROS DEL TERCER CICLO */
 td.curso3 {
   position: relative;
   left: 65px;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
 }
 
 td.crd3 {
@@ -939,6 +1486,10 @@ td.nota3 {
 td.curso4 {
   position: relative;
   left: 65px;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
 }
 
 td.crd4 {
@@ -1002,6 +1553,10 @@ td.nota6 {
 td.curso7 {
   position: relative;
   left: 65px;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
 }
 
 td.crd7 {
