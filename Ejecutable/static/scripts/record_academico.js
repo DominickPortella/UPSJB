@@ -61,4 +61,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    const fechaElement = document.getElementById('fecha');
+    const horaElement = document.getElementById('hora');
+  
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+  
+    fechaElement.textContent = `${day}/${month}/${year}`;
+    horaElement.textContent = `${hours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
 });

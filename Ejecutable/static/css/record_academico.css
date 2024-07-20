@@ -7,7 +7,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-bottom: 100px;
   overflow-x: hidden;
 }
 
@@ -540,7 +539,7 @@ footer p {
   position: relative;
   max-width: 860.4px;
   margin: 83px 273.8px 40px auto;
-  height: 390vh; /* Ajusta la altura al 100% del viewport */
+  height: 365vh; /* Ajusta la altura al 100% del viewport */
 }
 
 .red-shape {
@@ -588,8 +587,8 @@ footer p {
   height: auto;
   margin-right: 20px; /* Añade espacio entre el logo y el panel de notas */
   transform: translate(
-    -8px,
-    -1280px
+    -13.60px,
+    -1188.60px
   );
 }
 
@@ -612,7 +611,7 @@ footer p {
   font-size: 28px;
   line-height: 34px;
   letter-spacing: 0.5px;
-  transform: translateY(76px) translateX(39px);
+  transform: translateY(172px) translateX(33px);
 }
 
 .notes-panel p span {
@@ -636,57 +635,140 @@ footer p {
 .notes-panel p.info {
   margin: 0 !important;
   padding: 1.9px 0 !important;
-  transform: translateX(-189.85px) translateY(80px);
+  transform: translateX(-196px) translateY(176px);
 }
 
+
+/* CREDENCIALES DEL ESTUDIANTE */
 .notes-panel p.codigo span:first-child {
   margin-right: 110px; /* Agrega espacio entre Código: y 1000071135 */
 }
-
 .notes-panel p.nombre-completo span:first-child {
   margin-right: 32.35px; /* Agrega espacio entre Nombre Completo: y ROJAS LICAS, ANGELA IBETH */
 }
-
 .notes-panel p.situacion span:first-child {
   margin-right: 93.7px; /* Agrega espacio entre Situación: y Cambio Datos */
 }
-
 .notes-panel p.grado span:first-child {
   margin-right: 117.5px; /* Agrega espacio entre Grado: y PREGRADO */
 }
-
 .notes-panel p.especialidad span:first-child {
   margin-right: 69.6px; /* Agrega espacio entre Especialidad: y MEDICINA HUMANA */
 }
-
 .notes-panel p.info span {
   letter-spacing: 0.5px; /* Agrega espacio entre letras */
 }
 
+
+/* FRANJA DETRÁS DE LOS SEMESTRES */
 .background-semestre {
   display: block;
-  height: 30px; /* Altura del fondo */
-  background-color: rgba(237, 237, 237, 255); /* Color del fondo */
-  position: absolute; /* Posicionamos el fondo absolutamente */
-  top: 0; /* Posicionamos el fondo en la parte superior */
-  left: 12px; /* Posicionamos el fondo en la parte izquierda */
+  height: 30px;
+  background-color: rgba(237, 237, 237, 255);
+  position: absolute;
+  top: 0;
+  left: 12px;
   width: 97.3%;
   z-index: 0;
-  transform: translateY(393.6px);
+  transform: translateY(393.60px);
 }
-
 .background-semestre2 {
   display: block;
-  height: 30px; /* Altura del fondo */
-  background-color: rgba(237, 237, 237, 255); /* Color del fondo */
-  position: absolute; /* Posicionamos el fondo absolutamente */
-  top: 0; /* Posicionamos el fondo en la parte superior */
-  left: 12px; /* Posicionamos el fondo en la parte izquierda */
+  height: 30px;
+  background-color: rgba(237, 237, 237, 255);
+  position: absolute;
+  top: 0;
+  left: 12px;
   width: 97.3%;
   z-index: 0;
-  transform: translateY(638px);
+  transform: translateY(638.40px);
   border-top: 1px solid rgba(177, 175, 175, 255);
 }
+.background-semestre3 {
+  display: block;
+  height: 29.40px;
+  background-color: rgba(237, 237, 237, 255);
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 97.3%;
+  z-index: 0;
+  transform: translateY(905.20px);
+  border-top: 1px solid rgba(177, 175, 175, 255);
+}
+.background-semestre4 {
+  display: block;
+  height: 30.40px;
+  background-color: rgba(237, 237, 237, 255);
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 97.3%;
+  z-index: 0;
+  transform: translateY(1213.20px);
+  border-top: 1px solid rgba(177, 175, 175, 255);
+}
+.background-semestre5 {
+  display: block;
+  height: 30.40px;
+  background-color: rgba(237, 237, 237, 255);
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 97.3%;
+  z-index: 0;
+  transform: translateY(1437px);
+  border-top: 1px solid rgba(177, 175, 175, 255);
+}
+.background-semestre6 {
+  display: block;
+  height: 30.40px;
+  background-color: rgba(237, 237, 237, 255);
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 97.3%;
+  z-index: 0;
+  transform: translateY(1639px);
+  border-top: 1px solid rgba(177, 175, 175, 255);
+}
+.background-semestre7 {
+  display: block;
+  height: 30.40px;
+  background-color: rgba(237, 237, 237, 255);
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 97.3%;
+  z-index: 0;
+  transform: translateY(1841px);
+  border-top: 1px solid rgba(177, 175, 175, 255);
+}
+.background-semestre8 {
+  display: block;
+  height: 30.40px;
+  background-color: rgba(237, 237, 237, 255);
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 97.3%;
+  z-index: 0;
+  transform: translateY(2091px);
+  border-top: 1px solid rgba(177, 175, 175, 255);
+}
+.background-semestre9 {
+  display: block;
+  height: 30.40px;
+  background-color: rgba(237, 237, 237, 255);
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 97.3%;
+  z-index: 0;
+  transform: translateY(2300.60px);
+  border-top: 1px solid rgba(177, 175, 175, 255);
+}
+
 
 
 /* SEMESTRES */
@@ -698,7 +780,7 @@ h3.semestre1 {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.5px;
-  transform: translate(96.75px, 73px);
+  transform: translate(91px, 168.60px);
   z-index: 1;
 }
 h3.semestre2 {
@@ -709,7 +791,7 @@ h3.semestre2 {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.51px;
-  transform: translate(96.75px, 53.70px);
+  transform: translate(91px, 149.60px);
   z-index: 1;
 }
 h3.semestre3 {
@@ -720,7 +802,7 @@ h3.semestre3 {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.5px;
-  transform: translate(96.75px, 73px);
+  transform: translate(96.75px, 130px);
   z-index: 1;
 }
 h3.semestre4 {
@@ -731,7 +813,7 @@ h3.semestre4 {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.5px;
-  transform: translate(96.75px, 73px);
+  transform: translate(96.75px, 111px);
   z-index: 1;
 }
 h3.semestre5 {
@@ -742,7 +824,7 @@ h3.semestre5 {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.5px;
-  transform: translate(96.75px, 73px);
+  transform: translate(96.75px, 94px);
   z-index: 1;
 }
 h3.semestre6 {
@@ -753,7 +835,7 @@ h3.semestre6 {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.5px;
-  transform: translate(96.75px, 73px);
+  transform: translate(96.75px, 76.40px);
   z-index: 1;
 }
 h3.semestre7 {
@@ -764,7 +846,7 @@ h3.semestre7 {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.5px;
-  transform: translate(96.75px, 73px);
+  transform: translate(96.75px, 59.40px);
   z-index: 1;
 }
 h3.semestre8 {
@@ -775,7 +857,7 @@ h3.semestre8 {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.5px;
-  transform: translate(96.75px, 73px);
+  transform: translate(96.75px, 48.60px);
   z-index: 1;
 }
 h3.semestre9 {
@@ -786,7 +868,7 @@ h3.semestre9 {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.5px;
-  transform: translate(96.75px, 73px);
+  transform: translate(96.75px, 42.60px);
   z-index: 1;
 }
 
@@ -819,7 +901,7 @@ td {
   line-height: 21px;
   display: inline-block;
   letter-spacing: 0.5px;
-  transform: translateX(336.40px) translateY(52.45px);
+  transform: translateX(330.40px) translateY(147.60px);
 }
 .promedio-ponderado2 {
   font-family: sans-serif;
@@ -830,7 +912,7 @@ td {
   line-height: 21px;
   display: inline-block;
   letter-spacing: 0.5px;
-  transform: translateX(315.40px) translateY(33.60px);
+  transform: translateX(309.20px) translateY(128.60px);
 }
 .promedio-ponderado3 {
   font-family: sans-serif;
@@ -841,7 +923,7 @@ td {
   line-height: 21px;
   display: inline-block;
   letter-spacing: 0.5px;
-  transform: translateX(336.40px) translateY(52.45px);
+  transform: translateX(317.60px) translateY(108.80px);
 }
 .promedio-ponderado4 {
   font-family: sans-serif;
@@ -852,7 +934,7 @@ td {
   line-height: 21px;
   display: inline-block;
   letter-spacing: 0.5px;
-  transform: translateX(336.40px) translateY(52.45px);
+  transform: translateX(301.60px) translateY(92.60px);
 }
 .promedio-ponderado5 {
   font-family: sans-serif;
@@ -863,7 +945,7 @@ td {
   line-height: 21px;
   display: inline-block;
   letter-spacing: 0.5px;
-  transform: translateX(336.40px) translateY(52.45px);
+  transform: translateX(317.80px) translateY(75px);
 }
 .promedio-ponderado6 {
   font-family: sans-serif;
@@ -874,7 +956,7 @@ td {
   line-height: 21px;
   display: inline-block;
   letter-spacing: 0.5px;
-  transform: translateX(336.40px) translateY(52.45px);
+  transform: translateX(318px) translateY(57.60px);
 }
 .promedio-ponderado7 {
   font-family: sans-serif;
@@ -885,7 +967,7 @@ td {
   line-height: 21px;
   display: inline-block;
   letter-spacing: 0.5px;
-  transform: translateX(336.40px) translateY(52.45px);
+  transform: translateX(330.80px) translateY(47px);
 }
 .promedio-ponderado8 {
   font-family: sans-serif;
@@ -896,7 +978,7 @@ td {
   line-height: 21px;
   display: inline-block;
   letter-spacing: 0.5px;
-  transform: translateX(336.40px) translateY(52.45px);
+  transform: translateX(317.70px) translateY(40.60px);
 }
 .promedio-ponderado9 {
   font-family: sans-serif;
@@ -907,46 +989,46 @@ td {
   line-height: 21px;
   display: inline-block;
   letter-spacing: 0.5px;
-  transform: translateX(336.40px) translateY(52.45px);
+  transform: translateX(309.40px) translateY(26.40px);
 }
 
 
 
 /* TABLAS */
 table {
-  transform: translateX(-177px) translateY(60.80px);
+  transform: translateX(-183.20px) translateY(156.40px);
   letter-spacing: 0.5px;
 }
 table.dos {
-  transform: translateX(-177px) translateY(41.80px);
+  transform: translateX(-183.20px) translateY(137.60px);
   letter-spacing: 0.5px;
 }
 table.tres {
-  transform: translateX(-177px) translateY(41.80px);
+  transform: translateX(-183.20px) translateY(117.60px);
   letter-spacing: 0.5px;
 }
 table.cuatro {
-  transform: translateX(-177px) translateY(41.80px);
+  transform: translateX(-183.20px) translateY(99px);
   letter-spacing: 0.5px;
 }
 table.cinco {
-  transform: translateX(-177px) translateY(41.80px);
+  transform: translateX(-183.20px) translateY(81.80px);
   letter-spacing: 0.5px;
 }
 table.seis {
-  transform: translateX(-177px) translateY(41.80px);
+  transform: translateX(-183.20px) translateY(65px);
   letter-spacing: 0.5px;
 }
 table.siete {
-  transform: translateX(-177px) translateY(41.80px);
+  transform: translateX(-183.20px) translateY(48px);
   letter-spacing: 0.5px;
 }
 table.ocho {
-  transform: translateX(-177px) translateY(41.80px);
+  transform: translateX(-183.20px) translateY(37.40px);
   letter-spacing: 0.5px;
 }
 table.nueve {
-  transform: translateX(-177px) translateY(41.80px);
+  transform: translateX(-183.20px) translateY(31px);
   letter-spacing: 0.5px;
 }
 
@@ -988,62 +1070,62 @@ th.Nota2 {
 
 /* TABLA 3 */
 th.Curso3 {
-  transform: translateX(-126px);
+  transform: translateX(-110.30px);
 }
 
 th.Crd3 {
-  transform: translateX(61.4px);
+  transform: translateX(92.60px);
 }
 
 th.Ciclo3 {
-  transform: translateX(67.3px);
+  transform: translateX(98.40px);
 }
 
 th.Nota3 {
-  transform: translateX(72px);
+  transform: translateX(103px);
 }
 
 /* TABLA 4 */
 th.Curso4 {
-  transform: translateX(-126px);
+  transform: translateX(-110.30px);
 }
 
 th.Crd4 {
-  transform: translateX(61.4px);
+  transform: translateX(92.60px);
 }
 
 th.Ciclo4 {
-  transform: translateX(67.3px);
+  transform: translateX(98.40px);
 }
 
 th.Nota4 {
-  transform: translateX(72px);
+  transform: translateX(103px);
 }
 
 /* TABLA 5 */
 th.Curso5 {
-  transform: translateX(-57.2px);
+  transform: translateX(-57.40px);
 }
 
 th.Crd5 {
-  transform: translateX(199px);
+  transform: translateX(198.60px);
 }
 
 th.Ciclo5 {
-  transform: translateX(204.4px);
+  transform: translateX(204.50px);
 }
 
 th.Nota5 {
-  transform: translateX(209.4px);
+  transform: translateX(209.60px);
 }
 
 /* TABLA 6 */
 th.Curso6 {
-  transform: translateX(-23.6px);
+  transform: translateX(-23.60px);
 }
 
 th.Crd6 {
-  transform: translateX(266.4px);
+  transform: translateX(266.40px);
 }
 
 th.Ciclo6 {
@@ -1051,58 +1133,58 @@ th.Ciclo6 {
 }
 
 th.Nota6 {
-  transform: translateX(276.6px);
+  transform: translateX(277px);
 }
 
 /* TABLA 7 */
 th.Curso7 {
-  transform: translateX(-126px);
+  transform: translateX(-110.80px);
 }
 
 th.Crd7 {
-  transform: translateX(61.4px);
+  transform: translateX(92.60px);
 }
 
 th.Ciclo7 {
-  transform: translateX(67.3px);
+  transform: translateX(98.40px);
 }
 
 th.Nota7 {
-  transform: translateX(72px);
+  transform: translateX(103px);
 }
 
 /* TABLA 8 */
 th.Curso8 {
-  transform: translateX(-126px);
+  transform: translateX(-111px);
 }
 
 th.Crd8 {
-  transform: translateX(61.4px);
+  transform: translateX(92.60px);
 }
 
 th.Ciclo8 {
-  transform: translateX(67.3px);
+  transform: translateX(98.40px);
 }
 
 th.Nota8 {
-  transform: translateX(72px);
+  transform: translateX(103.40px);
 }
 
 /* TABLA 9 */
 th.Curso9 {
-  transform: translateX(-80px);
+  transform: translateX(-80.20px);
 }
 
 th.Crd9 {
-  transform: translateX(153.6px);
+  transform: translateX(153.50px);
 }
 
 th.Ciclo9 {
-  transform: translateX(159.4px);
+  transform: translateX(159px);
 }
 
 th.Nota9 {
-  transform: translateX(164.4px);
+  transform: translateX(164.40px);
 }
 
 
@@ -1145,6 +1227,112 @@ th.Nota9 {
 .seccion12 td.cod {
   transform: translateY(-16.80px);
 }
+.seccion13 td.cod {
+  transform: translateY(-13px);
+}
+.seccion14 td.cod {
+  transform: translateY(-16px);
+}
+.seccion15 td.cod {
+  transform: translateY(-18.80px);
+}
+.seccion16 td.cod {
+  transform: translateY(-21px);
+}
+.seccion17 td.cod {
+  transform: translateY(-14px);
+}
+.seccion18 td.cod {
+  transform: translateY(-16.80px);
+}
+.seccion19 td.cod {
+  transform: translateY(-13.40px);
+}
+.seccion20 td.cod {
+  transform: translateY(-4px);
+}
+.seccion21 td.cod {
+  transform: translateY(-7.60px);
+}
+.seccion22 td.cod {
+  transform: translateY(-11.40px);
+}
+.seccion23 td.cod {
+  transform: translateY(-14px);
+}
+.seccion24 td.cod {
+  transform: translateY(-3px);
+}
+.seccion25 td.cod {
+  transform: translateY(-5px);
+}
+.seccion26 td.cod {
+  transform: translateY(-8px);
+}
+.seccion27 td.cod {
+  transform: translateY(-10.60px);
+}
+.seccion28 td.cod {
+  transform: translateY(-14px);
+}
+.seccion29 td.cod {
+  transform: translateY(-3px);
+}
+.seccion30 td.cod {
+  transform: translateY(-6px);
+}
+.seccion31 td.cod {
+  transform: translateY(-8px);
+}
+.seccion32 td.cod {
+  transform: translateY(-11.40px);
+}
+.seccion33 td.cod {
+  transform: translateY(-14.80px);
+}
+.seccion34 td.cod {
+  transform: translateY(-14px);
+}
+.seccion35 td.cod {
+  transform: translateY(-6px);
+}
+.seccion36 td.cod {
+  transform: translateY(-18.40px);
+}
+.seccion37 td.cod {
+  transform: translateY(-9px);
+}
+.seccion38 td.cod {
+  transform: translateY(-9px);
+}
+.seccion39 td.cod {
+  transform: translateY(-12.60px);
+}
+.seccion40 td.cod {
+  transform: translateY(-2.20px);
+}
+.seccion41 td.cod {
+  transform: translateY(-3.80px);
+}
+.seccion42 td.cod {
+  transform: translateY(-4.60px);
+}
+.seccion43 td.cod {
+  transform: translateY(-2.60px);
+}
+.seccion44 td.cod {
+  transform: translateY(-5px);
+}
+.seccion45 td.cod {
+  transform: translateY(-8px);
+}
+.seccion46 td.cod {
+  transform: translateY(-11px);
+}
+.seccion47 td.cod {
+  transform: translateY(-14px);
+}
+
 
 
 /* CURSOS */
@@ -1256,6 +1444,321 @@ th.Nota9 {
   overflow-wrap: break-word;
   max-width: 394px;
 }
+.seccion13 td.curso3 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-3.20px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion14 td.curso3 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-5.60px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion15 td.curso3 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-8.60px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion16 td.curso3 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-10.60px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion17 td.curso3 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-14px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion18 td.curso3 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-16.80px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion19 td.curso4 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-3.20px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion20 td.curso4 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-4px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion21 td.curso4 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-7.60px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion22 td.curso4 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-11.40px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion23 td.curso4 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-13.90px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion24 td.curso5 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-3px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion25 td.curso5 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-5px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion26 td.curso5 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-8px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion27 td.curso5 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-10.60px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion28 td.curso5 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-14px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion29 td.curso6 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-3px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion30 td.curso6 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-6px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion31 td.curso6 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-8px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion32 td.curso6 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-11.40px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion33 td.curso6 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-14.80px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion34 td.curso7 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-3.60px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion35 td.curso7 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-6px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion36 td.curso7 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-7.80px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion37 td.curso7 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-8.80px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion38 td.curso7 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-9px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion39 td.curso8 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-1px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion40 td.curso8 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-2.20px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion41 td.curso8 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-3.80px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion42 td.curso8 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-4.60px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion43 td.curso9 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-2.60px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion44 td.curso9 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-5px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion45 td.curso9 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-8px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion46 td.curso9 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-11px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
+.seccion47 td.curso9 {
+  position: relative;
+  left: 65.20px;
+  transform: translateY(-14px);
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 394px;
+}
 
 
 
@@ -1320,6 +1823,182 @@ th.Nota9 {
   left: 92.60px;
   transform: translateY(-16.80px);
 }
+.seccion13 td.crd3 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-13px);
+}
+.seccion14 td.crd3 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-16px);
+}
+.seccion15 td.crd3 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-18.80px);
+}
+.seccion16 td.crd3 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-21px);
+}
+.seccion17 td.crd3 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-14px);
+}
+.seccion18 td.crd3 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-16.80px);
+}
+.seccion19 td.crd4 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-13.40px);
+}
+.seccion20 td.crd4 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-4px);
+}
+.seccion21 td.crd4 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-7.60px);
+}
+.seccion22 td.crd4 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-11.40px);
+}
+.seccion23 td.crd4 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-14px);
+}
+.seccion24 td.crd5 {
+  position: relative;
+  left: 198.60px;
+  transform: translateY(-3px);
+}
+.seccion25 td.crd5 {
+  position: relative;
+  left: 198.60px;
+  transform: translateY(-5px);
+}
+.seccion26 td.crd5 {
+  position: relative;
+  left: 198.60px;
+  transform: translateY(-8px);
+}
+.seccion27 td.crd5 {
+  position: relative;
+  left: 198.60px;
+  transform: translateY(-10.60px);
+}
+.seccion28 td.crd5 {
+  position: relative;
+  left: 198.60px;
+  transform: translateY(-14px);
+}
+.seccion29 td.crd6 {
+  position: relative;
+  left: 266.30px;
+  transform: translateY(-3px);
+}
+.seccion30 td.crd6 {
+  position: relative;
+  left: 266.30px;
+  transform: translateY(-6px);
+}
+.seccion31 td.crd6 {
+  position: relative;
+  left: 266.30px;
+  transform: translateY(-8px);
+}
+.seccion32 td.crd6 {
+  position: relative;
+  left: 266.30px;
+  transform: translateY(-11.40px);
+}
+.seccion33 td.crd6 {
+  position: relative;
+  left: 266.30px;
+  transform: translateY(-14.80px);
+}
+.seccion34 td.crd7 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-14px);
+}
+.seccion35 td.crd7 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-6px);
+}
+.seccion36 td.crd7 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-18.40px);
+}
+.seccion37 td.crd7 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-9px);
+}
+.seccion38 td.crd7 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-9px);
+}
+.seccion39 td.crd8 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-12.60px);
+}
+.seccion40 td.crd8 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-2.20px);
+}
+.seccion41 td.crd8 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-3.80px);
+}
+.seccion42 td.crd8 {
+  position: relative;
+  left: 92.60px;
+  transform: translateY(-4.60px);
+}
+.seccion43 td.crd9 {
+  position: relative;
+  left: 153.40px;
+  transform: translateY(-2.60px);
+}
+.seccion44 td.crd9 {
+  position: relative;
+  left: 153.40px;
+  transform: translateY(-5px);
+}
+.seccion45 td.crd9 {
+  position: relative;
+  left: 153.40px;
+  transform: translateY(-8px);
+}
+.seccion46 td.crd9 {
+  position: relative;
+  left: 153.40px;
+  transform: translateY(-11px);
+}
+.seccion47 td.crd9 {
+  position: relative;
+  left: 153.40px;
+  transform: translateY(-14px);
+}
+
 
 
 /* CICLO */
@@ -1383,6 +2062,182 @@ th.Nota9 {
   left: 98.40px;
   transform: translateY(-16.80px);
 }
+.seccion13 td.ciclo3 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-13px);
+}
+.seccion14 td.ciclo3 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-16px);
+}
+.seccion15 td.ciclo3 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-18.80px);
+}
+.seccion16 td.ciclo3 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-21px);
+}
+.seccion17 td.ciclo3 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-14px);
+}
+.seccion18 td.ciclo3 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-16.80px);
+}
+.seccion19 td.ciclo4 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-13.40px);
+}
+.seccion20 td.ciclo4 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-4px);
+}
+.seccion21 td.ciclo4 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-7.60px);
+}
+.seccion22 td.ciclo4 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-11.40px);
+}
+.seccion23 td.ciclo4 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-14px);
+}
+.seccion24 td.ciclo5 {
+  position: relative;
+  left: 204.60px;
+  transform: translateY(-3px);
+}
+.seccion25 td.ciclo5 {
+  position: relative;
+  left: 204.60px;
+  transform: translateY(-5px);
+}
+.seccion26 td.ciclo5 {
+  position: relative;
+  left: 204.60px;
+  transform: translateY(-8px);
+}
+.seccion27 td.ciclo5 {
+  position: relative;
+  left: 204.60px;
+  transform: translateY(-10.60px);
+}
+.seccion28 td.ciclo5 {
+  position: relative;
+  left: 204.60px;
+  transform: translateY(-14px);
+}
+.seccion29 td.ciclo6 {
+  position: relative;
+  left: 272.1px;
+  transform: translateY(-3px);
+}
+.seccion30 td.ciclo6 {
+  position: relative;
+  left: 272.1px;
+  transform: translateY(-6px);
+}
+.seccion31 td.ciclo6 {
+  position: relative;
+  left: 272.1px;
+  transform: translateY(-8px);
+}
+.seccion32 td.ciclo6 {
+  position: relative;
+  left: 272.1px;
+  transform: translateY(-11.40px);
+}
+.seccion33 td.ciclo6 {
+  position: relative;
+  left: 272.1px;
+  transform: translateY(-14.80px);
+}
+.seccion34 td.ciclo7 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-14px);
+}
+.seccion35 td.ciclo7 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-6px);
+}
+.seccion36 td.ciclo7 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-18.40px);
+}
+.seccion37 td.ciclo7 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-9px);
+}
+.seccion38 td.ciclo7 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-9px);
+}
+.seccion39 td.ciclo8 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-12.60px);
+}
+.seccion40 td.ciclo8 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-2.20px);
+}
+.seccion41 td.ciclo8 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-3.80px);
+}
+.seccion42 td.ciclo8 {
+  position: relative;
+  left: 98.40px;
+  transform: translateY(-4.60px);
+}
+.seccion43 td.ciclo9 {
+  position: relative;
+  left: 159.40px;
+  transform: translateY(-2.60px);
+}
+.seccion44 td.ciclo9 {
+  position: relative;
+  left: 159.40px;
+  transform: translateY(-5px);
+}
+.seccion45 td.ciclo9 {
+  position: relative;
+  left: 159.40px;
+  transform: translateY(-8px);
+}
+.seccion46 td.ciclo9 {
+  position: relative;
+  left: 159.40px;
+  transform: translateY(-11px);
+}
+.seccion47 td.ciclo9 {
+  position: relative;
+  left: 159.40px;
+  transform: translateY(-14px);
+}
+
 
 
 /* NOTAS */
@@ -1446,172 +2301,307 @@ th.Nota9 {
   left: 103px;
   transform: translateY(-16.80px);
 }
-
-
-
-
-
-
-
-
-/* REGISTROS DEL SEGUNDO CICLO */
-
-
-/* REGISTROS DEL TERCER CICLO */
-td.curso3 {
+.seccion13 td.nota3 {
   position: relative;
-  left: 65px;
-  word-wrap: break-word;
-  white-space: normal;
-  overflow-wrap: break-word;
-  max-width: 394px;
+  left: 103px;
+  transform: translateY(-13px);
 }
-
-td.crd3 {
+.seccion14 td.nota3 {
   position: relative;
-  left: 61.4px;
+  left: 103px;
+  transform: translateY(-16px);
 }
-
-td.ciclo3 {
+.seccion15 td.nota3 {
   position: relative;
-  left: 67.2px;
+  left: 103px;
+  transform: translateY(-18.80px);
 }
-
-td.nota3 {
+.seccion16 td.nota3 {
   position: relative;
-  left: 71.6px;
+  left: 103px;
+  transform: translateY(-21px);
 }
-
-/* REGISTROS DEL CUARTO CICLO */
-td.curso4 {
+.seccion17 td.nota3 {
   position: relative;
-  left: 65px;
-  word-wrap: break-word;
-  white-space: normal;
-  overflow-wrap: break-word;
-  max-width: 394px;
+  left: 103px;
+  transform: translateY(-14px);
 }
-
-td.crd4 {
+.seccion18 td.nota3 {
   position: relative;
-  left: 61.4px;
+  left: 103px;
+  transform: translateY(-16.80px);
 }
-
-td.ciclo4 {
+.seccion19 td.nota4 {
   position: relative;
-  left: 67.2px;
+  left: 103px;
+  transform: translateY(-13.40px);
 }
-
-td.nota4 {
+.seccion20 td.nota4 {
   position: relative;
-  left: 71.6px;
+  left: 103px;
+  transform: translateY(-4px);
 }
-
-/* REGISTROS DEL QUINTO CICLO */
-td.curso5 {
+.seccion21 td.nota4 {
   position: relative;
-  left: 65px;
+  left: 103px;
+  transform: translateY(-7.60px);
 }
-
-td.crd5 {
+.seccion22 td.nota4 {
   position: relative;
-  left: 200px;
+  left: 103px;
+  transform: translateY(-11.40px);
 }
-
-td.ciclo5 {
+.seccion23 td.nota4 {
   position: relative;
-  left: 208px;
+  left: 103px;
+  transform: translateY(-14px);
 }
-
-td.nota5 {
+.seccion24 td.nota5 {
   position: relative;
-  left: 210px;
+  left: 209.40px;
+  transform: translateY(-3px);
 }
-
-/* REGISTROS DEL SEXTO CICLO */
-td.curso6 {
+.seccion25 td.nota5 {
   position: relative;
-  left: 65px;
+  left: 209.40px;
+  transform: translateY(-5px);
 }
-
-td.crd6 {
+.seccion26 td.nota5 {
   position: relative;
-  left: 268px;
+  left: 209.40px;
+  transform: translateY(-8px);
 }
-
-td.ciclo6 {
+.seccion27 td.nota5 {
   position: relative;
-  left: 274px;
+  left: 209.40px;
+  transform: translateY(-10.60px);
 }
-
-td.nota6 {
+.seccion28 td.nota5 {
   position: relative;
-  left: 276px;
+  left: 209.40px;
+  transform: translateY(-14px);
 }
-
-/* REGISTROS DEL SEPTIMO CICLO */
-td.curso7 {
+.seccion29 td.nota6 {
   position: relative;
-  left: 65px;
-  word-wrap: break-word;
-  white-space: normal;
-  overflow-wrap: break-word;
-  max-width: 394px;
+  left: 277px;
+  transform: translateY(-3px);
 }
-
-td.crd7 {
+.seccion30 td.nota6 {
   position: relative;
-  left: 61.4px;
+  left: 277px;
+  transform: translateY(-6px);
 }
-
-td.ciclo7 {
+.seccion31 td.nota6 {
   position: relative;
-  left: 67.2px;
+  left: 277px;
+  transform: translateY(-8px);
 }
-
-td.nota7 {
+.seccion32 td.nota6 {
   position: relative;
-  left: 71.6px;
+  left: 277px;
+  transform: translateY(-11.40px);
 }
-
-/* REGISTROS DEL OCTAVO CICLO */
-td.curso8 {
+.seccion33 td.nota6 {
   position: relative;
-  left: 65px;
+  left: 277px;
+  transform: translateY(-14.80px);
 }
-
-td.crd8 {
+.seccion34 td.nota7 {
   position: relative;
-  left: 61.4px;
+  left: 103px;
+  transform: translateY(-14px);
 }
-
-td.ciclo8 {
+.seccion35 td.nota7 {
   position: relative;
-  left: 67.2px;
+  left: 103px;
+  transform: translateY(-6px);
 }
-
-td.nota8 {
+.seccion36 td.nota7 {
   position: relative;
-  left: 71.6px;
+  left: 103px;
+  transform: translateY(-18.40px);
 }
-
-/* REGISTROS DEL NOVENO CICLO */
-td.curso9 {
+.seccion37 td.nota7 {
   position: relative;
-  left: 65px;
+  left: 103px;
+  transform: translateY(-9px);
 }
-
-td.crd9 {
+.seccion38 td.nota7 {
   position: relative;
-  left: 156px;
+  left: 103px;
+  transform: translateY(-9px);
 }
-
-td.ciclo9 {
+.seccion39 td.nota8 {
   position: relative;
-  left: 160px;
+  left: 103px;
+  transform: translateY(-12.60px);
 }
-
-td.nota9 {
+.seccion40 td.nota8 {
+  position: relative;
+  left: 103px;
+  transform: translateY(-2.20px);
+}
+.seccion41 td.nota8 {
+  position: relative;
+  left: 103px;
+  transform: translateY(-3.80px);
+}
+.seccion42 td.nota8 {
+  position: relative;
+  left: 103px;
+  transform: translateY(-4.60px);
+}
+.seccion43 td.nota9 {
   position: relative;
   left: 164px;
+  transform: translateY(-2.60px);
+}
+.seccion44 td.nota9 {
+  position: relative;
+  left: 164px;
+  transform: translateY(-5px);
+}
+.seccion45 td.nota9 {
+  position: relative;
+  left: 164px;
+  transform: translateY(-8px);
+}
+.seccion46 td.nota9 {
+  position: relative;
+  left: 164px;
+  transform: translateY(-11px);
+}
+.seccion47 td.nota9 {
+  position: relative;
+  left: 164px;
+  transform: translateY(-14px);
+}
+
+
+
+.Resumen {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  transform: translate(-197.60px, 33.60px);
+}
+
+.total_cursos, .total_creditos, .nota_informativa {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.total_cursos {
+  transform: translate(-197.60px, 21px);
+}
+.total_creditos {
+    transform: translate(-197.60px, 8px);
+}
+.nota_informativa {
+  transform: translate(-197.60px, 49px);
+}
+
+.promedio_ponderado {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  transform: translate(257.80px, -71.20px);
+}
+
+.sin_valor {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 21px;
+  transform: translate(371.60px, -71.20px);
+}
+
+
+
+
+
+.boton-imprimir button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  line-height: 24px;
+  background-color: rgba(255, 10, 65, 255);
+  border: none;
+  padding: 7px 52px;
+  cursor: pointer;
+  transform: translate(718px, -16px);
+  border-radius: 4px;
+}
+
+.boton-imprimir button:hover {
+  background-color: rgba(217, 9, 55, 255);
+}
+
+.boton-flecha {
+  text-align: center; /* centrar el botón horizontalmente */
+}
+
+.boton-flecha button {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(219, 224, 228, 255);
+  padding: 11px 97px; /* reducir padding para hacer el botón más pequeño */
+  cursor: pointer;
+  font-size: 12px; /* reducir tamaño de fuente para hacer el botón más pequeño */
+  display: block; /* necesario para utilizar margin: 0 auto */
+  margin: 0 auto; /* centrar el botón horizontalmente */
+  transform: translate(356.60px, -2746px);
+  border-radius: 5%;
+}
+
+.boton-flecha button span {
+  font-size: 12px; /* reducir tamaño de fuente para hacer el botón más pequeño */
+  line-height: 18px;
+}
+
+.boton-flecha .flecha {
+  width: 12px; /* reducir tamaño de la flecha */
+  height: 12px;
+  margin-left: 5px; /* reducir margen para que la flecha esté más cerca del texto */
+  vertical-align: middle;
+  transform: translateX(83px) translateY(-1px); 
+}
+
+
+.fecha-hora {
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 6.60px;
+  transform: translateX(1032.60px) translateY(-2702.60px);
+  letter-spacing: 0.5px;
+}
+
+.fecha {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+
+}
+
+.hora {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
 }
