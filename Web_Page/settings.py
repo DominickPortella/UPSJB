@@ -134,3 +134,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Directorio donde Django recogerá los archivos estáticos
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+GIT_PAGES_DIR = 'templates'
