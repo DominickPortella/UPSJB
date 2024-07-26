@@ -79,7 +79,11 @@ WSGI_APPLICATION = 'Web_Page.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+<<<<<<< Updated upstream
         'NAME': 'web_page',
+=======
+        'NAME': 'web_page_db',
+>>>>>>> Stashed changes
         'USER': 'Joseph',
         'PASSWORD': 'J0s3ph@2004#21',
         'HOST': 'localhost',
