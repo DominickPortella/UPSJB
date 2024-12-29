@@ -155,7 +155,7 @@ th::after {
 
 td {
     border-bottom: 1px solid #c9c9c9;
-    max-width: 512px;
+    /* max-width: 512px; */
     
 }
 /* 502.297px */
@@ -312,3 +312,9 @@ td {
     margin: 0 0.5rem;
     color: #666;
 }
+
+.data-tf{
+    margin-right: 500px;
+    width: 700px;
+}
+
